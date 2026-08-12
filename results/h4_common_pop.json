@@ -1,0 +1,308 @@
+{
+  "generated_at": "2026-08-02T08:03:31.572805+00:00",
+  "unit_of_analysis": "models (n=8 collected; rows report how many have both phi and the given baseline finite), not items -- see module docstring for why this is not the labelled-E0 AUC the worksheet table asks for.",
+  "phi_by_model": {
+    "anthropic/claude-sonnet-5": 0.0034129692832764505,
+    "deepseek/deepseek-r1": 0.0,
+    "meta-llama/llama-3.1-70b-instruct": 0.27611940298507465,
+    "meta-llama/llama-3.1-8b-instruct": 0.13761467889908258,
+    "meta-llama/llama-3.2-1b-instruct": 0.0,
+    "openai/gpt-5.6-luna": 0.0,
+    "qwen/qwen-2.5-72b-instruct": 0.16363636363636364,
+    "qwen/qwen-2.5-7b-instruct": 0.05714285714285714
+  },
+  "metrics": [
+    {
+      "metric": "sigma",
+      "spearman_vs_phi": 0.4879500364742666,
+      "common_population_n_models": 8,
+      "n_disagreeing_pairs": 7,
+      "n_possible_pairs": 28,
+      "disagreeing_pairs": [
+        [
+          "anthropic/claude-sonnet-5",
+          "deepseek/deepseek-r1"
+        ],
+        [
+          "anthropic/claude-sonnet-5",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.0034129692832764505,
+        "deepseek/deepseek-r1": 0.125,
+        "meta-llama/llama-3.1-70b-instruct": 0.3880597014925373,
+        "meta-llama/llama-3.1-8b-instruct": 0.2018348623853211,
+        "meta-llama/llama-3.2-1b-instruct": 0.25,
+        "openai/gpt-5.6-luna": 0.0,
+        "qwen/qwen-2.5-72b-instruct": 0.18787878787878787,
+        "qwen/qwen-2.5-7b-instruct": 0.08571428571428572
+      }
+    },
+    {
+      "metric": "early_answering_auc",
+      "spearman_vs_phi": 0.14638501094227999,
+      "common_population_n_models": 8,
+      "n_disagreeing_pairs": 11,
+      "n_possible_pairs": 28,
+      "disagreeing_pairs": [
+        [
+          "anthropic/claude-sonnet-5",
+          "deepseek/deepseek-r1"
+        ],
+        [
+          "anthropic/claude-sonnet-5",
+          "meta-llama/llama-3.1-8b-instruct"
+        ],
+        [
+          "anthropic/claude-sonnet-5",
+          "openai/gpt-5.6-luna"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "meta-llama/llama-3.1-70b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "meta-llama/llama-3.1-8b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "openai/gpt-5.6-luna"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "openai/gpt-5.6-luna"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "openai/gpt-5.6-luna",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.47100000000000003,
+        "deepseek/deepseek-r1": 0.5183823529411764,
+        "meta-llama/llama-3.1-70b-instruct": 0.5,
+        "meta-llama/llama-3.1-8b-instruct": 0.42025862068965514,
+        "meta-llama/llama-3.2-1b-instruct": 0.3055555555555556,
+        "openai/gpt-5.6-luna": 0.5314885496183206,
+        "qwen/qwen-2.5-72b-instruct": 0.580592105263158,
+        "qwen/qwen-2.5-7b-instruct": 0.5229166666666667
+      }
+    },
+    {
+      "metric": "adding_mistakes",
+      "spearman_vs_phi": 0.1963522774695264,
+      "common_population_n_models": 8,
+      "n_disagreeing_pairs": 9,
+      "n_possible_pairs": 28,
+      "disagreeing_pairs": [
+        [
+          "anthropic/claude-sonnet-5",
+          "deepseek/deepseek-r1"
+        ],
+        [
+          "anthropic/claude-sonnet-5",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "meta-llama/llama-3.1-70b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "meta-llama/llama-3.1-8b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "deepseek/deepseek-r1",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.0,
+        "deepseek/deepseek-r1": 0.75,
+        "meta-llama/llama-3.1-70b-instruct": 0.3188405797101449,
+        "meta-llama/llama-3.1-8b-instruct": 0.27586206896551724,
+        "meta-llama/llama-3.2-1b-instruct": 0.2222222222222222,
+        "openai/gpt-5.6-luna": 0.0,
+        "qwen/qwen-2.5-72b-instruct": 0.15789473684210525,
+        "qwen/qwen-2.5-7b-instruct": 0.08333333333333333
+      }
+    },
+    {
+      "metric": "paraphrasing",
+      "spearman_vs_phi": 0.5964320793656581,
+      "common_population_n_models": 7,
+      "n_disagreeing_pairs": 3,
+      "n_possible_pairs": 21,
+      "disagreeing_pairs": [
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "meta-llama/llama-3.1-8b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "qwen/qwen-2.5-72b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.0,
+        "deepseek/deepseek-r1": null,
+        "meta-llama/llama-3.1-70b-instruct": 0.07246376811594203,
+        "meta-llama/llama-3.1-8b-instruct": 0.20689655172413793,
+        "meta-llama/llama-3.2-1b-instruct": 0.0,
+        "openai/gpt-5.6-luna": 0.0,
+        "qwen/qwen-2.5-72b-instruct": 0.0,
+        "qwen/qwen-2.5-7b-instruct": 0.03333333333333333
+      }
+    },
+    {
+      "metric": "filler_tokens",
+      "spearman_vs_phi": 0.6543708577803531,
+      "common_population_n_models": 8,
+      "n_disagreeing_pairs": 5,
+      "n_possible_pairs": 28,
+      "disagreeing_pairs": [
+        [
+          "anthropic/claude-sonnet-5",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "meta-llama/llama-3.1-8b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "qwen/qwen-2.5-72b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.012345679012345678,
+        "deepseek/deepseek-r1": 0.0,
+        "meta-llama/llama-3.1-70b-instruct": 0.8985507246376812,
+        "meta-llama/llama-3.1-8b-instruct": 0.9545454545454546,
+        "meta-llama/llama-3.2-1b-instruct": 0.6666666666666666,
+        "openai/gpt-5.6-luna": 0.0,
+        "qwen/qwen-2.5-72b-instruct": 0.4868421052631579,
+        "qwen/qwen-2.5-7b-instruct": 0.6666666666666666
+      }
+    },
+    {
+      "metric": "hint_verbalization",
+      "spearman_vs_phi": -0.14910801984141453,
+      "common_population_n_models": 7,
+      "n_disagreeing_pairs": 8,
+      "n_possible_pairs": 21,
+      "disagreeing_pairs": [
+        [
+          "anthropic/claude-sonnet-5",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-70b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "meta-llama/llama-3.2-1b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.1-8b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-72b-instruct"
+        ],
+        [
+          "meta-llama/llama-3.2-1b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ],
+        [
+          "qwen/qwen-2.5-72b-instruct",
+          "qwen/qwen-2.5-7b-instruct"
+        ]
+      ],
+      "per_model_value": {
+        "anthropic/claude-sonnet-5": 0.0,
+        "deepseek/deepseek-r1": 0.0,
+        "meta-llama/llama-3.1-70b-instruct": 0.1111111111111111,
+        "meta-llama/llama-3.1-8b-instruct": 0.0,
+        "meta-llama/llama-3.2-1b-instruct": 1.0,
+        "openai/gpt-5.6-luna": null,
+        "qwen/qwen-2.5-72b-instruct": 0.0,
+        "qwen/qwen-2.5-7b-instruct": 0.35
+      }
+    }
+  ],
+  "unavailable": {
+    "AttriCoT": "OpenRouter does not expose the required complete logit margins.",
+    "NLDD": "OpenRouter does not expose the required complete logit margins.",
+    "CC-SHAP": "OpenRouter does not expose input attributions.",
+    "labelled_E0_AUC_vs_baselines": "e0_harness() scores only phi/change-from-gold on synthetic items per model; the baseline panel was never re-run on those same synthetic items, which would need new live model calls (blocked here: no OPENROUTER_API_KEY)."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "per_model": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "n_audited": 22,
+      "extraction_failures": 5,
+      "unclear": 1,
+      "extraction_share": 0.22727272727272727,
+      "extraction_share_ci": [
+        0.09410939841509938,
+        0.4197999498701549
+      ],
+      "delta_reported": 0.25,
+      "delta_corrected": 0.19318181818181818,
+      "delta_corrected_ci": [
+        0.14505001253246128,
+        0.22647265039622516
+      ]
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "n_audited": 16,
+      "extraction_failures": 1,
+      "unclear": 1,
+      "extraction_share": 0.0625,
+      "extraction_share_ci": [
+        0.0032006977101884967,
+        0.2639573972885685
+      ],
+      "delta_reported": 0.08370044052863436,
+      "delta_corrected": 0.07846916299559471,
+      "delta_corrected_ci": [
+        0.06160709009478942,
+        0.08343254072029259
+      ]
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "n_audited": 12,
+      "extraction_failures": 0,
+      "unclear": 0,
+      "extraction_share": 0.0,
+      "extraction_share_ci": [
+        0.0,
+        0.22092219194555585
+      ],
+      "delta_reported": 0.08108108108108109,
+      "delta_corrected": 0.08108108108108109,
+      "delta_corrected_ci": [
+        0.06316847092333332,
+        0.08108108108108109
+      ]
+    },
+    {
+      "model": "meta-llama/llama-3.2-1b-instruct",
+      "n_audited": 8,
+      "extraction_failures": 0,
+      "unclear": 0,
+      "extraction_share": 0.0,
+      "extraction_share_ci": [
+        0.0,
+        0.3123439780663678
+      ],
+      "delta_reported": 0.2,
+      "delta_corrected": 0.2,
+      "delta_corrected_ci": [
+        0.13753120438672645,
+        0.2
+      ]
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "n_audited": 6,
+      "extraction_failures": 0,
+      "unclear": 0,
+      "extraction_share": 0.0,
+      "extraction_share_ci": [
+        0.0,
+        0.39303776899708265
+      ],
+      "delta_reported": 0.0297029702970297,
+      "delta_corrected": 0.0297029702970297,
+      "delta_corrected_ci": [
+        0.018028581118898535,
+        0.0297029702970297
+      ]
+    },
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "n_audited": 9,
+      "extraction_failures": 0,
+      "unclear": 0,
+      "extraction_share": 0.0,
+      "extraction_share_ci": [
+        0.0,
+        0.2831288355631134
+      ],
+      "delta_reported": 0.02142857142857143,
+      "delta_corrected": 0.02142857142857143,
+      "delta_corrected_ci": [
+        0.015361524952218998,
+        0.02142857142857143
+      ]
+    }
+  ],
+  "note": "corrected delta assumes audited items are representative of all derailed items",
+  "max_extraction_share": 0.22727272727272727
+}

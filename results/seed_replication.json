@@ -1,0 +1,132 @@
+{
+  "panel": "n>=10 models",
+  "note": "Worksheet seed1=decoding seed0 (main tables); seed2=dec1; seed3=dec2. Gate C1-C3.",
+  "models": [
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "short": "Claude-Sonnet-5",
+      "n_by_seed": {
+        "0": 293,
+        "1": 206,
+        "2": 208
+      },
+      "phi_by_seed": {
+        "0": 0.003,
+        "1": 0.005,
+        "2": 0.005
+      },
+      "phi_mean": 0.004,
+      "phi_sd": 0.001,
+      "phi_list": [
+        0.003413,
+        0.004854,
+        0.004808
+      ]
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "short": "Llama-3.1-70B",
+      "n_by_seed": {
+        "0": 134,
+        "1": 48,
+        "2": 45
+      },
+      "phi_by_seed": {
+        "0": 0.276,
+        "1": 0.188,
+        "2": 0.2
+      },
+      "phi_mean": 0.221,
+      "phi_sd": 0.039,
+      "phi_list": [
+        0.276119,
+        0.1875,
+        0.2
+      ]
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "short": "Llama-3.1-8B",
+      "n_by_seed": {
+        "0": 109,
+        "1": 32,
+        "2": 44
+      },
+      "phi_by_seed": {
+        "0": 0.138,
+        "1": 0.312,
+        "2": 0.114
+      },
+      "phi_mean": 0.188,
+      "phi_sd": 0.089,
+      "phi_list": [
+        0.137615,
+        0.3125,
+        0.113636
+      ]
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "short": "GPT-5.6-Luna",
+      "n_by_seed": {
+        "0": 341,
+        "1": 148,
+        "2": 105
+      },
+      "phi_by_seed": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "phi_mean": 0.0,
+      "phi_sd": 0.0,
+      "phi_list": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "short": "Qwen-2.5-72B",
+      "n_by_seed": {
+        "0": 165,
+        "1": 62,
+        "2": 76
+      },
+      "phi_by_seed": {
+        "0": 0.164,
+        "1": 0.145,
+        "2": 0.145
+      },
+      "phi_mean": 0.151,
+      "phi_sd": 0.009,
+      "phi_list": [
+        0.163636,
+        0.145161,
+        0.144737
+      ]
+    },
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "short": "Qwen-2.5-7B",
+      "n_by_seed": {
+        "0": 105,
+        "1": 18,
+        "2": 17
+      },
+      "phi_by_seed": {
+        "0": 0.057,
+        "1": 0.222,
+        "2": 0.294
+      },
+      "phi_mean": 0.191,
+      "phi_sd": 0.099,
+      "phi_list": [
+        0.057143,
+        0.222222,
+        0.294118
+      ]
+    }
+  ]
+}

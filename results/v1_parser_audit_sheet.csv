@@ -1,0 +1,723 @@
+model,record_id,problem_id,seed,parser_den_clean,trace_text,human_denotation,agree,note
+anthropic/claude-sonnet-5,gsm8k:test:43:0:1,gsm8k:test:43,0,48.0,"remaining = 2000 - 1800 = 200
+serving_size = 300 / 5 = 60
+grams_per_cal = serving_size / 250 = 0.24
+aside = 5 * 2 = 10
+answer = remaining * grams_per_cal = 48
+The final answer is 48",48,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:9:0:3,gsm8k:test:9,0,460.0,"regular_rate = 10
+overtime_rate = 1.2 * regular_rate = 12
+base_earnings = 40 * regular_rate = 400
+overtime_earnings = 5 * overtime_rate = 60
+total_earnings = base_earnings + overtime_earnings = 460
+The final answer is 460",460,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:42:0:0,gsm8k:test:42,0,14.0,"pieces_in_pies = 5 * 8 = 40
+pieces_remaining = 40 - 14 = 26
+aside = 5 * 3 = 15
+taken_by_guests = pieces_in_pies - pieces_remaining = 14
+The final answer is 14",14,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:40:0:2,gsm8k:test:40,0,8.0,"ben_phone_age = 2 * 1 = 2
+brandon_phone_age = 4 * 2 = 8
+
+aside = 3 * 0 = 0
+
+total = brandon_phone_age + aside = 8
+
+The final answer is 8",8,yes,
+qwen/qwen-2.5-7b-instruct,math:test:42:0:1,math:test:42,0,2.0,"x_minus_1 = 1
+positive_solution = x_minus_1 + 7 = 8
+negative_solution = x_minus_1 - 7 = -6
+aside = 4 * 2 = 8
+sum_of_solutions = positive_solution + negative_solution = 2
+The final answer is 2",2,yes,
+meta-llama/llama-3.2-1b-instruct,gsm8k:test:47:0:0,gsm8k:test:47,0,24.0,"bought = 2 * 2 = 4
+aside = 4 * 5 = 20
+total = bought + aside = 24
+The final answer is 24",24,yes,
+openai/gpt-5.6-luna,gsm8k:test:26:0:2,gsm8k:test:26,0,243.0,"shorts = 3 * 16.5 = 49.5
+pants = 3 * 22.5 = 67.5
+shoes = 3 * 42 = 126
+aside = 2 * 2 = 4
+clothing = shorts + pants = 117
+total = clothing + shoes = 243
+The final answer is 243",243,yes,
+qwen/qwen-2.5-72b-instruct,math:test:85:0:0,math:test:85,0,129.0,"a1 = 0 + 1 = 1
+a2 = a1 * 1 = 1
+a3 = a2 + 2 = 3
+a4 = a3 * 2 = 6
+a5 = a4 + 3 = 9
+a6 = a5 * 3 = 27
+a7 = a6 + 4 = 31
+a8 = a7 * 4 = 124
+a9 = a8 + 5 = 129
+aside = 129 - 125 = 4
+The final answer is 129",129,yes,aside follows a9; human uses a9/final-answer 129 not aside=4
+qwen/qwen-2.5-7b-instruct,gsm8k:test:62:0:1,gsm8k:test:62,0,52500.0,"pension_base = 50000 * 1 = 50000
+pension_bonus = 50000 * 0.05 = 2500
+final_pension = pension_base + pension_bonus = 52500
+The final answer is 52500",52500,yes,
+openai/gpt-5.6-luna,math:test:63:0:0,math:test:63,0,9.0,"root_product = 6 / 2 = 3
+aside = 4 + 5 = 9
+squared_product = root_product * root_product = 9
+The final answer is 9",9,yes,
+openai/gpt-5.6-luna,gsm8k:test:28:0:4,gsm8k:test:28,0,25.0,"trip = 60
+first = 20
+endgap = 15
+aside = 4 * 2 = 8
+second = trip - endgap = 45
+between = second - first = 25
+The final answer is 25",25,yes,
+qwen/qwen-2.5-7b-instruct,math:test:24:0:1,math:test:24,0,3125.0,"a = 5
+a_cubed = a * a * a = 125
+a_squared = a * a = 25
+aside = 4 * 4 = 16
+result = a_cubed * a_squared = 3125
+The final answer is 3125",3125,yes,
+qwen/qwen-2.5-7b-instruct,gsm8k:test:58:0:3,gsm8k:test:58,0,57.0,"final_bill = 40.00
+delivery_fee = 3.00
+tip = 4.00
+total_extra = delivery_fee + tip = 7.00
+total_after_extra = final_bill + total_extra = 47.00
+hidden_fee = final_bill * 0.25 = 10.00
+final_price = total_after_extra + hidden_fee = 57.00
+The final answer is 57.00",57,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:73:0:0,gsm8k:test:73,0,2295.0,"phone_cost = 150 * 5 = 750
+interest = 2 / 100 = 0.02
+monthly_interest = phone_cost * interest = 15
+monthly_cost = phone_cost + monthly_interest = 765
+aside = 7 * 3 = 21
+total_cost = monthly_cost * 3 = 2295
+The final answer is 2295",2295,yes,
+meta-llama/llama-3.1-70b-instruct,math:test:79:0:1,math:test:79,0,108.0,"outer_circumference = 2 * 3.14159 * 64 = 402.123859
+inner_circumference = 2 * 3.14159 * 16 = 100.531
+outer_distance = outer_circumference * 27 = 10863.33653
+aside = 5 * 5 = 25
+inner_revolutions = outer_distance / inner_circumference = 108.032987
+The final answer is 108",108.032987,no,last step states inner_revolutions=108.032987; final-answer/parser use 108
+anthropic/claude-sonnet-5,math:test:41:0:0,math:test:41,0,0.0,"term1 = 3 * 4 = 12
+diff = 12 - term1 = 0
+aside = 5 * 2 = 10
+b = diff / 2 = 0
+The final answer is 0",0,yes,
+openai/gpt-5.6-luna,math:test:65:0:4,math:test:65,0,6.0,"sum = 8
+product = 7
+sum_square = sum * sum = 64
+four_product = 4 * product = 28
+difference_square = sum_square - four_product = 36
+aside = 2 + 3 = 5
+six = 6
+answer = difference_square / six = 6
+The final answer is 6",6,yes,
+openai/gpt-5.6-luna,gsm8k:test:11:0:4,gsm8k:test:11,0,694.0,"donuts = 3 * 68 = 204
+cupcakes = 2 * 80 = 160
+cheesecakes = 6 * 55 = 330
+aside = 4 * 9 = 36
+first_total = donuts + cupcakes = 364
+total = first_total + cheesecakes = 694
+The final answer is 694",694,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:20:0:3,gsm8k:test:20,0,15.0,"orange_total = 10
+orange_spilled = 1
+orange_remaining = orange_total - orange_spilled = 9
+orange_water_fraction = 2 / 3 = 0.6666666666666666
+orange_water = orange_remaining * orange_water_fraction = 6
+pineapple_total = 15
+pineapple_water_fraction = 3 / 5 = 0.6
+pineapple_water = pineapple_total * pineapple_water_fraction = 9
+irrelevant = 7 * 2 = 14
+total_water = orange_water + pineapple_water = 15
+The final answer is 15",15,yes,
+openai/gpt-5.6-luna,math:test:12:0:0,math:test:12,0,10.0,"horizontal = 8 * 8 = 64
+vertical = 6 * 6 = 36
+squares = horizontal + vertical = 100
+aside = 3 * 4 = 12
+ten = 10
+distance = squares / ten = 10
+The final answer is 10",10,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:53:0:5,gsm8k:test:53,0,40.0,"truck_tire_rate = 60
+car_tire_rate = 40
+thursday_truck_tires = 6
+thursday_car_tires = 4
+friday_car_tires = 12
+
+thursday_truck_revenue = truck_tire_rate * thursday_truck_tires = 360
+thursday_car_revenue = car_tire_rate * thursday_car_tires = 160
+friday_car_revenue = car_tire_rate * friday_car_tires = 480
+
+thursday_total_revenue = thursday_truck_revenue + thursday_car_revenue = 520
+friday_total_revenue = friday_car_revenue + 0 = 480
+
+aside = thursday_truck_tires + friday_car_tires = 18
+difference = thursday_total_revenue - friday_total_revenue = 40
+The final answer is 40",40,yes,
+openai/gpt-5.6-luna,math:test:17:0:4,math:test:17,0,8.0,"A = 3
+B = 3
+C = 2
+aside = 4 * 4 = 16
+partial = A + B = 6
+answer = partial + C = 8
+The final answer is 8",8,yes,
+deepseek/deepseek-r1,gsm8k:test:21:0:1,gsm8k:test:21,0,14.0,"samantha_age = 31  
+raymond_age = samantha_age + 6 = 37  
+aside = 5 * 3 = 15  
+years_ago = raymond_age - 23 = 14  
+The final answer is 14",14,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:8:0:4,gsm8k:test:8,0,45.0,"distance_first_leg = 3 * 60 = 180
+aside_speed = 50 * 2 = 100
+distance_half_hour_30mph = 0.5 * 30 = 15
+remaining_time = 4 - 2 - 0.5 = 1.5
+distance_remaining_80mph = 1.5 * 80 = 120
+total_distance_return = distance_half_hour_30mph + distance_remaining_80mph = 135
+distance_from_home = distance_first_leg - total_distance_return = 45
+The final answer is 45",45,yes,
+anthropic/claude-sonnet-5,gsm8k:test:25:0:5,gsm8k:test:25,0,2.0,"chicken = 12
+milk = 5 * 3 = 15
+apples = 4 * 1.50 = 6
+subtotal = chicken + milk = 27
+subtotal2 = subtotal + apples = 33
+remaining = 50 - subtotal2 = 17
+aside = 2 * 5 = 10
+boxes = remaining / 8.50 = 2
+The final answer is 2",2,yes,
+qwen/qwen-2.5-72b-instruct,math:test:81:0:5,math:test:81,0,5.25,"a = 12 * 3 = 36
+b = 4 * 3 + 3 - 34 = -21
+c = 6 * 6 = 36
+d = a - c = 0
+e = 12 * 6 = 72
+f = 12 - 21 = -9
+g = e + f = 63
+h = g / 12 = 5.25
+The final answer is 5.25",5.25,yes,accepted stated multi-op line b=4*3+3-34=-21
+anthropic/claude-sonnet-5,math:test:75:0:6,math:test:75,0,-55.0,"a = -1
+b = 4
+c = 5
+aside = a + b = 3
+hundredA = 100 * a = -100
+tenB = 10 * b = 40
+sumAB = hundredA + tenB = -60
+answer = sumAB + c = -55
+The final answer is -55",-55,yes,
+meta-llama/llama-3.1-70b-instruct,math:test:0:0:6,math:test:0,0,2.0,"denominator = 6 - 2 = 4
+zero1 = -3
+zero2 = 2
+factor1 = 2 * zero1 = -6
+factor2 = 2 * zero2 = 4
+aside = 5 * 3 = 15
+numerator = 4 / 2 = 2
+answer = denominator / numerator = 2
+The final answer is 2",2,yes,
+qwen/qwen-2.5-72b-instruct,math:test:101:0:0,math:test:101,0,0.0,"a = 6 - 1 = 5
+b = 6 - 3 = 3
+c = 6 - 7 = -1
+d = 6 - 9 = -3
+f_6 = a * b * c * d = 45
+e = 4 - 1 = 3
+g = 4 - 3 = 1
+h = 4 - 7 = -3
+i = 4 - 9 = -5
+f_4 = e * g * h * i = 45
+aside = 2 * 2 = 4
+result = f_6 - f_4 = 0
+The final answer is 0",0,yes,
+anthropic/claude-sonnet-5,gsm8k:test:14:0:4,gsm8k:test:14,0,60.0,"contemporary = 20 * 20 = 400
+contemporary_students = contemporary / 100 = 4
+remaining = 20 - contemporary_students = 16
+jazz = 25 * 16 = 400
+jazz_students = jazz / 100 = 4
+aside = 5 * 3 = 15
+hiphop_students = remaining - jazz_students = 12
+hiphop_fraction = hiphop_students / 20 = 0.6
+hiphop_percentage = hiphop_fraction * 100 = 60
+
+The final answer is 60",60,yes,
+deepseek/deepseek-r1,math:test:89:0:4,math:test:89,0,4.0,"x = 3  
+aside = 4 * 2 = 8  
+xsq = x * x = 9  
+sixx = 6 * x = 18  
+diff = xsq - sixx = -9  
+expr = diff + 13 = 4  
+The final answer is 4",4,yes,
+openai/gpt-5.6-luna,gsm8k:test:56:0:3,gsm8k:test:56,0,3.0,"ticket = 7
+popcorn = 7
+budget = 42
+cost = ticket + popcorn = 14
+aside = 2 * 3 = 6
+visits = budget / cost = 3
+The final answer is 3",3,yes,
+anthropic/claude-sonnet-5,math:test:64:0:3,math:test:64,0,4.0,"a = 8
+a_sq = a * a = 64
+cbrt_a2 = 4
+inner = 16 * cbrt_a2 = 64
+aside = a_sq - inner = 0
+final = inner / 16 = 4
+
+The final answer is 4",4,yes,
+openai/gpt-5.6-luna,math:test:86:0:1,math:test:86,0,0.0,"one = 1
+zero = one - one = 0
+aside = 3 + 4 = 7
+answer = zero + zero = 0
+The final answer is 0",0,yes,
+openai/gpt-5.6-luna,math:test:43:0:4,math:test:43,0,16.0,"demand_constant = 128
+price_factor = 4
+upper_price = demand_constant / price_factor = 32
+lower_price = 0
+price_span = upper_price - lower_price = 32
+half_span = price_span / 2 = 16
+irrelevant = 7 * 9 = 63
+price = lower_price + half_span = 16
+The final answer is 16",16,yes,
+meta-llama/llama-3.1-70b-instruct,gsm8k:test:68:0:1,gsm8k:test:68,0,36.0,"girls = 60
+boys = 2 * girls = 120
+students = girls + boys = 180
+aside = 4 * 5 = 20
+teachers = students / 5 = 36
+The final answer is 36",36,yes,
+openai/gpt-5.6-luna,gsm8k:test:30:0:5,gsm8k:test:30,0,109.0,"darrell_parts = 7
+allen_parts = 11
+total_parts = darrell_parts + allen_parts = 18
+total_age = 162
+one_part = total_age / total_parts = 9
+allen_now = one_part * allen_parts = 99
+aside = 3 * 4 = 12
+allen_future = allen_now + 10 = 109
+The final answer is 109",109,yes,
+anthropic/claude-sonnet-5,math:test:83:0:0,math:test:83,0,8.0,"salt_per_quart = 1 / 4 = 0.25
+quarts_per_tsp = 1 / salt_per_quart = 4
+aside = 3 * 5 = 15
+answer = quarts_per_tsp * 2 = 8
+The final answer is 8",8,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:39:0:8,gsm8k:test:39,0,36.0,"run_speed = 4 * 3 = 12
+skip_speed = 3 / 2 = 1.5
+aside = 2 * 3 = 6
+run_time = 1 * 6 = 6
+walk_time = 2 * 6 = 12
+time_running = run_time / 3 = 2
+time_walking = walk_time / 3 = 4
+distance_running = run_speed * time_running = 24
+distance_walking = 3 * time_walking = 12
+total_distance = distance_running + distance_walking = 36
+The final answer is 36",36,yes,
+openai/gpt-5.6-luna,math:test:71:0:4,math:test:71,0,20.0,"left = 3 * 7 = 21
+right = 5 * 2 = 10
+difference = left - right = 11
+subtracted = 4 * 7 = 28
+added = 8 * 2 = 16
+adjustment = subtracted + added = 44
+scale = adjustment / difference = 4
+aside = 9 + 1 = 10
+greater = 5 * scale = 20
+The final answer is 20",20,yes,
+anthropic/claude-sonnet-5,gsm8k:test:0:0:4,gsm8k:test:0,0,18.0,"eggs = 16
+eaten = 3
+muffins = 4
+used = eaten + muffins = 7
+remainder = eggs - used = 9
+aside = eggs * 2 = 32
+earnings = remainder * 2 = 18
+The final answer is 18",18,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:69:0:0,gsm8k:test:69,0,60.0,"weekly_allowance = 5 * 8 = 40
+initial_amount = 100 - weekly_allowance = 60
+aside = 2 + 2 = 4
+The final answer is 60",60,yes,aside follows initial_amount; human uses 60 not aside=4
+anthropic/claude-sonnet-5,math:test:13:0:0,math:test:13,0,8.0,"x_mid = 1 + 1 = 2
+x_coord = x_mid / 2 = 1
+y_mid = 4 + 10 = 14
+y_coord = y_mid / 2 = 7
+aside = 3 * 5 = 15
+sum_coords = x_coord + y_coord = 8
+The final answer is 8",8,yes,
+meta-llama/llama-3.1-8b-instruct,math:test:28:0:3,math:test:28,0,-10.75,"a = -2.5
+b = 3.5
+prod = a * b = -8.75
+aside = 1 * 2 = 2
+ans = prod - aside = -10.75
+The final answer is -10.75",-10.75,yes,
+meta-llama/llama-3.1-70b-instruct,math:test:87:0:3,math:test:87,0,-13.0,"neg4 = -4
+bterm = neg4 * neg4 = 16
+const = -36
+bvalue = 16 - const = 52
+aside = 2 * 3 = 6
+b = bvalue / neg4 = -13
+The final answer is -13",-13,yes,
+qwen/qwen-2.5-7b-instruct,gsm8k:test:22:0:0,gsm8k:test:22,0,7.0,"customers_first_3 = 3 * 1 = 3
+customers_next_2 = 2 * 2 = 4
+irrelevant_aside = 1 * 8 = 8
+total_dvds_sold = customers_first_3 + customers_next_2 = 7
+The final answer is 7",7,yes,
+qwen/qwen-2.5-7b-instruct,math:test:51:0:0,math:test:51,0,0.0,"inverse = -1 * 1 = -1
+x = 0 + 0 = 0
+f_x = x + x = 0
+f_inv_x = f_x - x = 0 - 0 = 0
+f_x_minus_f_inv_x = f_x - f_inv_x = 0 - 0 = 0
+The final answer is 0",0,yes,
+meta-llama/llama-3.1-70b-instruct,gsm8k:test:33:0:0,gsm8k:test:33,0,110.0,"silver = 110 - 30 = 80
+aside = 5 * 3 = 15
+gold = silver + 30 = 110
+The final answer is 110",110,yes,
+openai/gpt-5.6-luna,math:test:11:0:5,math:test:11,0,-15.0,"seven = 7
+one = 1
+zero = 0
+shift = seven - one = 6
+negative = zero - seven = -7
+lower = negative - one = -8
+aside = 4 * 2 = 8
+answer = lower + negative = -15
+The final answer is -15",-15,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:18:0:1,gsm8k:test:18,0,7.0,"eggs_per_week = 7 * 3 = 21
+eggs_per_4_weeks = eggs_per_week * 4 = 84
+dozens_eggs = eggs_per_4_weeks / 12 = 7
+aside = 5 * 2 = 10
+The final answer is 7",7,yes,aside follows dozens_eggs; human uses 7 not aside=10
+qwen/qwen-2.5-72b-instruct,gsm8k:test:64:0:0,gsm8k:test:64,0,300.0,"miles_per_gallon = 100 / 4 = 25
+aside = 25 * 2 = 50
+total_miles = miles_per_gallon * 12 = 300
+The final answer is 300",300,yes,
+openai/gpt-5.6-luna,gsm8k:test:6:0:4,gsm8k:test:6,0,260.0,"seattle = 20
+charleston = 4 * seattle = 80
+toulouse = 2 * charleston = 160
+aside = 3 * 3 = 9
+partial = toulouse + charleston = 240
+total = partial + seattle = 260
+The final answer is 260",260,yes,
+anthropic/claude-sonnet-5,math:test:20:0:1,math:test:20,0,18.0,"m_limit = 20
+count1 = 7 + 5 = 12
+count2 = 4 + 2 = 6
+aside = 3 * 5 = 15
+total_values = count1 + count2 = 18
+The final answer is 18",18,yes,
+openai/gpt-5.6-luna,math:test:90:0:4,math:test:90,0,30.0,"difference = 60
+four = 4
+step = difference / four = 15
+one = 1
+smaller = step - one = 14
+two = 2
+larger = smaller + two = 16
+aside = 9 * 9 = 81
+sum = smaller + larger = 30
+The final answer is 30",30,yes,
+deepseek/deepseek-r1,math:test:72:0:0,math:test:72,0,24.0,"constant = 16 * 21 = 336  
+aside = 16 + 21 = 37  
+j = constant / 14 = 24  
+The final answer is 24",24,yes,
+anthropic/claude-sonnet-5,math:test:70:0:3,math:test:70,0,8.0,"y2 = 9 * 9 = 81
+xy = 3 * 9 = 27
+term = 3 * xy = 81
+diff = y2 - term = 0
+aside = 3 + 9 = 12
+answer = diff + 8 = 8
+The final answer is 8",8,yes,
+qwen/qwen-2.5-7b-instruct,gsm8k:test:66:0:5,gsm8k:test:66,0,48.0,"girls_per_team = 5
+boys_per_team = 5
+teams_per_school = 2
+schools = 4
+players_per_school = girls_per_team + boys_per_team = 10
+players_total = players_per_school * schools = 40
+coaches_per_school = 2
+coaches_total = schools * coaches_per_school = 8
+total_people = players_total + coaches_total = 48
+The final answer is 48",48,yes,
+anthropic/claude-sonnet-5,math:test:14:0:3,math:test:14,0,75.0,"AC = 15
+BD = 10
+aside = 3 * 4 = 12
+product = AC * BD = 150
+area = product / 2 = 75
+The final answer is 75",75,yes,
+openai/gpt-5.6-luna,math:test:23:0:0,math:test:23,0,8.0,"initialproduct = 3.67 * 4 = 14.68
+aside = 2 + 3 = 5
+newpressure = initialproduct / 1.835 = 8
+The final answer is 8",8,yes,
+openai/gpt-5.6-luna,math:test:55:0:1,math:test:55,0,5.0,"root_exponent = 3 / 2 = 1.5
+argument_exponent = 6 + root_exponent = 7.5
+aside = 4 * 4 = 16
+answer = argument_exponent / root_exponent = 5
+The final answer is 5",5,yes,
+meta-llama/llama-3.1-70b-instruct,math:test:1:0:3,math:test:1,0,15.0,"one_thirty = 130 / 100 = 1.3
+one_twenty = 120 / 100 = 1.2
+aside = 10 * 3 = 30
+thirty_scaled = 30 * one_thirty = 39
+twenty_scaled = 20 * one_twenty = 24
+diff = thirty_scaled - twenty_scaled = 15
+The final answer is 15",15,yes,
+openai/gpt-5.6-luna,math:test:7:0:5,math:test:7,0,7.000000000000006,"principal = 1225 / 1000 = 1.225
+factor = 1.07
+square = factor * factor = 1.1449
+growth = square * factor = 1.225043
+one = 1
+rate = factor - one = 0.07
+hundred = 100
+percent = rate * hundred = 7
+aside = 9 / 3 = 3
+answer = percent / one = 7
+The final answer is 7",7,yes,parser_den_clean float noise 7.000000000000006; stated answer 7
+qwen/qwen-2.5-72b-instruct,math:test:30:0:3,math:test:30,0,2160.0,"feathers_per_pound = 8 * 16 = 128
+gold_per_ounce = 2 * 16 = 32
+total_feathers_ounces_1 = feathers_per_pound + gold_per_ounce = 160
+total_feathers_ounces_2 = 14 * 16 + 3 * 16 = 272
+feathers_cost_per_pound = (1402 - 932) / (272 - 160) = 5
+gold_cost_per_ounce = (932 - 8 * 5 * 16) / 32 = 22
+five_feathers_cost = 5 * 5 * 16 = 400
+five_gold_cost = 5 * 22 * 16 = 1760
+total_cost = five_feathers_cost + five_gold_cost = 2160
+The final answer is 2160",2160,yes,accepted stated parenthesized multi-op cost lines
+openai/gpt-5.6-luna,math:test:4:0:2,math:test:4,0,4.0,"two = 2
+four = two * two = 4
+eight = four * two = 8
+two_to_four = four * four = 16
+two_to_eight = two_to_four * two_to_four = 256
+aside = 3 * 3 = 9
+x = eight / two = 4
+The final answer is 4",4,yes,
+anthropic/claude-sonnet-5,math:test:19:0:0,math:test:19,0,187.5,"per_oz = 125 / 8 = 15.625
+aside = 8 + 12 = 20
+total = per_oz * 12 = 187.5
+The final answer is 187.5",187.5,yes,
+qwen/qwen-2.5-7b-instruct,gsm8k:test:61:0:2,gsm8k:test:61,0,1430.0,"material_cost = 500
+construction_cost = 800
+total_cost = material_cost + construction_cost = 1300
+insurance_cost = total_cost * 0.10 = 130
+total_paid = total_cost + insurance_cost = 1430
+The final answer is 1430",1430,yes,
+meta-llama/llama-3.1-8b-instruct,math:test:58:0:12,math:test:58,0,6.0,"i = 3
+f_1 = 2
+f_4 = 3
+f_7 = 4
+aside = 3 - 7 = -4
+aside = -1 - 4 = -5
+aside = 7 + 4 = 11
+aside = 11 * 1 = 11
+aside = 3 - 2 = 1
+aside = 1 * 3 = 3
+f_1_to_4 = f_1 + 3 = 5
+f_1_to_4 = f_4 - f_1_to_4 = -2
+f_1_to_4 = f_7 - f_1_to_4 = 6
+f_inv_3 = f_1_to_4 + 4 = 10
+f_inv_f_inv_3 = f_inv_3 - 4 = 6
+The final answer is 6",6,yes,followed last stated values under name redefinition of f_1_to_4
+meta-llama/llama-3.2-1b-instruct,math:test:18:0:1,math:test:18,0,32.0,"bought = 10 * 3 = 30
+aside = 1 * 2 = 2
+total = bought + aside = 32
+The final answer is 32",32,yes,
+deepseek/deepseek-r1,math:test:66:0:4,math:test:66,0,17.0,"aside1 = 0 * 0 = 0  
+aside2 = aside1 / 2 = 0  
+aside3 = aside2 - 9 = -9  
+aside4 = aside3 * aside3 = 81  
+step1 = 4 * 4 = 16  
+step2 = step1 / 2 = 8  
+step3 = step2 - 9 = -1  
+step4 = step3 * step3 = 1  
+step5 = step1 + step4 = 17  
+The final answer is 17",17,yes,
+anthropic/claude-sonnet-5,gsm8k:test:7:0:1,gsm8k:test:7,0,160.0,"part1_gb = 200 * 0.4 = 80
+part1_time = part1_gb / 2 = 40
+restart_time = 20
+aside = 200 / 2 = 100
+full_download_time = 200 / 2 = 100
+total_time = part1_time + restart_time = 60
+final_time = total_time + full_download_time = 160
+The final answer is 160",160,yes,
+deepseek/deepseek-r1,gsm8k:test:67:0:4,gsm8k:test:67,0,595.0,"diamonds = 175  
+rubies = diamonds - 35 = 140  
+emeralds = 2 * rubies = 280  
+aside = 10 * 10 = 100  
+dr_sum = diamonds + rubies = 315  
+total = dr_sum + emeralds = 595  
+The final answer is 595",595,yes,
+openai/gpt-5.6-luna,gsm8k:test:41:0:4,gsm8k:test:41,0,200.0,"throw = 400
+factor = 3
+reach = 1000
+aside = 7 / 1 = 7
+gem_throw = throw * factor = 1200
+outside = gem_throw - reach = 200
+The final answer is 200",200,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:29:0:1,gsm8k:test:29,0,104.0,"pair1 = 33
+pair2 = 2 * pair1 = 66
+total_heels = pair1 + pair2 = 99
+cost_difference = 5
+boots = total_heels + cost_difference = 104
+aside = 3 * 10 = 30
+The final answer is 104",104,yes,aside follows boots; human uses 104 not aside=30
+meta-llama/llama-3.1-70b-instruct,gsm8k:test:48:0:0,gsm8k:test:48,0,8.0,"total_inches = 4 * 12 = 48
+aside = 3 * 4 = 12
+pieces = total_inches / 6 = 8
+The final answer is 8",8,yes,
+anthropic/claude-sonnet-5,gsm8k:test:10:0:2,gsm8k:test:10,0,366.0,"first = 60
+second = first * 3 = 180
+reduction = second * 0.3 = 54
+third = second - reduction = 126
+aside = first + 10 = 70
+sum1 = first + second = 240
+total = sum1 + third = 366
+The final answer is 366",366,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:51:0:0,gsm8k:test:51,0,5.0,"time_to_1 = 3 = 3
+distance = 10 * 3 = 30
+speed = 6
+time_to_4 = distance / speed = 5
+The final answer is 5",5,yes,
+openai/gpt-5.6-luna,math:test:37:0:5,math:test:37,0,23.0,"two_part_numerator = 3
+two_part_denominator = 2
+three_part_numerator = 4
+three_part_denominator = 3
+common_denominator = two_part_denominator * three_part_denominator = 6
+a = two_part_numerator * three_part_denominator = 9
+b = three_part_numerator * two_part_denominator = 8
+aside = 7 * 7 = 49
+sum_ab = a + b = 17
+answer = sum_ab + common_denominator = 23
+The final answer is 23",23,yes,
+meta-llama/llama-3.1-8b-instruct,gsm8k:test:3:0:0,gsm8k:test:3,0,540.0,"sprints_per_week = 3 * 3 = 9
+meters_per_sprint = 60
+total_meters_per_week = sprints_per_week * meters_per_sprint = 540
+aside = 20 * 30 = 600
+The final answer is 540",540,yes,aside follows total_meters_per_week; human uses 540 not aside=600
+qwen/qwen-2.5-72b-instruct,gsm8k:test:32:0:0,gsm8k:test:32,0,35.0,"hours_per_day = 10 * 0.5 = 5
+days_per_week = 7
+aside = 5 + 2 = 7
+hours_per_week = hours_per_day * days_per_week = 35
+The final answer is 35",35,yes,
+anthropic/claude-sonnet-5,gsm8k:test:38:0:1,gsm8k:test:38,0,10.0,"day1 = 3
+otherday = day1 / 2 = 1.5
+twodays = otherday * 2 = 3
+totalhours = day1 + twodays = 6
+aside = 60 - totalhours = 54
+speed = 60 / totalhours = 10
+The final answer is 10",10,yes,
+anthropic/claude-sonnet-5,math:test:74:0:2,math:test:74,0,10.0,"a = 2
+b = -20
+negb = 0 - b = 20
+aside = b * a = -40
+sum = negb / a = 10
+The final answer is 10",10,yes,
+qwen/qwen-2.5-7b-instruct,gsm8k:test:23:0:0,gsm8k:test:23,0,8.0,"burn_time_hours = 5 - 1 = 4
+melts_per_hour = 2
+total_melt = burn_time_hours * melts_per_hour = 8
+The final answer is 8",8,yes,
+anthropic/claude-sonnet-5,math:test:59:0:0,math:test:59,0,20.0,"term1 = 3 * 6 = 18
+term2 = 1 * 2 = 2
+aside = 5 * 4 = 20
+answer = term1 + term2 = 20
+The final answer is 20",20,yes,
+meta-llama/llama-3.1-8b-instruct,math:test:102:0:1,math:test:102,0,6.0,"one_third = 1 / 3 = 0.33333333333333333333333333333333
+percentage = 0.5 * one_third = 0.16666666666666666666666666666667
+aside = 6 * 7 = 42
+answer = percentage * 36 = 6
+The final answer is 6",6,yes,
+openai/gpt-5.6-luna,gsm8k:test:19:0:7,gsm8k:test:19,0,6.0,"trail = 12
+first = 4
+next = 2
+covered = first + next = 6
+distance = trail - covered = 6
+elapsed = 1 + 1 = 2
+target = 4
+desired_time = trail / target = 3
+aside = elapsed * elapsed = 4
+remaining_time = desired_time - elapsed = 1
+speed = distance / remaining_time = 6
+The final answer is 6",6,yes,
+meta-llama/llama-3.2-1b-instruct,math:test:80:0:0,math:test:80,0,550.0,"aside = 100 * 3 = 300
+bought = 100 + 150 = 250
+total = bought + aside = 550
+The final answer is 550",550,yes,
+openai/gpt-5.6-luna,math:test:52:0:1,math:test:52,0,12.0,"first = 1000
+difference = 987 - first = -13
+index = 76
+decrease = difference * index = -988
+term = first + decrease = 12
+next = term + difference = -1
+aside = 4 * 5 = 20
+answer = first + decrease = 12
+The final answer is 12",12,yes,
+openai/gpt-5.6-luna,gsm8k:test:35:0:3,gsm8k:test:35,0,9.0,"first = 4
+rate = 25 / 100 = 0.25
+increase = first * rate = 1
+second = first + increase = 5
+aside = 7 * 3 = 21
+total = first + second = 9
+The final answer is 9",9,yes,
+anthropic/claude-sonnet-5,math:test:62:0:4,math:test:62,0,78.0,"a = 3
+b = 13
+c = 2
+aside = a + c = 5
+ab = a * b = 39
+abc = ab * c = 78
+The final answer is 78",78,yes,
+qwen/qwen-2.5-7b-instruct,math:test:76:0:0,math:test:76,0,59.99999999999595,"cube_root_12 = 12 ** (1/3) = 2.2894284851066637
+cube_root_20 = 20 ** (1/3) = 2.7144176165945383
+cube_root_15 = 15 ** (1/3) = 2.4662120743306385
+cube_root_60 = 60 ** (1/3) = 3.9148676411688634
+aside = 2.7144176165945383 * 3.9148676411688634 = 10.646773645565986
+total = 2.2894284851066637 * 2.4662120743306385 = 5.623413251903491
+final_result = total * aside = 60
+The final answer is 60",60,yes,parser_den_clean float noise ~59.99999999999595; stated final_result=60
+qwen/qwen-2.5-72b-instruct,math:test:5:0:1,math:test:5,0,402.0,"first_term = 6
+common_difference = 10 - 6 = 4
+term_position = 100
+aside = 4 * 2 = 8
+n_minus_one = term_position - 1 = 99
+product = n_minus_one * common_difference = 396
+hundredth_term = first_term + product = 402
+The final answer is 402",402,yes,
+openai/gpt-5.6-luna,math:test:50:0:1,math:test:50,0,4.0,"f_eight = 6 + 2 = 8
+g_eight = 10 - 6 = 4
+aside = 3 * 3 = 9
+largest = f_eight - g_eight = 4
+The final answer is 4",4,yes,
+openai/gpt-5.6-luna,math:test:46:0:3,math:test:46,0,2.0,"b = 1
+a = 13 * b = 13
+elevenb = 11 * b = 11
+numerator = a + elevenb = 24
+denominator = a - b = 12
+aside = 7 * 3 = 21
+answer = numerator / denominator = 2
+The final answer is 2",2,yes,
+openai/gpt-5.6-luna,math:test:100:0:1,math:test:100,0,1.0,"given_exponent = 6
+scaled_exponent = given_exponent * 1 = 6
+aside = 8 / 2 = 4
+k = scaled_exponent / given_exponent = 1
+The final answer is 1",1,yes,
+openai/gpt-5.6-luna,math:test:38:0:5,math:test:38,0,49.0,"x_center = 14 / 2 = 7
+y_center = 48 / 2 = 24
+x_radius_squared = x_center * x_center = 49
+y_radius_squared = y_center * y_center = 576
+radius_squared = x_radius_squared + y_radius_squared = 625
+radius = 25 * 1 = 25
+aside = 3 + 4 = 7
+maximum_y = y_center + radius = 49
+The final answer is 49",49,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:2:0:3,gsm8k:test:2,0,-10000.0,"initial_cost = 80000
+repairs = 50000
+total_investment = initial_cost + repairs = 130000
+value_increase_factor = 150 / 100 = 1.5
+aside = 2 * 3 = 6
+new_value = initial_cost * value_increase_factor = 120000
+profit = new_value - total_investment = -10000
+The final answer is -10000",-10000,yes,
+meta-llama/llama-3.1-70b-instruct,math:test:93:0:6,math:test:93,0,5.0,"
+
+a_plus_2b = 14
+a_plus_2c = 16
+a = 0
+two_b = a_plus_2b - a = 14
+b = two_b / 2 = 7
+two_c = a_plus_2c - a = 16
+c = two_c / 2 = 8
+aside = b - c = -1
+sum = a + b + c = 15
+average = sum / 3 = 5
+The final answer is 5",5,yes,
+openai/gpt-5.6-luna,gsm8k:test:59:0:0,gsm8k:test:59,0,187.0,"clusters = 6 * 20 = 120
+aside = 2 + 3 = 5
+total = clusters + 67 = 187
+The final answer is 187",187,yes,
+openai/gpt-5.6-luna,gsm8k:test:52:0:2,gsm8k:test:52,0,15.0,"comic_weight = 30 * 0.25 = 7.5
+aside = 2 + 3 = 5
+remaining = 15 - comic_weight = 7.5
+toys = remaining / 0.5 = 15
+The final answer is 15",15,yes,
+qwen/qwen-2.5-72b-instruct,gsm8k:test:63:0:2,gsm8k:test:63,0,1596.0,"monthly_fee = 140
+half_year = 6
+initial_half_total = monthly_fee * half_year = 840
+discount = monthly_fee * 0.10 = 14
+discounted_monthly_fee = monthly_fee - discount = 126
+second_half_total = discounted_monthly_fee * half_year = 756
+aside = 840 + 840 = 1680
+total_paid = initial_half_total + second_half_total = 1596
+The final answer is 1596",1596,yes,

@@ -1,0 +1,73 @@
+# Captured artifact: python denote_tdsc_verify.py --certify
+# Regenerated 2026-08-11 after fixing a grammar-variant-file clobbering bug
+# in denote_tdsc_certify.py's data loading (both files share the `model`
+# field for DeepSeek-R1/Llama-70B/Qwen-72B, so the per-model dict was
+# silently overwritten by whichever file sorted last -- same class of bug
+# found and fixed in denote_tdsc_verify.py's load_panel/mode_grid this pass).
+# Deterministic: seeded via random.Random(20260809); confirmed identical
+# across repeated runs both before and after the fix.
+#
+# FINDING, unchanged by the bugfix: this run's E1 budget/certified-rate table
+# (10/20/30/50 -> 3.0%/19.0%/33.0%/50.2%) still does NOT match EITHER the
+# manuscript's stated "4.5, 23.5, 41.2 and 50.3 percent" (Table at
+# denote_tdsc.tex ~1227) OR the manuscript's own previously-noted independent
+# reimplementation figures ("4.1, 23.0, 35.6 and 47.1 percent"). Fixing the
+# clobbering bug moved the population sizes closer to correct (DeepSeek-R1
+# 182->16, Llama-70B 172->227, Qwen-72B 233->303) but did not close the gap
+# to the printed table -- the remaining discrepancy is most likely the B1 gap
+# (unshipped re-run records changing Table I's population) compounding with
+# whatever replicate/trial count produced the original 2,000-replicate table,
+# which this single deterministic pass does not reproduce. Do NOT treat this
+# artifact as resolving the \rp{} flag -- it demonstrates the opposite: even
+# the corrected original script does not reproduce the printed rates from
+# the currently released records. Leave the flag in place; this file exists
+# so the discrepancy has a citable artifact instead of vanishing into stdout.
+========================================================================
+E1  CERTIFY evaluated as a procedure (audit subsamples, one item per problem)
+========================================================================
+   budget  certified  of pairs  mis-certified
+       10       3.0%        15              0
+       20      19.0%        15              0
+       30      33.0%        15              0
+       50      50.2%        15              0
+      100       0.0%         1              0
+
+========================================================================
+E2  FAMILY-WISE COVERAGE of a k-system certified leaderboard
+========================================================================
+  k= 2: union bound on joint coverage at per-system alpha=0.05 -> 0.90;  at alpha/k -> 0.95
+  k= 6: union bound on joint coverage at per-system alpha=0.05 -> 0.70;  at alpha/k -> 0.95
+  k=12: union bound on joint coverage at per-system alpha=0.05 -> 0.40;  at alpha/k -> 0.95
+
+        g  n at a=.05  n at a/k, k=6  n at a/k, k=12   ceil((3+ln k)/g), k=6
+    0.186          15             24              27                      26
+    0.102          28             45              51                      47
+    0.082          36             56              65                      59
+    0.043          69            109             125                     112
+
+  envelope check, n = ceil(ln(k/alpha)/g) suffices at alpha=0.05: True
+
+========================================================================
+E3  EVASION: substituting derailment for stability, on real outcomes
+========================================================================
+  Qwen-72B: phi=0.155 delta=0.030 sigma=0.185 psi=0.815
+  Llama-70B reports sigma=0.326 (rank 1 of 6)
+  To reach that sigma with phi UNCHANGED, Qwen-72B needs delta=0.171,
+  i.e. converting 17.3% of its stable (restore) responses into derailments.
+  Its true propagation rate stays at 0.155, BELOW Llama-70B's 0.242.
+
+    delta   sigma    phi  sigma rank  phi rank  audit n to expose
+    0.024   0.179  0.155           3         3                124
+    0.100   0.255  0.155           2         3                 29
+    0.150   0.305  0.155           2         3                 19
+    0.200   0.355  0.155           1         3                 14
+    0.224   0.379  0.155           1         3                 12
+    0.300   0.455  0.155           1         3                  9
+
+  A corruption test reports the sigma rank. No corruption protocol
+  separates the two columns. An audit of the sizes above does.
+
+
+================================================================
+  certify      PASS
+================================================================

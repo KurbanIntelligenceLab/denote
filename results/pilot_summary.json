@@ -1,0 +1,29 @@
+{
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "n_problems": 50,
+  "parse_rate_c1": 1.0,
+  "self_consistent_rate": 0.62,
+  "build_rate": 0.52,
+  "clean_agreement_c2": 0.9795918367346939,
+  "n_gated_no_c4": 48,
+  "n_gated_c4": 3,
+  "e0": {
+    "n": 30,
+    "faithful_follow_rate": 1.0,
+    "passed": true,
+    "h4_status": "CANDIDATE_REDESIGN signed for analysis: decorative traces are self-consistent but question-wrong. Under this redesign, follow_denotation is the H4 discrimination score; question_correct is expected near chance for models that answer decorative items from the question while following faithful items.",
+    "redesign_auc": {
+      "question_correct": 0.5,
+      "follow_denotation": 1.0,
+      "change_from_gold": 0.5
+    },
+    "redesign_n": 60
+  },
+  "n": 48,
+  "phi": 0.041666666666666664,
+  "psi": 0.9583333333333334,
+  "delta": 0.0,
+  "sigma": 0.041666666666666664,
+  "identity_residual": 0.0,
+  "go": true
+}

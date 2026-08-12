@@ -1,0 +1,26 @@
+[
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=sample_trace"
+  },
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=answer_direct"
+  },
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=continue_from"
+  },
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=continue_from"
+  },
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=sample_trace"
+  },
+  {
+    "model": "deepseek/deepseek-r1",
+    "error": "OpenRouter returned no choices for model=deepseek/deepseek-r1 purpose=sample_trace"
+  }
+]

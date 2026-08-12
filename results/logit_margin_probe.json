@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-08-07T16:01:36.054745+00:00",
+  "purpose": "OpenRouter intact-vs-corrupt answer-token logprob margin probe for AttriCoT/NLDD feasibility. Not a faithfulness measurement; do not fill H4 AttriCoT/NLDD/CC-SHAP from this alone.",
+  "question": "Compute 7 + 5.",
+  "answer_line": "The final answer is 12",
+  "overall_realistic_for_attricot_nldd": true,
+  "models_realistic": [
+    "meta-llama/llama-3.1-8b-instruct"
+  ],
+  "models_not_realistic": [
+    "meta-llama/llama-3.2-1b-instruct",
+    "meta-llama/llama-3.1-70b-instruct",
+    "qwen/qwen-2.5-7b-instruct",
+    "qwen/qwen-2.5-72b-instruct"
+  ],
+  "cc_shap_overall": "unsupported",
+  "rows": [
+    {
+      "model": "meta-llama/llama-3.2-1b-instruct",
+      "intact": {
+        "ok": false,
+        "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"errors\":[{\"message\":\"AiError: Bad input: Error: oneOf at \\'/\\' not met, 0 matches: \\'/seed\\' must be >= 1, Type mismatch of \\'/messages/0/content\\', \\'array\\' not in \\'string\\', Type mismatch of \\'/messages/1/content\\', \\'array\\' not in \\'string\\' (f079ef17-cdeb-4ac0-a740-8803ed44acb1)\",\"code\":5006}],\"success\":false,\"result\":{},\"messages\":[]}', 'provider_name': 'Cloudflare', 'is_byok': False}}, 'user_id': 'user_2rhQySO6euNUzXRiLaJVEoaOdgw'}",
+        "text": null,
+        "margins": []
+      },
+      "corrupt": {
+        "ok": false,
+        "error": "BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"errors\":[{\"message\":\"AiError: Bad input: Error: oneOf at \\'/\\' not met, 0 matches: \\'/seed\\' must be >= 1, Type mismatch of \\'/messages/0/content\\', \\'array\\' not in \\'string\\', Type mismatch of \\'/messages/1/content\\', \\'array\\' not in \\'string\\' (d3db0726-79a6-424e-b68b-d5c57a972177)\",\"code\":5006}],\"success\":false,\"result\":{},\"messages\":[]}', 'provider_name': 'Cloudflare', 'is_byok': False}}, 'user_id': 'user_2rhQySO6euNUzXRiLaJVEoaOdgw'}",
+        "text": null,
+        "margins": []
+      },
+      "intact_n_tokens": 0,
+      "corrupt_n_tokens": 0,
+      "can_form_intact_corrupt_margin_pair": false,
+      "realistic_for_attricot_nldd": false,
+      "cc_shap": {
+        "attempted": true,
+        "supported": false,
+        "error": "no attribution/shap fields on chat.completions response",
+        "note": "CC-SHAP needs input attributions / explanation-prediction consistency. OpenRouter chat.completions has no standard attribution field; this probe only checks that."
+      },
+      "note": "API returned no token logprobs under either prefix; CC-SHAP unsupported on this hop"
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "intact": {
+        "ok": true,
+        "error": null,
+        "text": "The final answer is 12.",
+        "n_tokens": 7,
+        "margins": [
+          0.625,
+          1.125,
+          10.374999631108949,
+          7.499999934225343,
+          5.3750000349245965,
+          8.000000264612027,
+          5.499999893363565
+        ],
+        "mean_margin": 5.499999965462068
+      },
+      "corrupt": {
+        "ok": true,
+        "error": null,
+        "text": "The final answer is 19.",
+        "n_tokens": 7,
+        "margins": [
+          0.25,
+          0.375,
+          9.12500044083572,
+          6.999999960884452,
+          4.749999972060323,
+          0.5000000298023224,
+          3.6250001341104507
+        ],
+        "mean_margin": 3.6607143625276097
+      },
+      "intact_n_tokens": 7,
+      "corrupt_n_tokens": 7,
+      "can_form_intact_corrupt_margin_pair": true,
+      "realistic_for_attricot_nldd": true,
+      "cc_shap": {
+        "attempted": true,
+        "supported": false,
+        "error": "no attribution/shap fields on chat.completions response",
+        "note": "CC-SHAP needs input attributions / explanation-prediction consistency. OpenRouter chat.completions has no standard attribution field; this probe only checks that."
+      },
+      "note": "API returned no token logprobs under either prefix; CC-SHAP unsupported on this hop"
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "intact": {
+        "ok": true,
+        "error": null,
+        "text": "The final answer is 12",
+        "n_tokens": 5,
+        "margins": [
+          15.68750035762804,
+          12.625000357725185,
+          8.875000042840838,
+          10.12499976545223,
+          0.5
+        ],
+        "mean_margin": 9.562500104729258
+      },
+      "corrupt": {
+        "ok": false,
+        "error": "empty logprobs content",
+        "text": "The final answer is 12.",
+        "n_tokens": 0,
+        "margins": [],
+        "mean_margin": null
+      },
+      "intact_n_tokens": 5,
+      "corrupt_n_tokens": 0,
+      "can_form_intact_corrupt_margin_pair": false,
+      "realistic_for_attricot_nldd": false,
+      "cc_shap": {
+        "attempted": true,
+        "supported": false,
+        "error": "no attribution/shap fields on chat.completions response",
+        "note": "CC-SHAP needs input attributions / explanation-prediction consistency. OpenRouter chat.completions has no standard attribution field; this probe only checks that."
+      },
+      "note": "API returned no token logprobs under either prefix; CC-SHAP unsupported on this hop"
+    },
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "intact": {
+        "ok": false,
+        "error": "empty logprobs content",
+        "text": "The final answer is 12",
+        "n_tokens": 0,
+        "margins": [],
+        "mean_margin": null
+      },
+      "corrupt": {
+        "ok": false,
+        "error": "empty logprobs content",
+        "text": "The final answer is 19",
+        "n_tokens": 0,
+        "margins": [],
+        "mean_margin": null
+      },
+      "intact_n_tokens": 0,
+      "corrupt_n_tokens": 0,
+      "can_form_intact_corrupt_margin_pair": false,
+      "realistic_for_attricot_nldd": false,
+      "cc_shap": {
+        "attempted": true,
+        "supported": false,
+        "error": "no attribution/shap fields on chat.completions response",
+        "note": "CC-SHAP needs input attributions / explanation-prediction consistency. OpenRouter chat.completions has no standard attribution field; this probe only checks that."
+      },
+      "note": "API returned no token logprobs under either prefix; CC-SHAP unsupported on this hop"
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "intact": {
+        "ok": false,
+        "error": "empty logprobs content",
+        "text": "The final answer is 12",
+        "n_tokens": 0,
+        "margins": [],
+        "mean_margin": null
+      },
+      "corrupt": {
+        "ok": false,
+        "error": "empty logprobs content",
+        "text": "The final answer is 12",
+        "n_tokens": 0,
+        "margins": [],
+        "mean_margin": null
+      },
+      "intact_n_tokens": 0,
+      "corrupt_n_tokens": 0,
+      "can_form_intact_corrupt_margin_pair": false,
+      "realistic_for_attricot_nldd": false,
+      "cc_shap": {
+        "attempted": true,
+        "supported": false,
+        "error": "no attribution/shap fields on chat.completions response",
+        "note": "CC-SHAP needs input attributions / explanation-prediction consistency. OpenRouter chat.completions has no standard attribution field; this probe only checks that."
+      },
+      "note": "API returned no token logprobs under either prefix; CC-SHAP unsupported on this hop"
+    }
+  ]
+}

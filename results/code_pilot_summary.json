@@ -1,0 +1,19 @@
+{
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "domain": "code",
+  "access_date": "2026-08-02",
+  "n_raw": 10,
+  "n_gated": 7,
+  "n_problems": 30,
+  "parse_rate_c1": 1.0,
+  "build_rate": 0.3333333333333333,
+  "gate_rate": 0.7,
+  "identity_residual": 1.1102230246251565e-16,
+  "n": 7,
+  "phi": 0.5714285714285714,
+  "psi": 0.2857142857142857,
+  "delta": 0.14285714285714285,
+  "sigma": 0.7142857142857143,
+  "go": true,
+  "go_note": "Code pilot GO: parse>=0.2, build>=0.1, identity residual 0, at least one gated item. Thresholds are looser than math because MBPP reference construction itself is ~0.25."
+}

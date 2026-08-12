@@ -1,0 +1,1700 @@
+{
+  "generated_at": "2026-08-02T07:53:52.732716+00:00",
+  "dataset": "mbpp_sanitized_test",
+  "n_problems": 257,
+  "n_test_call_parsed": 241,
+  "n_built_c1_c3": 63,
+  "test_call_parse_rate": 0.9377431906614786,
+  "build_rate": 0.245136186770428,
+  "note": "Construction-only survival on the dataset's own reference solutions. No model was called. Not a phi/delta/sigma measurement of any system.",
+  "rows": [
+    {
+      "problem_id": "mbpp:test:11",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:12",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:14",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:16",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:17",
+      "status": "built",
+      "func_name": "square_perimeter",
+      "resume_lineno": 2,
+      "edited_var": "a",
+      "den_clean": 40,
+      "den_treat": 52,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:18",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:19",
+      "status": "built",
+      "func_name": "test_duplicate",
+      "resume_lineno": 2,
+      "edited_var": "arraynums",
+      "den_clean": false,
+      "den_treat": true,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:20",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:56",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:57",
+      "status": "built",
+      "func_name": "find_Max_Num",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": 321,
+      "den_treat": 621,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:58",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:59",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:61",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:62",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:63",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:64",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:65",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:66",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:67",
+      "status": "built",
+      "func_name": "bell_number",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 2,
+      "den_treat": 52,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:68",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:69",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:70",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:71",
+      "status": "built",
+      "func_name": "comb_sort",
+      "resume_lineno": 2,
+      "edited_var": "nums",
+      "den_clean": [
+        5,
+        15,
+        25,
+        37,
+        79
+      ],
+      "den_treat": [
+        8,
+        15,
+        25,
+        37,
+        79
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:72",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:74",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:75",
+      "status": "built",
+      "func_name": "find_tuples",
+      "resume_lineno": 2,
+      "edited_var": "K",
+      "den_clean": [
+        [
+          6,
+          24,
+          12
+        ]
+      ],
+      "den_treat": [],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:77",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:79",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:80",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:82",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:83",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:84",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:85",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:86",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:87",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:88",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:89",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:90",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:91",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:92",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:93",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:94",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:95",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:96",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:97",
+      "status": "built",
+      "func_name": "frequency_lists",
+      "resume_lineno": 3,
+      "edited_var": "list1",
+      "den_clean": {
+        "1": 1,
+        "2": 3,
+        "3": 1,
+        "4": 1,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "den_treat": {
+        "4": 2,
+        "2": 3,
+        "3": 1,
+        "5": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      },
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:98",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:99",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:100",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:101",
+      "status": "built",
+      "func_name": "kth_element",
+      "resume_lineno": 2,
+      "edited_var": "k",
+      "den_clean": 3,
+      "den_treat": 19,
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:102",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:103",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:104",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:105",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:106",
+      "status": "built",
+      "func_name": "add_lists",
+      "resume_lineno": 2,
+      "edited_var": "test_list",
+      "den_clean": [
+        9,
+        10,
+        5,
+        6,
+        7
+      ],
+      "den_treat": [
+        9,
+        10,
+        8,
+        6,
+        7
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:108",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:109",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:111",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:113",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:115",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:116",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:117",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:118",
+      "status": "built",
+      "func_name": "string_to_list",
+      "resume_lineno": 2,
+      "edited_var": "string",
+      "den_clean": [
+        "python",
+        "programming"
+      ],
+      "den_treat": [
+        "python",
+        "programming_x"
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:119",
+      "status": "built",
+      "func_name": "search",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": 3,
+      "den_treat": 6,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:120",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:123",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:124",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:125",
+      "status": "built",
+      "func_name": "find_length",
+      "resume_lineno": 4,
+      "edited_var": "current_sum",
+      "den_clean": 6,
+      "den_treat": 7,
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:126",
+      "status": "built",
+      "func_name": "sum",
+      "resume_lineno": 2,
+      "edited_var": "b",
+      "den_clean": 6,
+      "den_treat": 3,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:127",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:128",
+      "status": "built",
+      "func_name": "long_words",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": [
+        "python",
+        "programming",
+        "language"
+      ],
+      "den_treat": [
+        "programming",
+        "language"
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:129",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:130",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:131",
+      "status": "built",
+      "func_name": "reverse_vowels",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": "Python",
+      "den_treat": "Python_x",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:132",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:133",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:135",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:137",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:138",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:139",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:140",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:141",
+      "status": "built",
+      "func_name": "pancake_sort",
+      "resume_lineno": 2,
+      "edited_var": "nums",
+      "den_clean": [
+        15,
+        25,
+        38,
+        69,
+        79
+      ],
+      "den_treat": [
+        18,
+        25,
+        38,
+        69,
+        79
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:142",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:143",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:145",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:160",
+      "status": "built",
+      "func_name": "find_solution",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": [
+        2,
+        1
+      ],
+      "den_treat": [
+        2,
+        2
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:161",
+      "status": "built",
+      "func_name": "remove_elements",
+      "resume_lineno": 2,
+      "edited_var": "list1",
+      "den_clean": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "den_treat": [
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:162",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:163",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:164",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:165",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:166",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:167",
+      "status": "built",
+      "func_name": "next_power_of_2",
+      "resume_lineno": 5,
+      "edited_var": "n",
+      "den_clean": 1,
+      "den_treat": 4,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:168",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:170",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:171",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:172",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:222",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:223",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:224",
+      "status": "built",
+      "func_name": "count_Set_Bits",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 1,
+      "den_treat": 2,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:226",
+      "status": "built",
+      "func_name": "odd_values_string",
+      "resume_lineno": 2,
+      "edited_var": "str",
+      "den_clean": "ace",
+      "den_treat": "ace_",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:227",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:228",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:229",
+      "status": "built",
+      "func_name": "re_arrange_array",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": [
+        -1,
+        -3,
+        -7,
+        4,
+        5,
+        6,
+        2,
+        8,
+        9
+      ],
+      "den_treat": [
+        -3,
+        -7,
+        2,
+        4,
+        5,
+        6,
+        2,
+        8,
+        9
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:230",
+      "status": "built",
+      "func_name": "replace_blank",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": "hello@people",
+      "den_treat": "hello@people_x",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:232",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:233",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:234",
+      "status": "built",
+      "func_name": "volume_cube",
+      "resume_lineno": 2,
+      "edited_var": "l",
+      "den_clean": 27,
+      "den_treat": 216,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:235",
+      "status": "built",
+      "func_name": "even_bit_set_number",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 10,
+      "den_treat": 15,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:237",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:238",
+      "status": "built",
+      "func_name": "number_of_substrings",
+      "resume_lineno": 2,
+      "edited_var": "str",
+      "den_clean": 6,
+      "den_treat": 15,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:239",
+      "status": "built",
+      "func_name": "get_total_number_of_sequences",
+      "resume_lineno": 2,
+      "edited_var": "m",
+      "den_clean": 4,
+      "den_treat": 14,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:240",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:242",
+      "status": "built",
+      "func_name": "count_charac",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": 18,
+      "den_treat": 20,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:244",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:245",
+      "status": "built",
+      "func_name": "max_sum",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": 194,
+      "den_treat": 197,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:246",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:247",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:248",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:249",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:250",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:251",
+      "status": "built",
+      "func_name": "insert_element",
+      "resume_lineno": 2,
+      "edited_var": "element",
+      "den_clean": [
+        "c",
+        "Red",
+        "c",
+        "Green",
+        "c",
+        "Black"
+      ],
+      "den_treat": [
+        "c_x",
+        "Red",
+        "c_x",
+        "Green",
+        "c_x",
+        "Black"
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:252",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:253",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:255",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:256",
+      "status": "built",
+      "func_name": "count_Primes_nums",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 2,
+      "den_treat": 4,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:257",
+      "status": "built",
+      "func_name": "swap_numbers",
+      "resume_lineno": 2,
+      "edited_var": "a",
+      "den_clean": [
+        20,
+        10
+      ],
+      "den_treat": [
+        20,
+        13
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:259",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:260",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:261",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:262",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:264",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:265",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:266",
+      "status": "built",
+      "func_name": "lateralsurface_cube",
+      "resume_lineno": 2,
+      "edited_var": "l",
+      "den_clean": 100,
+      "den_treat": 256,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:267",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:268",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:269",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:270",
+      "status": "built",
+      "func_name": "sum_even_and_even_index",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": 30,
+      "den_treat": 38,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:271",
+      "status": "built",
+      "func_name": "even_Power_Sum",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 1056,
+      "den_treat": 141600,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:272",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:273",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:274",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:276",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:277",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:278",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:279",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:280",
+      "status": "built",
+      "func_name": "sequential_search",
+      "resume_lineno": 2,
+      "edited_var": "item",
+      "den_clean": [
+        true,
+        3
+      ],
+      "den_treat": [
+        false,
+        10
+      ],
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:281",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:282",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:283",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:284",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:285",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:286",
+      "status": "built",
+      "func_name": "max_sub_array_sum_repeated",
+      "resume_lineno": 2,
+      "edited_var": "a",
+      "den_clean": 30,
+      "den_treat": 37,
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:287",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:290",
+      "status": "built",
+      "func_name": "max_length",
+      "resume_lineno": 3,
+      "edited_var": "max_length",
+      "den_clean": [
+        3,
+        [
+          13,
+          15,
+          17
+        ]
+      ],
+      "den_treat": [
+        6,
+        [
+          13,
+          15,
+          17
+        ]
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:291",
+      "status": "built",
+      "func_name": "count_no_of_ways",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 16,
+      "den_treat": 864,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:292",
+      "status": "built",
+      "func_name": "find",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 3,
+      "den_treat": 4,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:293",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:294",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:295",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:296",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:297",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:299",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:300",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:301",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:304",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:305",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:306",
+      "status": "built",
+      "func_name": "max_sum_increasing_subseq",
+      "resume_lineno": 2,
+      "edited_var": "a",
+      "den_clean": 11,
+      "den_treat": 10,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:307",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:308",
+      "status": "built",
+      "func_name": "large_product",
+      "resume_lineno": 2,
+      "edited_var": "N",
+      "den_clean": [
+        60,
+        54,
+        50
+      ],
+      "den_treat": [
+        60,
+        54,
+        50,
+        48,
+        45,
+        40
+      ],
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:309",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:310",
+      "status": "built",
+      "func_name": "string_to_tuple",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": [
+        "p",
+        "y",
+        "t",
+        "h",
+        "o",
+        "n",
+        "3",
+        ".",
+        "0"
+      ],
+      "den_treat": [
+        "p",
+        "y",
+        "t",
+        "h",
+        "o",
+        "n",
+        "3",
+        ".",
+        "0",
+        "_",
+        "x"
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:311",
+      "status": "built",
+      "func_name": "set_left_most_unset_bit",
+      "resume_lineno": 4,
+      "edited_var": "n",
+      "den_clean": 14,
+      "den_treat": 15,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:312",
+      "status": "no_parseable_test_call"
+    },
+    {
+      "problem_id": "mbpp:test:388",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:389",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:390",
+      "status": "built",
+      "func_name": "add_string",
+      "resume_lineno": 2,
+      "edited_var": "list_",
+      "den_clean": [
+        "temp1",
+        "temp2",
+        "temp3",
+        "temp4"
+      ],
+      "den_treat": [
+        "temp4",
+        "temp2",
+        "temp3",
+        "temp4"
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:391",
+      "status": "built",
+      "func_name": "convert_list_dictionary",
+      "resume_lineno": 2,
+      "edited_var": "l3",
+      "den_clean": [
+        {
+          "S001": {
+            "Adina Park": 85
+          }
+        },
+        {
+          "S002": {
+            "Leyton Marsh": 98
+          }
+        },
+        {
+          "S003": {
+            "Duncan Boyle": 89
+          }
+        },
+        {
+          "S004": {
+            "Saim Richards": 92
+          }
+        }
+      ],
+      "den_treat": [
+        {
+          "S001": {
+            "Adina Park": 88
+          }
+        },
+        {
+          "S002": {
+            "Leyton Marsh": 98
+          }
+        },
+        {
+          "S003": {
+            "Duncan Boyle": 89
+          }
+        },
+        {
+          "S004": {
+            "Saim Richards": 92
+          }
+        }
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:392",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:393",
+      "status": "built",
+      "func_name": "max_length_list",
+      "resume_lineno": 3,
+      "edited_var": "max_length",
+      "den_clean": [
+        3,
+        [
+          13,
+          15,
+          17
+        ]
+      ],
+      "den_treat": [
+        6,
+        [
+          13,
+          15,
+          17
+        ]
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:394",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:395",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:396",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:397",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:398",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:399",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:400",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:401",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:404",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:405",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:406",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:407",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:408",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:409",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:410",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:411",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:412",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:413",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:414",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:415",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:417",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:418",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:419",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:420",
+      "status": "built",
+      "func_name": "cube_Sum",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 72,
+      "den_treat": 1800,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:421",
+      "status": "built",
+      "func_name": "concatenate_tuple",
+      "resume_lineno": 3,
+      "edited_var": "delim",
+      "den_clean": "ID-is-4-UTS",
+      "den_treat": "ID-_xis-_x4-_xUTS",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:422",
+      "status": "built",
+      "func_name": "find_Average_Of_Cube",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 4.5,
+      "den_treat": 45.0,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:424",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:425",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:426",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:427",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:428",
+      "status": "built",
+      "func_name": "shell_sort",
+      "resume_lineno": 2,
+      "edited_var": "my_list",
+      "den_clean": [
+        2,
+        3,
+        4,
+        5,
+        12,
+        12,
+        23,
+        56,
+        81,
+        95
+      ],
+      "den_treat": [
+        3,
+        4,
+        5,
+        5,
+        12,
+        12,
+        23,
+        56,
+        81,
+        95
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:429",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:430",
+      "status": "built",
+      "func_name": "parabola_directrix",
+      "resume_lineno": 2,
+      "edited_var": "a",
+      "den_clean": -198,
+      "den_treat": -318,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:431",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:432",
+      "status": "built",
+      "func_name": "median_trapezium",
+      "resume_lineno": 2,
+      "edited_var": "base1",
+      "den_clean": 20.0,
+      "den_treat": 21.5,
+      "has_placebo": true
+    },
+    {
+      "problem_id": "mbpp:test:433",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:434",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:435",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:436",
+      "status": "built",
+      "func_name": "neg_nos",
+      "resume_lineno": 2,
+      "edited_var": "list1",
+      "den_clean": [
+        -1,
+        -6
+      ],
+      "den_treat": [
+        -6
+      ],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:437",
+      "status": "built",
+      "func_name": "remove_odd",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": "yhn",
+      "den_treat": "yhnx",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:438",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:439",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:440",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:441",
+      "status": "built",
+      "func_name": "surfacearea_cube",
+      "resume_lineno": 2,
+      "edited_var": "l",
+      "den_clean": 150,
+      "den_treat": 384,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:442",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:443",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:444",
+      "status": "built",
+      "func_name": "trim_tuple",
+      "resume_lineno": 2,
+      "edited_var": "K",
+      "den_clean": "[(2,), (9,), (2,), (2,)]",
+      "den_treat": "[(), (), (), ()]",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:445",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:446",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:447",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:448",
+      "status": "built",
+      "func_name": "cal_sum",
+      "resume_lineno": 2,
+      "edited_var": "n",
+      "den_clean": 49,
+      "den_treat": 117,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:450",
+      "status": "built",
+      "func_name": "extract_string",
+      "resume_lineno": 2,
+      "edited_var": "l",
+      "den_clean": [
+        "practice",
+        "solution"
+      ],
+      "den_treat": [],
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:451",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:452",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:453",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:454",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:455",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:456",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:457",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:458",
+      "status": "built",
+      "func_name": "rectangle_area",
+      "resume_lineno": 2,
+      "edited_var": "l",
+      "den_clean": 200,
+      "den_treat": 260,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:459",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:460",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:461",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:462",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:463",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:464",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:465",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:468",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:470",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:471",
+      "status": "built",
+      "func_name": "find_remainder",
+      "resume_lineno": 2,
+      "edited_var": "arr",
+      "den_clean": 9,
+      "den_treat": 3,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:472",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:473",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:474",
+      "status": "built",
+      "func_name": "replace_char",
+      "resume_lineno": 2,
+      "edited_var": "str1",
+      "den_clean": "pollgon",
+      "den_treat": "pollgon_x",
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:475",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:476",
+      "status": "built",
+      "func_name": "big_sum",
+      "resume_lineno": 2,
+      "edited_var": "nums",
+      "den_clean": 4,
+      "den_treat": 6,
+      "has_placebo": false
+    },
+    {
+      "problem_id": "mbpp:test:477",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:478",
+      "status": "gate_rejected"
+    },
+    {
+      "problem_id": "mbpp:test:479",
+      "status": "gate_rejected"
+    }
+  ]
+}

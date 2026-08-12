@@ -1,0 +1,3148 @@
+{
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "domain": "code",
+  "access_date": "2026-08-03",
+  "started_at": "2026-08-03T02:14:13.971004+00:00",
+  "records": [
+    {
+      "record_id": "mbpp:test:11:0:2",
+      "problem_id": "mbpp:test:11",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to remove first and last occurrence of a given character from the string.",
+      "gold": "heo",
+      "trace": "def remove_char(s, char):\n    start = s.find(char)\n    end = s.rfind(char)\n    if start == -1 or end == -1:\n        return s\n    return s[:start] + s[start+1:end] + s[end+1:]",
+      "source": "def remove_char(s, char):\n    start = s.find(char)\n    end = s.rfind(char)\n    if start == -1 or end == -1:\n        return s\n    return s[:start] + s[start+1:end] + s[end+1:]\n",
+      "status": "built",
+      "den_clean": "heo",
+      "den_treat": "heo_x",
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": "heo",
+        "treat": "heo_x",
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"heo\"",
+        "treat": "FINAL RESULT: \"heo_x\"",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"hello\", \"char\": \"l\"}\nTAIL:\ndef __tail__(s=s, char=char):\n    start = s.find(char)\n    end = s.rfind(char)\n    if start == -1 or end == -1:\n        return s\n    return s[:start] + s[start+1:end] + s[end+1:]\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"hello_x\", \"char\": \"l\"}\nTAIL:\ndef __tail__(s=s, char=char):\n    start = s.find(char)\n    end = s.rfind(char)\n    if start == -1 or end == -1:\n        return s\n    return s[:start] + s[start+1:end] + s[end+1:]\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": "he_o_x"
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "s",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:12:0:rejected",
+      "problem_id": "mbpp:test:12",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sort_matrix_by_row_sum(matrix):\n    sorted_matrix = sorted(matrix, key=sum)\n    return sorted_matrix",
+      "source": "def sort_matrix_by_row_sum(matrix):\n    sorted_matrix = sorted(matrix, key=sum)\n    return sorted_matrix\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:14:0:2",
+      "problem_id": "mbpp:test:14",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find the volume of a triangular prism.",
+      "gold": 240,
+      "trace": "def volume_triangular_prism(base, height, length):\n    triangle_area = 0.5 * base * height\n    return triangle_area * length",
+      "source": "def volume_triangular_prism(base, height, length):\n    triangle_area = 0.5 * base * height\n    return triangle_area * length\n",
+      "status": "built",
+      "den_clean": 240.0,
+      "den_treat": 312.0,
+      "den_placebo": null,
+      "den_copyable": 20.0,
+      "answers": {
+        "control": 240.0,
+        "treat": 312.0,
+        "placebo": null,
+        "copyable": 2.0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 240.0",
+        "treat": "FINAL RESULT: 312.0",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 2.0"
+      },
+      "rendered": {
+        "control": "STATE: {\"base\": 10, \"height\": 8, \"length\": 6}\nTAIL:\ndef __tail__(base=base, height=height, length=length):\n    triangle_area = 0.5 * base * height\n    return triangle_area * length\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"base\": 13, \"height\": 8, \"length\": 6}\nTAIL:\ndef __tail__(base=base, height=height, length=length):\n    triangle_area = 0.5 * base * height\n    return triangle_area * length\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"base\": 10, \"height\": 8, \"length\": 0.5}\nTAIL:\ndef __tail__(base=base, height=height, length=length):\n    triangle_area = 0.5 * base * height\n    return triangle_area * length\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "FINAL RESULT": 312.0
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "base",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:16:0:rejected",
+      "problem_id": "mbpp:test:16",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_lowercase_sequence(s):\n    import re\n    pattern = r'^[a-z]+_[a-z]+$'\n    return bool(re.match(pattern, s))",
+      "source": "def is_lowercase_sequence(s):\n    import re\n    pattern = r'^[a-z]+_[a-z]+$'\n    return bool(re.match(pattern, s))\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:17:0:2",
+      "problem_id": "mbpp:test:17",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that returns the perimeter of a square given its side length as input.",
+      "gold": 40,
+      "trace": "def square_perimeter(side_length):\n    perimeter = 4 * side_length\n    return perimeter",
+      "source": "def square_perimeter(side_length):\n    perimeter = 4 * side_length\n    return perimeter\n",
+      "status": "built",
+      "den_clean": 40,
+      "den_treat": 52,
+      "den_placebo": null,
+      "den_copyable": 16,
+      "answers": {
+        "control": 40,
+        "treat": 52,
+        "placebo": null,
+        "copyable": 16
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 40",
+        "treat": "FINAL RESULT: 52",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 16"
+      },
+      "rendered": {
+        "control": "STATE: {\"side_length\": 10}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 4 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"side_length\": 13}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 4 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"side_length\": 4}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 4 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "side_length",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:18:0:2",
+      "problem_id": "mbpp:test:18",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to remove characters from the first string which are present in the second string.",
+      "gold": "bacuve",
+      "trace": "def remove_chars(s1, s2):\n    result = ''\n    for char in s1:\n        if char not in s2:\n            result += char\n    return result",
+      "source": "def remove_chars(s1, s2):\n    result = ''\n    for char in s1:\n        if char not in s2:\n            result += char\n    return result\n",
+      "status": "built",
+      "den_clean": "bacuve",
+      "den_treat": "bacuve_x",
+      "den_placebo": "bacuve",
+      "den_copyable": null,
+      "answers": {
+        "control": "basscurve",
+        "treat": "basscurv_x",
+        "placebo": "bcasscurve",
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"basscurve\"",
+        "treat": "FINAL RESULT: \"basscurv_x\"",
+        "placebo": "FINAL RESULT: \"bcasscurve\"",
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s1\": \"probasscurve\", \"s2\": \"pros\"}\nTAIL:\ndef __tail__(s1=s1, s2=s2):\n    result = ''\n    for char in s1:\n        if char not in s2:\n            result += char\n    return result\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s1\": \"probasscurve_x\", \"s2\": \"pros\"}\nTAIL:\ndef __tail__(s1=s1, s2=s2):\n    result = ''\n    for char in s1:\n        if char not in s2:\n            result += char\n    return result\n    return None\n__result__ = __tail__()\n",
+        "placebo": "STATE: {\"s1\": \"probasscurve\", \"s2\": \"pros_x\"}\nTAIL:\ndef __tail__(s1=s1, s2=s2):\n    result = ''\n    for char in s1:\n        if char not in s2:\n            result += char\n    return result\n    return None\n__result__ = __tail__()\n",
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "s1",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:19:0:rejected",
+      "problem_id": "mbpp:test:19",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def contains_duplicate(nums):\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False",
+      "source": "def contains_duplicate(nums):\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:20:0:rejected",
+      "problem_id": "mbpp:test:20",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_woodball(number):\n    if number % 9 == 0 and '3' in str(number):\n        return True\n    return False",
+      "source": "def is_woodball(number):\n    if number % 9 == 0 and '3' in str(number):\n        return True\n    return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:56:0:2",
+      "problem_id": "mbpp:test:56",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to check if a given number is one less than twice its reverse.",
+      "gold": false,
+      "trace": "def is_one_less_than_twice_reverse(number):\n    reverse = int(str(number)[::-1])\n    twice_reverse = reverse * 2\n    return number + 1 == twice_reverse",
+      "source": "def is_one_less_than_twice_reverse(number):\n    reverse = int(str(number)[::-1])\n    twice_reverse = reverse * 2\n    return number + 1 == twice_reverse\n",
+      "status": "built",
+      "den_clean": false,
+      "den_treat": true,
+      "den_placebo": null,
+      "den_copyable": false,
+      "answers": {
+        "control": false,
+        "treat": false,
+        "placebo": null,
+        "copyable": false
+      },
+      "outputs": {
+        "control": "FINAL RESULT: False",
+        "treat": "FINAL RESULT: False",
+        "placebo": null,
+        "copyable": "FINAL RESULT: False"
+      },
+      "rendered": {
+        "control": "STATE: {\"number\": 70}\nTAIL:\ndef __tail__(number=number):\n    reverse = int(str(number)[::-1])\n    twice_reverse = reverse * 2\n    return number + 1 == twice_reverse\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"number\": 73}\nTAIL:\ndef __tail__(number=number):\n    reverse = int(str(number)[::-1])\n    twice_reverse = reverse * 2\n    return number + 1 == twice_reverse\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"number\": 2}\nTAIL:\ndef __tail__(number=number):\n    reverse = int(str(number)[::-1])\n    twice_reverse = reverse * 2\n    return number + 1 == twice_reverse\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "number",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:57:0:rejected",
+      "problem_id": "mbpp:test:57",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def largest_number(digits):\n    digits.sort(reverse=True)\n    largest = ''.join(map(str, digits))\n    return int(largest)",
+      "source": "def largest_number(digits):\n    digits.sort(reverse=True)\n    largest = ''.join(map(str, digits))\n    return int(largest)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:58:0:rejected",
+      "problem_id": "mbpp:test:58",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def have_opposite_sign(a, b):\n    return (a ^ b) < 0",
+      "source": "def have_opposite_sign(a, b):\n    return (a ^ b) < 0\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:59:0:2",
+      "problem_id": "mbpp:test:59",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the nth octagonal number.",
+      "gold": 65,
+      "trace": "def find_octagonal_number(n):\n    octagonal_number = n * (3 * n - 2)\n    return octagonal_number",
+      "source": "def find_octagonal_number(n):\n    octagonal_number = n * (3 * n - 2)\n    return octagonal_number\n",
+      "status": "built",
+      "den_clean": 65,
+      "den_treat": 176,
+      "den_placebo": null,
+      "den_copyable": 8,
+      "answers": {
+        "control": 70,
+        "treat": 176,
+        "placebo": null,
+        "copyable": 8
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 70",
+        "treat": "FINAL RESULT: 176",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 8"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    octagonal_number = n * (3 * n - 2)\n    return octagonal_number\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 8}\nTAIL:\ndef __tail__(n=n):\n    octagonal_number = n * (3 * n - 2)\n    return octagonal_number\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    octagonal_number = n * (3 * n - 2)\n    return octagonal_number\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 168
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:61:0:5",
+      "problem_id": "mbpp:test:61",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to count the number of substrings with the sum of digits equal to their length.",
+      "gold": 6,
+      "trace": "def find_substring_with_equal_sum_and_length(s):\n    def digit_sum(s):\n        return sum(int(c) for c in s if c.isdigit())\n    \n    count = 0\n    for i in range(len(s)):\n        current_sum = 0\n        for j in range(i, len(s)):\n            current_sum += int(s[j]) if s[j].isdigit() else 0\n            if current_sum == j - i + 1:\n                count += 1\n    return count",
+      "source": "def find_substring_with_equal_sum_and_length(s):\n    def digit_sum(s):\n        return sum(int(c) for c in s if c.isdigit())\n    \n    count = 0\n    for i in range(len(s)):\n        current_sum = 0\n        for j in range(i, len(s)):\n            current_sum += int(s[j]) if s[j].isdigit() else 0\n            if current_sum == j - i + 1:\n                count += 1\n    return count\n",
+      "status": "built",
+      "den_clean": 6,
+      "den_treat": 12,
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": 6,
+        "treat": 6,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 6",
+        "treat": "FINAL RESULT: 6",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"112112\"}\nTAIL:\ndef __tail__(s=s):\n    count = 0\n    for i in range(len(s)):\n        current_sum = 0\n        for j in range(i, len(s)):\n            current_sum += int(s[j]) if s[j].isdigit() else 0\n            if current_sum == j - i + 1:\n                count += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"112112_x\"}\nTAIL:\ndef __tail__(s=s):\n    count = 0\n    for i in range(len(s)):\n        current_sum = 0\n        for j in range(i, len(s)):\n            current_sum += int(s[j]) if s[j].isdigit() else 0\n            if current_sum == j - i + 1:\n                count += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 5,
+      "edited_var": "s",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:62:0:rejected",
+      "problem_id": "mbpp:test:62",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_smallest_number(numbers):\n    smallest = numbers[0]\n    for number in numbers:\n        if number < smallest:\n            smallest = number\n    return smallest",
+      "source": "def find_smallest_number(numbers):\n    smallest = numbers[0]\n    for number in numbers:\n        if number < smallest:\n            smallest = number\n    return smallest\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:63:0:rejected",
+      "problem_id": "mbpp:test:63",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_difference(pairs):\n    max_diff = 0\n    for a, b in pairs:\n        diff = abs(a - b)\n        if diff > max_diff:\n            max_diff = diff\n    return max_diff",
+      "source": "def max_difference(pairs):\n    max_diff = 0\n    for a, b in pairs:\n        diff = abs(a - b)\n        if diff > max_diff:\n            max_diff = diff\n    return max_diff\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:64:0:rejected",
+      "problem_id": "mbpp:test:64",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sort_tuples(lst):\n    return sorted(lst, key=lambda x: x[1])",
+      "source": "def sort_tuples(lst):\n    return sorted(lst, key=lambda x: x[1])\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:65:0:rejected",
+      "problem_id": "mbpp:test:65",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_flattened(lst):\n    flat_list = [item for sublist in lst for item in sublist]\n    return sum(flat_list)",
+      "source": "def sum_flattened(lst):\n    flat_list = [item for sublist in lst for item in sublist]\n    return sum(flat_list)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:66:0:rejected",
+      "problem_id": "mbpp:test:66",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_positive(nums):\n    positive_count = 0\n    for num in nums:\n        if num > 0:\n            positive_count += 1\n    return positive_count",
+      "source": "def count_positive(nums):\n    positive_count = 0\n    for num in nums:\n        if num > 0:\n            positive_count += 1\n    return positive_count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:67:0:2",
+      "problem_id": "mbpp:test:67",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the number of ways to partition a set of Bell numbers.",
+      "gold": 2,
+      "trace": "def bell_number_partitions(n):\n    bell_triangle = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell_triangle[0][0] = 1\n    for i in range(1, n+1):\n        bell_triangle[i][0] = bell_triangle[i-1][i-1]\n        for j in range(1, i+1):\n            bell_triangle[i][j] = bell_triangle[i-1][j-1] + bell_triangle[i][j-1]\n    return bell_triangle[n][0]",
+      "source": "def bell_number_partitions(n):\n    bell_triangle = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell_triangle[0][0] = 1\n    for i in range(1, n+1):\n        bell_triangle[i][0] = bell_triangle[i-1][i-1]\n        for j in range(1, i+1):\n            bell_triangle[i][j] = bell_triangle[i-1][j-1] + bell_triangle[i][j-1]\n    return bell_triangle[n][0]\n",
+      "status": "built",
+      "den_clean": 2,
+      "den_treat": 52,
+      "den_placebo": null,
+      "den_copyable": 1,
+      "answers": {
+        "control": 2,
+        "treat": 52,
+        "placebo": null,
+        "copyable": 1
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 2",
+        "treat": "FINAL RESULT: 52",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 1"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    bell_triangle = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell_triangle[0][0] = 1\n    for i in range(1, n+1):\n        bell_triangle[i][0] = bell_triangle[i-1][i-1]\n        for j in range(1, i+1):\n            bell_triangle[i][j] = bell_triangle[i-1][j-1] + bell_triangle[i][j-1]\n    return bell_triangle[n][0]\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    bell_triangle = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell_triangle[0][0] = 1\n    for i in range(1, n+1):\n        bell_triangle[i][0] = bell_triangle[i-1][i-1]\n        for j in range(1, i+1):\n            bell_triangle[i][j] = bell_triangle[i-1][j-1] + bell_triangle[i][j-1]\n    return bell_triangle[n][0]\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 1}\nTAIL:\ndef __tail__(n=n):\n    bell_triangle = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    bell_triangle[0][0] = 1\n    for i in range(1, n+1):\n        bell_triangle[i][0] = bell_triangle[i-1][i-1]\n        for j in range(1, i+1):\n            bell_triangle[i][j] = bell_triangle[i-1][j-1] + bell_triangle[i][j-1]\n    return bell_triangle[n][0]\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 525798
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:68:0:rejected",
+      "problem_id": "mbpp:test:68",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_monotonic(nums):\n    increasing = decreasing = True\n    for i in range(1, len(nums)):\n        if nums[i] > nums[i - 1]:\n            decreasing = False\n        elif nums[i] < nums[i - 1]:\n            increasing = False\n    return increasing or decreasing",
+      "source": "def is_monotonic(nums):\n    increasing = decreasing = True\n    for i in range(1, len(nums)):\n        if nums[i] > nums[i - 1]:\n            decreasing = False\n        elif nums[i] < nums[i - 1]:\n            increasing = False\n    return increasing or decreasing\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:69:0:rejected",
+      "problem_id": "mbpp:test:69",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def contains_sublist(main_list, sublist):\n    main_len = len(main_list)\n    sub_len = len(sublist)\n    \n    if sub_len > main_len:\n        return False\n    \n    for i in range(main_len - sub_len + 1):\n        if main_list[i:i+sub_len] == sublist:\n            return True\n    return False",
+      "source": "def contains_sublist(main_list, sublist):\n    main_len = len(main_list)\n    sub_len = len(sublist)\n    \n    if sub_len > main_len:\n        return False\n    \n    for i in range(main_len - sub_len + 1):\n        if main_list[i:i+sub_len] == sublist:\n            return True\n    return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:70:0:rejected",
+      "problem_id": "mbpp:test:70",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def all_tuples_equal_length(tuples):\n    lengths = [len(t) for t in tuples]\n    return len(set(lengths)) == 1",
+      "source": "def all_tuples_equal_length(tuples):\n    lengths = [len(t) for t in tuples]\n    return len(set(lengths)) == 1\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:71:0:rejected",
+      "problem_id": "mbpp:test:71",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sort_list(lst):\n    return sorted(lst)",
+      "source": "def sort_list(lst):\n    return sorted(lst)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:72:0:rejected",
+      "problem_id": "mbpp:test:72",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def can_be_difference_of_squares(n):\n    if n % 2 == 0 or n % 7 == 0 or n % 13 == 0:\n        return False\n    return True",
+      "source": "def can_be_difference_of_squares(n):\n    if n % 2 == 0 or n % 7 == 0 or n % 13 == 0:\n        return False\n    return True\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:74:0:rejected",
+      "problem_id": "mbpp:test:74",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def check_pattern(sequence, patterns):\n    for i in range(len(sequence) - len(patterns) + 1):\n        if sequence[i:i+len(patterns)] == patterns:\n            return True\n    return False",
+      "source": "def check_pattern(sequence, patterns):\n    for i in range(len(sequence) - len(patterns) + 1):\n        if sequence[i:i+len(patterns)] == patterns:\n            return True\n    return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:75:0:2",
+      "problem_id": "mbpp:test:75",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find tuples which have all elements divisible by k from the given list of tuples.",
+      "gold": [
+        [
+          6,
+          24,
+          12
+        ]
+      ],
+      "trace": "def divisible_tuples(tuples_list, k):\n    result = []\n    for tup in tuples_list:\n        if all(x % k == 0 for x in tup):\n            result.append(tup)\n    return result",
+      "source": "def divisible_tuples(tuples_list, k):\n    result = []\n    for tup in tuples_list:\n        if all(x % k == 0 for x in tup):\n            result.append(tup)\n    return result\n",
+      "status": "built",
+      "den_clean": [
+        [
+          6,
+          24,
+          12
+        ]
+      ],
+      "den_treat": [],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          [
+            6,
+            24,
+            12
+          ]
+        ],
+        "treat": [
+          [
+            6,
+            24,
+            12
+          ],
+          [
+            12,
+            18,
+            21
+          ]
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: [[6, 24, 12]]",
+        "treat": "FINAL RESULT: [[6, 24, 12], [12, 18, 21]]",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"tuples_list\": [[6, 24, 12], [7, 9, 6], [12, 18, 21]], \"k\": 6}\nTAIL:\ndef __tail__(tuples_list=tuples_list, k=k):\n    result = []\n    for tup in tuples_list:\n        if all(x % k == 0 for x in tup):\n            result.append(tup)\n    return result\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"tuples_list\": [[6, 24, 12], [7, 9, 6], [12, 18, 21]], \"k\": 9}\nTAIL:\ndef __tail__(tuples_list=tuples_list, k=k):\n    result = []\n    for tup in tuples_list:\n        if all(x % k == 0 for x in tup):\n            result.append(tup)\n    return result\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": [
+        {
+          "tuples_list": [
+            [
+              6,
+              24,
+              12
+            ],
+            [
+              12,
+              18,
+              21
+            ]
+          ],
+          "k": 9
+        }
+      ],
+      "treatment_step_idx": 2,
+      "edited_var": "k",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:77:0:rejected",
+      "problem_id": "mbpp:test:77",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_divisible_by_11(n):\n    return n % 11 == 0",
+      "source": "def is_divisible_by_11(n):\n    return n % 11 == 0\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:79:0:rejected",
+      "problem_id": "mbpp:test:79",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_odd_length(word):\n    length = len(word)\n    return length % 2 != 0",
+      "source": "def is_odd_length(word):\n    length = len(word)\n    return length % 2 != 0\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:80:0:2",
+      "problem_id": "mbpp:test:80",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the nth tetrahedral number.",
+      "gold": 35,
+      "trace": "def nth_tetrahedral(n):\n    tetra = (n * (n + 1) * (n + 2)) // 6\n    return tetra",
+      "source": "def nth_tetrahedral(n):\n    tetra = (n * (n + 1) * (n + 2)) // 6\n    return tetra\n",
+      "status": "built",
+      "den_clean": 35,
+      "den_treat": 120,
+      "den_placebo": null,
+      "den_copyable": 56,
+      "answers": {
+        "control": 35,
+        "treat": 20,
+        "placebo": null,
+        "copyable": 56
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 35",
+        "treat": "FINAL RESULT: 20",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 56"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    tetra = (n * (n + 1) * (n + 2)) // 6\n    return tetra\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 8}\nTAIL:\ndef __tail__(n=n):\n    tetra = (n * (n + 1) * (n + 2)) // 6\n    return tetra\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 6}\nTAIL:\ndef __tail__(n=n):\n    tetra = (n * (n + 1) * (n + 2)) // 6\n    return tetra\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 120
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:83:0:rejected",
+      "problem_id": "mbpp:test:83",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_character(s):\n    total = sum(ord(c) for c in s) % 26\n    return chr((total + 97) % 26 + 97)",
+      "source": "def find_character(s):\n    total = sum(ord(c) for c in s) % 26\n    return chr((total + 97) % 26 + 97)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:84:0:4",
+      "problem_id": "mbpp:test:84",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the nth number in the newman conway sequence.",
+      "gold": 6,
+      "trace": "def find_newman_conway(n):\n    if n <= 2:\n        return 1\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]",
+      "source": "def find_newman_conway(n):\n    if n <= 2:\n        return 1\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]\n",
+      "status": "built",
+      "den_clean": 6,
+      "den_treat": 8,
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": 6,
+        "treat": 9,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 6",
+        "treat": "FINAL RESULT: 9",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 10}\nTAIL:\ndef __tail__(n=n):\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 13}\nTAIL:\ndef __tail__(n=n):\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    dp[2] = 1\n    for i in range(3, n + 1):\n        dp[i] = dp[dp[i - 1]] + dp[i - dp[i - 1]]\n    return dp[n]\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 8
+      },
+      "treatment_step_idx": 4,
+      "edited_var": "n",
+      "trace_length": 6
+    },
+    {
+      "record_id": "mbpp:test:86:0:rejected",
+      "problem_id": "mbpp:test:86",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def centered_hexagonal(n):\n    return 3 * n * (n - 1) + 1",
+      "source": "def centered_hexagonal(n):\n    return 3 * n * (n - 1) + 1\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:87:0:rejected",
+      "problem_id": "mbpp:test:87",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def merge_dicts(dict1, dict2, dict3):\n    merged_dict = {**dict1, **dict2, **dict3}\n    return merged_dict",
+      "source": "def merge_dicts(dict1, dict2, dict3):\n    merged_dict = {**dict1, **dict2, **dict3}\n    return merged_dict\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:88:0:2",
+      "problem_id": "mbpp:test:88",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to get the frequency of all the elements in a list, returned as a dictionary.",
+      "gold": {
+        "10": 4,
+        "20": 4,
+        "40": 2,
+        "50": 2,
+        "30": 1
+      },
+      "trace": "def element_frequency(lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq",
+      "source": "def element_frequency(lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq\n",
+      "status": "built",
+      "den_clean": {
+        "10": 4,
+        "20": 4,
+        "40": 2,
+        "50": 2,
+        "30": 1
+      },
+      "den_treat": {
+        "13": 1,
+        "10": 3,
+        "20": 4,
+        "40": 2,
+        "50": 2,
+        "30": 1
+      },
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": {
+          "10": 4,
+          "20": 4,
+          "40": 2,
+          "50": 2,
+          "30": 1
+        },
+        "treat": {
+          "13": 1,
+          "10": 3,
+          "20": 4,
+          "40": 2,
+          "50": 2,
+          "30": 1
+        },
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: {10: 4, 20: 4, 40: 2, 50: 2, 30: 1}",
+        "treat": "FINAL RESULT: {13: 1, 10: 3, 20: 4, 40: 2, 50: 2, 30: 1}",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"lst\": [10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]}\nTAIL:\ndef __tail__(lst=lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"lst\": [13, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]}\nTAIL:\ndef __tail__(lst=lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "lst",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:89:0:2",
+      "problem_id": "mbpp:test:89",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the closest smaller number than n.",
+      "gold": 10,
+      "trace": "def find_closest_smaller(n):\n    closest = n - 1\n    while closest > 0 and closest >= n // 10:\n        if closest % 10 != 9:\n            break\n        closest = closest // 10 + 9\n    return closest",
+      "source": "def find_closest_smaller(n):\n    closest = n - 1\n    while closest > 0 and closest >= n // 10:\n        if closest % 10 != 9:\n            break\n        closest = closest // 10 + 9\n    return closest\n",
+      "status": "built",
+      "den_clean": 10,
+      "den_treat": 13,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 10,
+        "treat": 13,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 10",
+        "treat": "FINAL RESULT: 13",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 11}\nTAIL:\ndef __tail__(n=n):\n    closest = n - 1\n    while closest > 0 and closest >= n // 10:\n        if closest % 10 != 9:\n            break\n        closest = closest // 10 + 9\n    return closest\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 14}\nTAIL:\ndef __tail__(n=n):\n    closest = n - 1\n    while closest > 0 and closest >= n // 10:\n        if closest % 10 != 9:\n            break\n        closest = closest // 10 + 9\n    return closest\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 1}\nTAIL:\ndef __tail__(n=n):\n    closest = n - 1\n    while closest > 0 and closest >= n // 10:\n        if closest % 10 != 9:\n            break\n        closest = closest // 10 + 9\n    return closest\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:90:0:rejected",
+      "problem_id": "mbpp:test:90",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def longest_word_length(sentence):\n    words = sentence.split()\n    longest_length = 0\n    for word in words:\n        if len(word) > longest_length:\n            longest_length = len(word)\n    return longest_length",
+      "source": "def longest_word_length(sentence):\n    words = sentence.split()\n    longest_length = 0\n    for word in words:\n        if len(word) > longest_length:\n            longest_length = len(word)\n    return longest_length\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:91:0:rejected",
+      "problem_id": "mbpp:test:91",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_substring_in_list(substring, string_list):\n    for string in string_list:\n        if substring in string:\n            return True\n    return False",
+      "source": "def is_substring_in_list(substring, string_list):\n    for string in string_list:\n        if substring in string:\n            return True\n    return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:92:0:rejected",
+      "problem_id": "mbpp:test:92",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and all(s[i] != s[i+1] for i in range(len(s)-1)) and any(s[i] == s[i+2] for i in range(len(s)-2))",
+      "source": "def is_undulating(n):\n    s = str(n)\n    return len(s) >= 3 and all(s[i] != s[i+1] for i in range(len(s)-1)) and any(s[i] == s[i+2] for i in range(len(s)-2))\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:93:0:rejected",
+      "problem_id": "mbpp:test:93",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def power(a, b):\n    return a ** b",
+      "source": "def power(a, b):\n    return a ** b\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:94:0:rejected",
+      "problem_id": "mbpp:test:94",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def smallest_second_value(tuples_list):\n    smallest_tuple = min(tuples_list, key=lambda x: x[1])\n    return smallest_tuple[0]",
+      "source": "def smallest_second_value(tuples_list):\n    smallest_tuple = min(tuples_list, key=lambda x: x[1])\n    return smallest_tuple[0]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:95:0:rejected",
+      "problem_id": "mbpp:test:95",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def smallest_list_length(list_of_lists):\n    min_length = float('inf')\n    for lst in list_of_lists:\n        if len(lst) < min_length:\n            min_length = len(lst)\n    return min_length",
+      "source": "def smallest_list_length(list_of_lists):\n    min_length = float('inf')\n    for lst in list_of_lists:\n        if len(lst) < min_length:\n            min_length = len(lst)\n    return min_length\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:96:0:2",
+      "problem_id": "mbpp:test:96",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find the number of divisors of a given integer.",
+      "gold": 4,
+      "trace": "def find_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count",
+      "source": "def find_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n",
+      "status": "built",
+      "den_clean": 4,
+      "den_treat": 6,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 4,
+        "treat": 6,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 4",
+        "treat": "FINAL RESULT: 6",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 15}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 18}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "count": 6
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:97:0:rejected",
+      "problem_id": "mbpp:test:97",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def frequency_dict(lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq",
+      "source": "def frequency_dict(lst):\n    freq = {}\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n    return freq\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:99:0:2",
+      "problem_id": "mbpp:test:99",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.",
+      "gold": "1000",
+      "trace": "def decimal_to_binary(n):\n    binary_str = \"\"\n    while n > 0:\n        binary_str = str(n % 2) + binary_str\n        n = n // 2\n    return binary_str",
+      "source": "def decimal_to_binary(n):\n    binary_str = \"\"\n    while n > 0:\n        binary_str = str(n % 2) + binary_str\n        n = n // 2\n    return binary_str\n",
+      "status": "built",
+      "den_clean": "1000",
+      "den_treat": "1011",
+      "den_placebo": null,
+      "den_copyable": "",
+      "answers": {
+        "control": "1000",
+        "treat": "1011",
+        "placebo": null,
+        "copyable": "0"
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"1000\"",
+        "treat": "FINAL RESULT: \"1011\"",
+        "placebo": null,
+        "copyable": "FINAL RESULT: \"0\""
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 8}\nTAIL:\ndef __tail__(n=n):\n    binary_str = \"\"\n    while n > 0:\n        binary_str = str(n % 2) + binary_str\n        n = n // 2\n    return binary_str\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 11}\nTAIL:\ndef __tail__(n=n):\n    binary_str = \"\"\n    while n > 0:\n        binary_str = str(n % 2) + binary_str\n        n = n // 2\n    return binary_str\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    binary_str = \"\"\n    while n > 0:\n        binary_str = str(n % 2) + binary_str\n        n = n // 2\n    return binary_str\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:100:0:rejected",
+      "problem_id": "mbpp:test:100",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def next_smallest_palindrome(n):\n    n += 1\n    while not str(n) == str(n)[::-1]:\n        n += 1\n    return n",
+      "source": "def next_smallest_palindrome(n):\n    n += 1\n    while not str(n) == str(n)[::-1]:\n        n += 1\n    return n\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:101:0:rejected",
+      "problem_id": "mbpp:test:101",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_kth_element(arr, k):    \n    return arr[k-1]",
+      "source": "def find_kth_element(arr, k):    \n    return arr[k-1]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:102:0:rejected",
+      "problem_id": "mbpp:test:102",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def convert_to_camel_case(snake_str):\n    components = snake_str.split('_')\n    return components[0] + ''.join(x.title() for x in components[1:])",
+      "source": "def convert_to_camel_case(snake_str):\n    components = snake_str.split('_')\n    return components[0] + ''.join(x.title() for x in components[1:])\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:103:0:rejected",
+      "problem_id": "mbpp:test:103",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def eulerian_number(n, m):\n    if m == 0:\n        return 1 if n == m else 0\n    if m == n:\n        return 1\n    triangle = [[0] * (m + 1) for _ in range(n + 1)]\n    triangle[1][1] = 1\n    for i in range(2, n + 1):\n        triangle[i][1] = i * triangle[i - 1][1]\n        for j in range(2, min(i, m) + 1):\n            triangle[i][j] = (i - 1) * triangle[i - 1][j - 1] + (j + 1) * triangle[i - 1][j]\n    return triangle[n][m]",
+      "source": "def eulerian_number(n, m):\n    if m == 0:\n        return 1 if n == m else 0\n    if m == n:\n        return 1\n    triangle = [[0] * (m + 1) for _ in range(n + 1)]\n    triangle[1][1] = 1\n    for i in range(2, n + 1):\n        triangle[i][1] = i * triangle[i - 1][1]\n        for j in range(2, min(i, m) + 1):\n            triangle[i][j] = (i - 1) * triangle[i - 1][j - 1] + (j + 1) * triangle[i - 1][j]\n    return triangle[n][m]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:104:0:rejected",
+      "problem_id": "mbpp:test:104",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sort_sublists(lst):\n    for sublist in lst:\n        sublist.sort()",
+      "source": "def sort_sublists(lst):\n    for sublist in lst:\n        sublist.sort()\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:105:0:rejected",
+      "problem_id": "mbpp:test:105",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_true(lst):\n    count = 0\n    for item in lst:\n        if item is True:\n            count += 1\n    return count",
+      "source": "def count_true(lst):\n    count = 0\n    for item in lst:\n        if item is True:\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:106:0:2",
+      "problem_id": "mbpp:test:106",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to append the given list to the given tuples.",
+      "gold": [
+        9,
+        10,
+        5,
+        6,
+        7
+      ],
+      "trace": "def append_to_tuple(lst, tup): \n    new_tup = tup + tuple(lst) \n    return new_tup",
+      "source": "def append_to_tuple(lst, tup): \n    new_tup = tup + tuple(lst) \n    return new_tup\n",
+      "status": "built",
+      "den_clean": [
+        9,
+        10,
+        5,
+        6,
+        7
+      ],
+      "den_treat": [
+        9,
+        10,
+        8,
+        6,
+        7
+      ],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          9,
+          10,
+          5,
+          6,
+          7
+        ],
+        "treat": [
+          9,
+          10,
+          8,
+          6,
+          7
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: (9, 10, 5, 6, 7)",
+        "treat": "FINAL RESULT: (9, 10, 8, 6, 7)",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"lst\": [5, 6, 7], \"tup\": [9, 10]}\nTAIL:\ndef __tail__(lst=lst, tup=tup):\n    new_tup = tup + tuple(lst) \n    return new_tup\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"lst\": [8, 6, 7], \"tup\": [9, 10]}\nTAIL:\ndef __tail__(lst=lst, tup=tup):\n    new_tup = tup + tuple(lst) \n    return new_tup\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "lst",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:108:0:2",
+      "problem_id": "mbpp:test:108",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to merge three lists into a single sorted list.",
+      "gold": [
+        4,
+        5,
+        11,
+        15,
+        19,
+        20,
+        24,
+        24,
+        25,
+        25,
+        26,
+        29,
+        48,
+        54,
+        56,
+        110,
+        154,
+        233
+      ],
+      "trace": "def merge_and_sort(list1, list2, list3):\n    combined = list1 + list2 + list3\n    combined.sort()\n    return combined",
+      "source": "def merge_and_sort(list1, list2, list3):\n    combined = list1 + list2 + list3\n    combined.sort()\n    return combined\n",
+      "status": "built",
+      "den_clean": [
+        4,
+        5,
+        11,
+        15,
+        19,
+        20,
+        24,
+        24,
+        25,
+        25,
+        26,
+        29,
+        48,
+        54,
+        56,
+        110,
+        154,
+        233
+      ],
+      "den_treat": [
+        4,
+        5,
+        11,
+        15,
+        19,
+        20,
+        24,
+        24,
+        25,
+        26,
+        28,
+        29,
+        48,
+        54,
+        56,
+        110,
+        154,
+        233
+      ],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          4,
+          11,
+          15,
+          19,
+          20,
+          24,
+          24,
+          25,
+          26,
+          48,
+          54,
+          56,
+          29,
+          110,
+          154,
+          233
+        ],
+        "treat": [
+          4,
+          5,
+          11,
+          19,
+          20,
+          24,
+          24,
+          25,
+          26,
+          28,
+          29,
+          48,
+          54,
+          56,
+          110,
+          154,
+          233
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: [4, 11, 15, 19, 20, 24, 24, 25, 26, 48, 54, 56, 29, 110, 154, 233]",
+        "treat": "FINAL RESULT: [4, 5, 11, 19, 20, 24, 24, 25, 26, 28, 29, 48, 54, 56, 110, 154, 233]",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"list1\": [25, 24, 15, 4, 5, 29, 110], \"list2\": [19, 20, 11, 56, 25, 233, 154], \"list3\": [24, 26, 54, 48]}\nTAIL:\ndef __tail__(list1=list1, list2=list2, list3=list3):\n    combined = list1 + list2 + list3\n    combined.sort()\n    return combined\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"list1\": [28, 24, 15, 4, 5, 29, 110], \"list2\": [19, 20, 11, 56, 25, 233, 154], \"list3\": [24, 26, 54, 48]}\nTAIL:\ndef __tail__(list1=list1, list2=list2, list3=list3):\n    combined = list1 + list2 + list3\n    combined.sort()\n    return combined\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": [
+          4,
+          5,
+          11,
+          15,
+          19,
+          20,
+          24,
+          24,
+          25,
+          26,
+          28,
+          29,
+          48,
+          54,
+          110,
+          154,
+          233
+        ]
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "list1",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:109:0:rejected",
+      "problem_id": "mbpp:test:109",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_odd_values(binary_string, rotations):\n    def rotate_string(s, n):\n        return s[-n:] + s[:-n]\n\n    def count_ones(s):\n        return s.count('1')\n\n    max_ones = 0\n    for i in range(rotations + 1):\n        rotated_string = rotate_string(binary_string, i)\n        ones_count = count_ones(rotated_string)\n        max_ones = max(max_ones, ones_count)\n\n    return max_ones if max_ones % 2 != 0 else 0",
+      "source": "def find_odd_values(binary_string, rotations):\n    def rotate_string(s, n):\n        return s[-n:] + s[:-n]\n\n    def count_ones(s):\n        return s.count('1')\n\n    max_ones = 0\n    for i in range(rotations + 1):\n        rotated_string = rotate_string(binary_string, i)\n        ones_count = count_ones(rotated_string)\n        max_ones = max(max_ones, ones_count)\n\n    return max_ones if max_ones % 2 != 0 else 0\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:113:0:rejected",
+      "problem_id": "mbpp:test:113",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_integer(s):\n    try:\n        int(s)\n        return True\n    except ValueError:\n        return False",
+      "source": "def is_integer(s):\n    try:\n        int(s)\n        return True\n    except ValueError:\n        return False\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:115:0:rejected",
+      "problem_id": "mbpp:test:115",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def are_all_dicts_empty(list_of_dicts):\n    return all(not d for d in list_of_dicts)",
+      "source": "def are_all_dicts_empty(list_of_dicts):\n    return all(not d for d in list_of_dicts)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:116:0:rejected",
+      "problem_id": "mbpp:test:116",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def concatenate_tuple(t):\n    result = 0\n    for num in t:\n        result = result * 10 + num\n    return result",
+      "source": "def concatenate_tuple(t):\n    result = 0\n    for num in t:\n        result = result * 10 + num\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:117:0:rejected",
+      "problem_id": "mbpp:test:117",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def convert_to_floats(nested_list):\n    result = []\n    for sublist in nested_list:\n        if isinstance(sublist, list):\n            converted_sublist = [float(item) if item.replace('.', '', 1).isdigit() else item for item in sublist]\n            result.append(converted_sublist)\n        else:\n            result.append(float(sublist) if isinstance(sublist, str) and sublist.replace('.', '', 1).isdigit() else sublist)\n    return result",
+      "source": "def convert_to_floats(nested_list):\n    result = []\n    for sublist in nested_list:\n        if isinstance(sublist, list):\n            converted_sublist = [float(item) if item.replace('.', '', 1).isdigit() else item for item in sublist]\n            result.append(converted_sublist)\n        else:\n            result.append(float(sublist) if isinstance(sublist, str) and sublist.replace('.', '', 1).isdigit() else sublist)\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:118:0:rejected",
+      "problem_id": "mbpp:test:118",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def split_on_space(input_string):\n    return input_string.split(' ')",
+      "source": "def split_on_space(input_string):\n    return input_string.split(' ')\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:119:0:rejected",
+      "problem_id": "mbpp:test:119",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_only_element(arr):\n    n = len(arr)\n    if n == 1:\n        return arr[0]\n    for i in range(1, n, 2):\n        if i == n - 1 or arr[i] != arr[i - 1] and arr[i] != arr[i + 1]:\n            return arr[i]\n    return arr[0]",
+      "source": "def find_only_element(arr):\n    n = len(arr)\n    if n == 1:\n        return arr[0]\n    for i in range(1, n, 2):\n        if i == n - 1 or arr[i] != arr[i - 1] and arr[i] != arr[i + 1]:\n            return arr[i]\n    return arr[0]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:120:0:rejected",
+      "problem_id": "mbpp:test:120",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_absolute_product(pairs):\n    max_product = 0\n    for a, b in pairs:\n        product = abs(a * b)\n        if product > max_product:\n            max_product = product\n    return max_product",
+      "source": "def max_absolute_product(pairs):\n    max_product = 0\n    for a, b in pairs:\n        product = abs(a * b)\n        if product > max_product:\n            max_product = product\n    return max_product\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:123:0:rejected",
+      "problem_id": "mbpp:test:123",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_of_amicable_numbers(n):\n    def proper_divisors(num):\n        divisors = [1]\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                divisors.append(i)\n                if num // i != i:\n                    divisors.append(num // i)\n        return divisors\n    \n    def sum_divisors(num):\n        return sum(proper_divisors(num))\n    \n    amicable_pairs = []\n    for num in range(2, n + 1):\n        partner = sum_divisors(num)\n        if sum_divisors(partner) == num and partner != num:\n            amicable_pairs.append(num)\n    \n    return sum(amicable_pairs)",
+      "source": "def sum_of_amicable_numbers(n):\n    def proper_divisors(num):\n        divisors = [1]\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                divisors.append(i)\n                if num // i != i:\n                    divisors.append(num // i)\n        return divisors\n    \n    def sum_divisors(num):\n        return sum(proper_divisors(num))\n    \n    amicable_pairs = []\n    for num in range(2, n + 1):\n        partner = sum_divisors(num)\n        if sum_divisors(partner) == num and partner != num:\n            amicable_pairs.append(num)\n    \n    return sum(amicable_pairs)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:125:0:rejected",
+      "problem_id": "mbpp:test:125",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_diff_zero_one(binary_string):\n    max_diff = 0\n    current_diff = 0\n    for char in binary_string:\n        if char == '0':\n            current_diff -= 1\n        else:\n            current_diff += 1\n        max_diff = max(max_diff, current_diff)\n        if current_diff < 0:\n            current_diff = 0\n    return max_diff",
+      "source": "def max_diff_zero_one(binary_string):\n    max_diff = 0\n    current_diff = 0\n    for char in binary_string:\n        if char == '0':\n            current_diff -= 1\n        else:\n            current_diff += 1\n        max_diff = max(max_diff, current_diff)\n        if current_diff < 0:\n            current_diff = 0\n    return max_diff\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:126:0:rejected",
+      "problem_id": "mbpp:test:126",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_of_common_divisors(a, b):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n    \n    divisors_sum = 0\n    for i in range(1, gcd(a, b) + 1):\n        if a % i == 0 and b % i == 0:\n            divisors_sum += i\n    return divisors_sum",
+      "source": "def sum_of_common_divisors(a, b):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n    \n    divisors_sum = 0\n    for i in range(1, gcd(a, b) + 1):\n        if a % i == 0 and b % i == 0:\n            divisors_sum += i\n    return divisors_sum\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:127:0:rejected",
+      "problem_id": "mbpp:test:127",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def multiply(x, y):\n    return x * y",
+      "source": "def multiply(x, y):\n    return x * y\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:128:0:rejected",
+      "problem_id": "mbpp:test:128",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_long_words(words, n):\n    long_words = [word for word in words if len(word) > n]\n    return long_words",
+      "source": "def find_long_words(words, n):\n    long_words = [word for word in words if len(word) > n]\n    return long_words\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:129:0:rejected",
+      "problem_id": "mbpp:test:129",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_magic_square(matrix):\n    n = len(matrix)\n    if any(len(row) != n for row in matrix):\n        return False\n    magic_sum = sum(matrix[0])\n    for row in matrix:\n        if sum(row) != magic_sum:\n            return False\n    for col in range(n):\n        if sum(matrix[row][col] for row in range(n)) != magic_sum:\n            return False\n    if sum(matrix[i][i] for i in range(n)) != magic_sum or sum(matrix[i][n-1-i] for i in range(n)) != magic_sum:\n        return False\n    return True",
+      "source": "def is_magic_square(matrix):\n    n = len(matrix)\n    if any(len(row) != n for row in matrix):\n        return False\n    magic_sum = sum(matrix[0])\n    for row in matrix:\n        if sum(row) != magic_sum:\n            return False\n    for col in range(n):\n        if sum(matrix[row][col] for row in range(n)) != magic_sum:\n            return False\n    if sum(matrix[i][i] for i in range(n)) != magic_sum or sum(matrix[i][n-1-i] for i in range(n)) != magic_sum:\n        return False\n    return True\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:130:0:rejected",
+      "problem_id": "mbpp:test:130",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_frequency_item(lst):\n    freq = {}\n    max_freq = 0\n    max_item = None\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n        if freq[item] > max_freq:\n            max_freq = freq[item]\n            max_item = item\n    return max_item",
+      "source": "def max_frequency_item(lst):\n    freq = {}\n    max_freq = 0\n    max_item = None\n    for item in lst:\n        if item in freq:\n            freq[item] += 1\n        else:\n            freq[item] = 1\n        if freq[item] > max_freq:\n            max_freq = freq[item]\n            max_item = item\n    return max_item\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:131:0:2",
+      "problem_id": "mbpp:test:131",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to reverse only the vowels of a given string (where y is not a vowel).",
+      "gold": "Python",
+      "trace": "def reverse_vowels(s):\n    vowels = 'aeiouAEIOU'\n    s_list = list(s)\n    i, j = 0, len(s_list) - 1\n    while i < j:\n        if s_list[i] not in vowels:\n            i += 1\n        elif s_list[j] not in vowels:\n            j -= 1\n        else:\n            s_list[i], s_list[j] = s_list[j], s_list[i]\n            i += 1\n            j -= 1\n    return ''.join(s_list)",
+      "source": "def reverse_vowels(s):\n    vowels = 'aeiouAEIOU'\n    s_list = list(s)\n    i, j = 0, len(s_list) - 1\n    while i < j:\n        if s_list[i] not in vowels:\n            i += 1\n        elif s_list[j] not in vowels:\n            j -= 1\n        else:\n            s_list[i], s_list[j] = s_list[j], s_list[i]\n            i += 1\n            j -= 1\n    return ''.join(s_list)\n",
+      "status": "built",
+      "den_clean": "Python",
+      "den_treat": "Python_x",
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": "Pthoyn",
+        "treat": "PythOn_x",
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"Pthoyn\"",
+        "treat": "FINAL RESULT: \"PythOn_x\"",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"Python\"}\nTAIL:\ndef __tail__(s=s):\n    vowels = 'aeiouAEIOU'\n    s_list = list(s)\n    i, j = 0, len(s_list) - 1\n    while i < j:\n        if s_list[i] not in vowels:\n            i += 1\n        elif s_list[j] not in vowels:\n            j -= 1\n        else:\n            s_list[i], s_list[j] = s_list[j], s_list[i]\n            i += 1\n            j -= 1\n    return ''.join(s_list)\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"Python_x\"}\nTAIL:\ndef __tail__(s=s):\n    vowels = 'aeiouAEIOU'\n    s_list = list(s)\n    i, j = 0, len(s_list) - 1\n    while i < j:\n        if s_list[i] not in vowels:\n            i += 1\n        elif s_list[j] not in vowels:\n            j -= 1\n        else:\n            s_list[i], s_list[j] = s_list[j], s_list[i]\n            i += 1\n            j -= 1\n    return ''.join(s_list)\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "s",
+      "trace_length": 5
+    },
+    {
+      "record_id": "mbpp:test:132:0:rejected",
+      "problem_id": "mbpp:test:132",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def tuple_to_string(tup):    \n    return ''.join(str(item) for item in tup)",
+      "source": "def tuple_to_string(tup):    \n    return ''.join(str(item) for item in tup)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:133:0:rejected",
+      "problem_id": "mbpp:test:133",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_of_negatives(numbers):\n    negatives = [num for num in numbers if num < 0]\n    return sum(negatives)",
+      "source": "def sum_of_negatives(numbers):\n    negatives = [num for num in numbers if num < 0]\n    return sum(negatives)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:135:0:rejected",
+      "problem_id": "mbpp:test:135",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def nth_hexagonal(n):\n    return n * (2 * n - 1)",
+      "source": "def nth_hexagonal(n):\n    return n * (2 * n - 1)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:138:0:rejected",
+      "problem_id": "mbpp:test:138",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def is_sum_of_powers_of_two(n):\n    if n < 1:\n        return False\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            return False\n    return True",
+      "source": "def is_sum_of_powers_of_two(n):\n    if n < 1:\n        return False\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            return False\n    return True\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:141:0:rejected",
+      "problem_id": "mbpp:test:141",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sort_list(lst):\n    return sorted(lst)",
+      "source": "def sort_list(lst):\n    return sorted(lst)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:142:0:rejected",
+      "problem_id": "mbpp:test:142",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_matches(list1, list2, list3):\n    count = 0\n    for i in range(min(len(list1), len(list2), len(list3))):\n        if list1[i] == list2[i] == list3[i]:\n            count += 1\n    return count",
+      "source": "def count_matches(list1, list2, list3):\n    count = 0\n    for i in range(min(len(list1), len(list2), len(list3))):\n        if list1[i] == list2[i] == list3[i]:\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:143:0:rejected",
+      "problem_id": "mbpp:test:143",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_lists_in_tuple(tup):\n    count = 0\n    for item in tup:\n        if isinstance(item, list):\n            count += 1\n    return count",
+      "source": "def count_lists_in_tuple(tup):\n    count = 0\n    for item in tup:\n        if isinstance(item, list):\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:145:0:rejected",
+      "problem_id": "mbpp:test:145",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_difference(arr):\n    min_element = arr[0]\n    max_diff = 0\n    for num in arr:\n        max_diff = max(max_diff, num - min_element)\n        min_element = min(min_element, num)\n    return max_diff",
+      "source": "def max_difference(arr):\n    min_element = arr[0]\n    max_diff = 0\n    for num in arr:\n        max_diff = max(max_diff, num - min_element)\n        min_element = min(min_element, num)\n    return max_diff\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:160:0:rejected",
+      "problem_id": "mbpp:test:160",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_integers(a, b, n):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n    \n    def extended_gcd(x, y):\n        if x == 0:\n            return y, 0, 1\n        gcd, s1, t1 = extended_gcd(y % x, x)\n        s = t1 - (y // x) * s1\n        t = s1\n        return gcd, s, t\n    \n    gcd_value, s, t = extended_gcd(abs(a), abs(b))\n    if n % gcd_value != 0:\n        return None\n    \n    x = s * (n // gcd_value) * (1 if a > 0 else -1)\n    y = t * (n // gcd_value) * (1 if b > 0 else -1)\n    \n    return (x, y)",
+      "source": "def find_integers(a, b, n):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n    \n    def extended_gcd(x, y):\n        if x == 0:\n            return y, 0, 1\n        gcd, s1, t1 = extended_gcd(y % x, x)\n        s = t1 - (y // x) * s1\n        t = s1\n        return gcd, s, t\n    \n    gcd_value, s, t = extended_gcd(abs(a), abs(b))\n    if n % gcd_value != 0:\n        return None\n    \n    x = s * (n // gcd_value) * (1 if a > 0 else -1)\n    y = t * (n // gcd_value) * (1 if b > 0 else -1)\n    \n    return (x, y)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:161:0:rejected",
+      "problem_id": "mbpp:test:161",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def remove_elements(list1, list2):\n    return [item for item in list1 if item not in list2]",
+      "source": "def remove_elements(list1, list2):\n    return [item for item in list1 if item not in list2]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:162:0:2",
+      "problem_id": "mbpp:test:162",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).",
+      "gold": 12,
+      "trace": "def calculate_sum(n):\n    total = 0\n    for i in range(n // 2 + 1):\n        total += n - 2 * i\n    return total",
+      "source": "def calculate_sum(n):\n    total = 0\n    for i in range(n // 2 + 1):\n        total += n - 2 * i\n    return total\n",
+      "status": "built",
+      "den_clean": 12,
+      "den_treat": 25,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 12,
+        "treat": 25,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 12",
+        "treat": "FINAL RESULT: 25",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 6}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n // 2 + 1):\n        total += n - 2 * i\n    return total\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 9}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n // 2 + 1):\n        total += n - 2 * i\n    return total\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n // 2 + 1):\n        total += n - 2 * i\n    return total\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 27
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:164:0:rejected",
+      "problem_id": "mbpp:test:164",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def same_divisor_sum(n1, n2):\n    def sum_of_divisors(num):\n        return sum([i for i in range(1, num + 1) if num % i == 0])\n    \n    return sum_of_divisors(n1) == sum_of_divisors(n2)",
+      "source": "def same_divisor_sum(n1, n2):\n    def sum_of_divisors(num):\n        return sum([i for i in range(1, num + 1) if num % i == 0])\n    \n    return sum_of_divisors(n1) == sum_of_divisors(n2)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:165:0:rejected",
+      "problem_id": "mbpp:test:165",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def same_position_chars(s):\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    count = 0\n    for i, char in enumerate(s.lower()):\n        if char == alphabet[i]:\n            count += 1\n    return count",
+      "source": "def same_position_chars(s):\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    count = 0\n    for i, char in enumerate(s.lower()):\n        if char == alphabet[i]:\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:166:0:rejected",
+      "problem_id": "mbpp:test:166",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_even_xor_pairs(numbers):\n    even_count = 0\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if (numbers[i] ^ numbers[j]) % 2 == 0:\n                even_count += 1\n    return even_count",
+      "source": "def count_even_xor_pairs(numbers):\n    even_count = 0\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if (numbers[i] ^ numbers[j]) % 2 == 0:\n                even_count += 1\n    return even_count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:167:0:2",
+      "problem_id": "mbpp:test:167",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find the smallest power of 2 greater than or equal to n.",
+      "gold": 1,
+      "trace": "def find_next_power_of_2(n):\n    power = 1\n    while power < n:\n        power *= 2\n    return power",
+      "source": "def find_next_power_of_2(n):\n    power = 1\n    while power < n:\n        power *= 2\n    return power\n",
+      "status": "built",
+      "den_clean": 1,
+      "den_treat": 4,
+      "den_placebo": null,
+      "den_copyable": 1,
+      "answers": {
+        "control": 1,
+        "treat": 4,
+        "placebo": null,
+        "copyable": 1
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 1",
+        "treat": "FINAL RESULT: 4",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 1"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    power = 1\n    while power < n:\n        power *= 2\n    return power\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 3}\nTAIL:\ndef __tail__(n=n):\n    power = 1\n    while power < n:\n        power *= 2\n    return power\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 1}\nTAIL:\ndef __tail__(n=n):\n    power = 1\n    while power < n:\n        power *= 2\n    return power\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 8
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:168:0:rejected",
+      "problem_id": "mbpp:test:168",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_occurrences(lst, num):\n    count = 0\n    for x in lst:\n        if x == num:\n            count += 1\n    return count",
+      "source": "def count_occurrences(lst, num):\n    count = 0\n    for x in lst:\n        if x == num:\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:170:0:rejected",
+      "problem_id": "mbpp:test:170",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_range(nums, i, j):\n    return sum(nums[i:j+1])",
+      "source": "def sum_range(nums, i, j):\n    return sum(nums[i:j+1])\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:171:0:2",
+      "problem_id": "mbpp:test:171",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the perimeter of a regular pentagon from the length of its sides.",
+      "gold": 25,
+      "trace": "def find_perimeter(side_length):\n    perimeter = 5 * side_length\n    return perimeter",
+      "source": "def find_perimeter(side_length):\n    perimeter = 5 * side_length\n    return perimeter\n",
+      "status": "built",
+      "den_clean": 25,
+      "den_treat": 40,
+      "den_placebo": null,
+      "den_copyable": 25,
+      "answers": {
+        "control": 25,
+        "treat": 40,
+        "placebo": null,
+        "copyable": 25
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 25",
+        "treat": "FINAL RESULT: 40",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 25"
+      },
+      "rendered": {
+        "control": "STATE: {\"side_length\": 5}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 5 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"side_length\": 8}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 5 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"side_length\": 5}\nTAIL:\ndef __tail__(side_length=side_length):\n    perimeter = 5 * side_length\n    return perimeter\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "perimeter": 40
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "side_length",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:172:0:3",
+      "problem_id": "mbpp:test:172",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to count the number of occurence of the string 'std' in a given string.",
+      "gold": 3,
+      "trace": "def count_occurrence(s):\n    count = 0\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count",
+      "source": "def count_occurrence(s):\n    count = 0\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count\n",
+      "status": "built",
+      "den_clean": 3,
+      "den_treat": 6,
+      "den_placebo": 3,
+      "den_copyable": 3,
+      "answers": {
+        "control": 3,
+        "treat": 3,
+        "placebo": 3,
+        "copyable": 3
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 3",
+        "treat": "FINAL RESULT: 3",
+        "placebo": "FINAL RESULT: 3",
+        "copyable": "FINAL RESULT: 3"
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"letstdlenstdporstd\", \"count\": 0}\nTAIL:\ndef __tail__(s=s, count=count):\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"letstdlenstdporstd\", \"count\": 3}\nTAIL:\ndef __tail__(s=s, count=count):\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "placebo": "STATE: {\"s\": \"letstdlenstdporstd_x\", \"count\": 0}\nTAIL:\ndef __tail__(s=s, count=count):\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "copyable": "STATE: {\"s\": \"letstdlenstdporstd\", \"count\": 0}\nTAIL:\ndef __tail__(s=s, count=count):\n    std = 'std'\n    i = 0\n    while i <= len(s) - len(std):\n        if s[i:i+len(std)] == std:\n            count += 1\n            i += len(std)\n        else:\n            i += 1\n    return count\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 3
+      },
+      "treatment_step_idx": 3,
+      "edited_var": "count",
+      "trace_length": 5
+    },
+    {
+      "record_id": "mbpp:test:222:0:rejected",
+      "problem_id": "mbpp:test:222",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def same_data_type(test_tup):\n    temp = type(test_tup[0])\n    for ele in test_tup:\n        if not isinstance(ele, temp):\n            return False\n    return True",
+      "source": "def same_data_type(test_tup):\n    temp = type(test_tup[0])\n    for ele in test_tup:\n        if not isinstance(ele, temp):\n            return False\n    return True\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:223:0:2",
+      "problem_id": "mbpp:test:223",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that takes in a sorted array, its length (n), and an element and returns whether the element is the majority element in the given sorted array. (The majority element is the element that occurs more than n/2 times.)",
+      "gold": true,
+      "trace": "def is_majority_element(arr, n, element):\n    first_occurrence = -1\n    last_occurrence = -1\n    \n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n    \n    return last_occurrence - first_occurrence + 1 > n // 2",
+      "source": "def is_majority_element(arr, n, element):\n    first_occurrence = -1\n    last_occurrence = -1\n    \n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n    \n    return last_occurrence - first_occurrence + 1 > n // 2\n",
+      "status": "built",
+      "den_clean": true,
+      "den_treat": false,
+      "den_placebo": true,
+      "den_copyable": false,
+      "answers": {
+        "control": null,
+        "treat": null,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: true",
+        "treat": "FINAL RESULT: false",
+        "placebo": "FINAL RESULT: true",
+        "copyable": "FINAL RESULT: true"
+      },
+      "rendered": {
+        "control": "STATE: {\"arr\": [1, 2, 3, 3, 3, 3, 10], \"n\": 7, \"element\": 3}\nTAIL:\ndef __tail__(arr=arr, n=n, element=element):\n    first_occurrence = -1\n    last_occurrence = -1\n\n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n\n    return last_occurrence - first_occurrence + 1 > n // 2\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"arr\": [1, 2, 3, 3, 3, 3, 10], \"n\": 7, \"element\": 6}\nTAIL:\ndef __tail__(arr=arr, n=n, element=element):\n    first_occurrence = -1\n    last_occurrence = -1\n\n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n\n    return last_occurrence - first_occurrence + 1 > n // 2\n    return None\n__result__ = __tail__()\n",
+        "placebo": "STATE: {\"arr\": [4, 2, 3, 3, 3, 3, 10], \"n\": 7, \"element\": 3}\nTAIL:\ndef __tail__(arr=arr, n=n, element=element):\n    first_occurrence = -1\n    last_occurrence = -1\n\n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n\n    return last_occurrence - first_occurrence + 1 > n // 2\n    return None\n__result__ = __tail__()\n",
+        "copyable": "STATE: {\"arr\": [1, 2, 3, 3, 3, 3, 10], \"n\": 7, \"element\": 1}\nTAIL:\ndef __tail__(arr=arr, n=n, element=element):\n    first_occurrence = -1\n    last_occurrence = -1\n\n    for i in range(n):\n        if arr[i] == element:\n            if first_occurrence == -1:\n                first_occurrence = i\n            last_occurrence = i\n\n    return last_occurrence - first_occurrence + 1 > n // 2\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "element",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:224:0:2",
+      "problem_id": "mbpp:test:224",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to count the number of set bits (binary digits with value 1) in a given number.",
+      "gold": 1,
+      "trace": "def count_set_bits(n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count",
+      "source": "def count_set_bits(n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n",
+      "status": "built",
+      "den_clean": 1,
+      "den_treat": 2,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 1,
+        "treat": 2,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 1",
+        "treat": "FINAL RESULT: 2",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "count": 1
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:226:0:2",
+      "problem_id": "mbpp:test:226",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to remove the characters which have odd index values of a given string.",
+      "gold": "ace",
+      "trace": "def remove_odd_index_chars(s):\n    new_str = \"\"\n    for i in range(len(s)):\n        if i % 2 == 0:\n            new_str += s[i]\n    return new_str",
+      "source": "def remove_odd_index_chars(s):\n    new_str = \"\"\n    for i in range(len(s)):\n        if i % 2 == 0:\n            new_str += s[i]\n    return new_str\n",
+      "status": "built",
+      "den_clean": "ace",
+      "den_treat": "ace_",
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": "ace",
+        "treat": "ace_x",
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"ace\"",
+        "treat": "FINAL RESULT: \"ace_x\"",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"abcdef\"}\nTAIL:\ndef __tail__(s=s):\n    new_str = \"\"\n    for i in range(len(s)):\n        if i % 2 == 0:\n            new_str += s[i]\n    return new_str\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"abcdef_x\"}\nTAIL:\ndef __tail__(s=s):\n    new_str = \"\"\n    for i in range(len(s)):\n        if i % 2 == 0:\n            new_str += s[i]\n    return new_str\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "s",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:227:0:2",
+      "problem_id": "mbpp:test:227",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find minimum of three numbers.",
+      "gold": 0,
+      "trace": "def find_minimum(a, b, c):\n    minimum = a\n    if b < minimum:\n        minimum = b\n    if c < minimum:\n        minimum = c\n    return minimum",
+      "source": "def find_minimum(a, b, c):\n    minimum = a\n    if b < minimum:\n        minimum = b\n    if c < minimum:\n        minimum = c\n    return minimum\n",
+      "status": "built",
+      "den_clean": 0,
+      "den_treat": 3,
+      "den_placebo": 0,
+      "den_copyable": null,
+      "answers": {
+        "control": 0,
+        "treat": 3,
+        "placebo": 0,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 0",
+        "treat": "FINAL RESULT: 3",
+        "placebo": "FINAL RESULT: 0",
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"a\": 10, \"b\": 20, \"c\": 0}\nTAIL:\ndef __tail__(a=a, b=b, c=c):\n    minimum = a\n    if b < minimum:\n        minimum = b\n    if c < minimum:\n        minimum = c\n    return minimum\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"a\": 10, \"b\": 20, \"c\": 3}\nTAIL:\ndef __tail__(a=a, b=b, c=c):\n    minimum = a\n    if b < minimum:\n        minimum = b\n    if c < minimum:\n        minimum = c\n    return minimum\n    return None\n__result__ = __tail__()\n",
+        "placebo": "STATE: {\"a\": 13, \"b\": 20, \"c\": 0}\nTAIL:\ndef __tail__(a=a, b=b, c=c):\n    minimum = a\n    if b < minimum:\n        minimum = b\n    if c < minimum:\n        minimum = c\n    return minimum\n    return None\n__result__ = __tail__()\n",
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 3
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "c",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:228:0:rejected",
+      "problem_id": "mbpp:test:228",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def are_bits_unset(start, end, number):\n    mask = (1 << end) - 1 ^ ((1 << (start - 1)) - 1)\n    return (number & mask) == 0",
+      "source": "def are_bits_unset(start, end, number):\n    mask = (1 << end) - 1 ^ ((1 << (start - 1)) - 1)\n    return (number & mask) == 0\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:229:0:rejected",
+      "problem_id": "mbpp:test:229",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def rearrange_negatives(arr, n):\n    negatives = [x for x in arr[:n] if x < 0]\n    positives = [x for x in arr[:n] if x >= 0]\n    return negatives + positives",
+      "source": "def rearrange_negatives(arr, n):\n    negatives = [x for x in arr[:n] if x < 0]\n    positives = [x for x in arr[:n] if x >= 0]\n    return negatives + positives\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:230:0:2",
+      "problem_id": "mbpp:test:230",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.",
+      "gold": "hello@people",
+      "trace": "def replace_blanks(s, char):\n    result = \"\"\n    for c in s:\n        if c == \" \":\n            result += char\n        else:\n            result += c\n    return result",
+      "source": "def replace_blanks(s, char):\n    result = \"\"\n    for c in s:\n        if c == \" \":\n            result += char\n        else:\n            result += c\n    return result\n",
+      "status": "built",
+      "den_clean": "hello@people",
+      "den_treat": "hello@people_x",
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": "hello@people",
+        "treat": "hello@people_",
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: \"hello@people\"",
+        "treat": "FINAL RESULT: \"hello@people_\"",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"hello people\", \"char\": \"@\"}\nTAIL:\ndef __tail__(s=s, char=char):\n    result = \"\"\n    for c in s:\n        if c == \" \":\n            result += char\n        else:\n            result += c\n    return result\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"hello people_x\", \"char\": \"@\"}\nTAIL:\ndef __tail__(s=s, char=char):\n    result = \"\"\n    for c in s:\n        if c == \" \":\n            result += char\n        else:\n            result += c\n    return result\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "s",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:234:0:2",
+      "problem_id": "mbpp:test:234",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the volume of a cube given its side length.",
+      "gold": 27,
+      "trace": "def find_cube_volume(side_length):\n    volume = side_length ** 3\n    return volume",
+      "source": "def find_cube_volume(side_length):\n    volume = side_length ** 3\n    return volume\n",
+      "status": "built",
+      "den_clean": 27,
+      "den_treat": 216,
+      "den_placebo": null,
+      "den_copyable": 27,
+      "answers": {
+        "control": 27,
+        "treat": 216,
+        "placebo": null,
+        "copyable": 27
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 27",
+        "treat": "FINAL RESULT: 216",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 27"
+      },
+      "rendered": {
+        "control": "STATE: {\"side_length\": 3}\nTAIL:\ndef __tail__(side_length=side_length):\n    volume = side_length ** 3\n    return volume\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"side_length\": 6}\nTAIL:\ndef __tail__(side_length=side_length):\n    volume = side_length ** 3\n    return volume\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"side_length\": 3}\nTAIL:\ndef __tail__(side_length=side_length):\n    volume = side_length ** 3\n    return volume\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "volume": 216
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "side_length",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:235:0:rejected",
+      "problem_id": "mbpp:test:235",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def set_even_bits(n):\n    even_bits = 0b10101010101010101010101010101010\n    return n | even_bits",
+      "source": "def set_even_bits(n):\n    even_bits = 0b10101010101010101010101010101010\n    return n | even_bits\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:237:0:rejected",
+      "problem_id": "mbpp:test:237",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def map_tuples(lst):\n    result = {}\n    for tup in lst:\n        if tup in result:\n            result[tup] += 1\n        else:\n            result[tup] = 1\n    return result",
+      "source": "def map_tuples(lst):\n    result = {}\n    for tup in lst:\n        if tup in result:\n            result[tup] += 1\n        else:\n            result[tup] = 1\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:238:0:2",
+      "problem_id": "mbpp:test:238",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to count the number of non-empty substrings of a given string.",
+      "gold": 6,
+      "trace": "def count_substrings(s):\n    n = len(s)\n    total = 0\n    for i in range(n):\n        total += n - i\n    return total",
+      "source": "def count_substrings(s):\n    n = len(s)\n    total = 0\n    for i in range(n):\n        total += n - i\n    return total\n",
+      "status": "built",
+      "den_clean": 6,
+      "den_treat": 15,
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": 6,
+        "treat": 10,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 6",
+        "treat": "FINAL RESULT: 10",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"s\": \"abc\"}\nTAIL:\ndef __tail__(s=s):\n    n = len(s)\n    total = 0\n    for i in range(n):\n        total += n - i\n    return total\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"s\": \"abc_x\"}\nTAIL:\ndef __tail__(s=s):\n    n = len(s)\n    total = 0\n    for i in range(n):\n        total += n - i\n    return total\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 6
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "s",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:239:0:rejected",
+      "problem_id": "mbpp:test:239",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_sequences(m, n):\n    if m < 1 or n < 1:\n        return 0\n    dp = [[0 for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = 1\n    for i in range(1, n + 1):\n        for j in range(1, m + 1):\n            dp[i][j] = dp[i][j - 1]\n            for k in range(1, j // 2 + 1):\n                dp[i][j] += dp[i - 1][k]\n    return dp[n][m]",
+      "source": "def find_sequences(m, n):\n    if m < 1 or n < 1:\n        return 0\n    dp = [[0 for _ in range(m + 1)] for _ in range(n + 1)]\n    dp[0][0] = 1\n    for i in range(1, n + 1):\n        for j in range(1, m + 1):\n            dp[i][j] = dp[i][j - 1]\n            for k in range(1, j // 2 + 1):\n                dp[i][j] += dp[i - 1][k]\n    return dp[n][m]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:240:0:rejected",
+      "problem_id": "mbpp:test:240",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def replace_last_with_second(first_list, second_list):\n    first_list[-1:] = second_list\n    return first_list",
+      "source": "def replace_last_with_second(first_list, second_list):\n    first_list[-1:] = second_list\n    return first_list\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:242:0:rejected",
+      "problem_id": "mbpp:test:242",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_total_chars(s):\n    return len(s)",
+      "source": "def count_total_chars(s):\n    return len(s)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:244:0:2",
+      "problem_id": "mbpp:test:244",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find the next perfect square greater than a given number.",
+      "gold": 36,
+      "trace": "def next_perfect_square(n):\n    i = n + 1\n    while True:\n        sqrt_i = i ** 0.5\n        if sqrt_i.is_integer():\n            return i\n        i += 1",
+      "source": "def next_perfect_square(n):\n    i = n + 1\n    while True:\n        sqrt_i = i ** 0.5\n        if sqrt_i.is_integer():\n            return i\n        i += 1\n",
+      "status": "built",
+      "den_clean": 36,
+      "den_treat": 49,
+      "den_placebo": null,
+      "den_copyable": 4,
+      "answers": {
+        "control": 49,
+        "treat": 49,
+        "placebo": null,
+        "copyable": 4
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 49",
+        "treat": "FINAL RESULT: 49",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 4"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 35}\nTAIL:\ndef __tail__(n=n):\n    i = n + 1\n    while True:\n        sqrt_i = i ** 0.5\n        if sqrt_i.is_integer():\n            return i\n        i += 1\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 38}\nTAIL:\ndef __tail__(n=n):\n    i = n + 1\n    while True:\n        sqrt_i = i ** 0.5\n        if sqrt_i.is_integer():\n            return i\n        i += 1\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 1}\nTAIL:\ndef __tail__(n=n):\n    i = n + 1\n    while True:\n        sqrt_i = i ** 0.5\n        if sqrt_i.is_integer():\n            return i\n        i += 1\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 49
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:245:0:rejected",
+      "problem_id": "mbpp:test:245",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_bitonic_sum(arr):\n    n = len(arr)\n    inc = [0] * n\n    dec = [0] * n\n    \n    inc[0] = arr[0]\n    dec[n-1] = arr[n-1]\n    \n    for i in range(1, n):\n        inc[i] = max(arr[i], inc[i-1] + arr[i] if inc[i-1] > 0 else arr[i])\n        j = n - i - 1\n        dec[j] = max(arr[j], dec[j+1] + arr[j] if dec[j+1] > 0 else arr[j])\n    \n    max_sum = 0\n    for i in range(n):\n        max_sum = max(max_sum, inc[i] + dec[i] - arr[i])\n    \n    return max_sum",
+      "source": "def max_bitonic_sum(arr):\n    n = len(arr)\n    inc = [0] * n\n    dec = [0] * n\n    \n    inc[0] = arr[0]\n    dec[n-1] = arr[n-1]\n    \n    for i in range(1, n):\n        inc[i] = max(arr[i], inc[i-1] + arr[i] if inc[i-1] > 0 else arr[i])\n        j = n - i - 1\n        dec[j] = max(arr[j], dec[j+1] + arr[j] if dec[j+1] > 0 else arr[j])\n    \n    max_sum = 0\n    for i in range(n):\n        max_sum = max(max_sum, inc[i] + dec[i] - arr[i])\n    \n    return max_sum\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:247:0:rejected",
+      "problem_id": "mbpp:test:247",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def longest_palindromic_subsequence(s):\n    n = len(s)\n    dp = [[0] * n for _ in range(n)]\n    \n    for i in range(n - 1, -1, -1):\n        dp[i][i] = 1\n        for j in range(i + 1, n):\n            if s[i] == s[j]:\n                dp[i][j] = dp[i + 1][j - 1] + 2\n            else:\n                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])\n    \n    return dp[0][n - 1]",
+      "source": "def longest_palindromic_subsequence(s):\n    n = len(s)\n    dp = [[0] * n for _ in range(n)]\n    \n    for i in range(n - 1, -1, -1):\n        dp[i][i] = 1\n        for j in range(i + 1, n):\n            if s[i] == s[j]:\n                dp[i][j] = dp[i + 1][j - 1] + 2\n            else:\n                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])\n    \n    return dp[0][n - 1]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:249:0:rejected",
+      "problem_id": "mbpp:test:249",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def intersection_of_two_arrays(arr1, arr2):\n    set1 = set(arr1)\n    set2 = set(arr2)\n    return list(set1 & set2)",
+      "source": "def intersection_of_two_arrays(arr1, arr2):\n    set1 = set(arr1)\n    set2 = set(arr2)\n    return list(set1 & set2)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:250:0:rejected",
+      "problem_id": "mbpp:test:250",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_occurrences(tup, element):    \n    count = 0\n    for item in tup:\n        if item == element:\n            count += 1\n    return count",
+      "source": "def count_occurrences(tup, element):    \n    count = 0\n    for item in tup:\n        if item == element:\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:251:0:2",
+      "problem_id": "mbpp:test:251",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.",
+      "gold": [
+        "c",
+        "Red",
+        "c",
+        "Green",
+        "c",
+        "Black"
+      ],
+      "trace": "def insert_before(lst, elem):\n    result = []\n    for item in lst:\n        result.append(elem)\n        result.append(item)\n    return result",
+      "source": "def insert_before(lst, elem):\n    result = []\n    for item in lst:\n        result.append(elem)\n        result.append(item)\n    return result\n",
+      "status": "built",
+      "den_clean": [
+        "c",
+        "Red",
+        "c",
+        "Green",
+        "c",
+        "Black"
+      ],
+      "den_treat": [
+        "c_x",
+        "Red",
+        "c_x",
+        "Green",
+        "c_x",
+        "Black"
+      ],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          "c",
+          "Red",
+          "c",
+          "Green",
+          "c",
+          "Black"
+        ],
+        "treat": [
+          "c_x",
+          "Red",
+          "c_x",
+          "Green",
+          "c_x",
+          "Black"
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: [\"c\", \"Red\", \"c\", \"Green\", \"c\", \"Black\"]",
+        "treat": "FINAL RESULT: [\"c_x\", \"Red\", \"c_x\", \"Green\", \"c_x\", \"Black\"]",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"lst\": [\"Red\", \"Green\", \"Black\"], \"elem\": \"c\"}\nTAIL:\ndef __tail__(lst=lst, elem=elem):\n    result = []\n    for item in lst:\n        result.append(elem)\n        result.append(item)\n    return result\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"lst\": [\"Red\", \"Green\", \"Black\"], \"elem\": \"c_x\"}\nTAIL:\ndef __tail__(lst=lst, elem=elem):\n    result = []\n    for item in lst:\n        result.append(elem)\n        result.append(item)\n    return result\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "elem",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:252:0:rejected",
+      "problem_id": "mbpp:test:252",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def to_polar(z):\n    r = abs(z)\n    theta = cmath.phase(z)\n    return r, theta",
+      "source": "def to_polar(z):\n    r = abs(z)\n    theta = cmath.phase(z)\n    return r, theta\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:253:0:rejected",
+      "problem_id": "mbpp:test:253",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_integers(lst):\n    count = 0\n    for item in lst:\n        if isinstance(item, int):\n            count += 1\n    return count",
+      "source": "def count_integers(lst):\n    count = 0\n    for item in lst:\n        if isinstance(item, int):\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:255:0:rejected",
+      "problem_id": "mbpp:test:255",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def combinations_with_repetition(lst, n):\n    if n == 0:\n        return [()]\n    if not lst:\n        return []\n    first_element = lst[0]\n    rest_elements = lst[1:]\n    with_first = [(first_element,) + comb for comb in combinations_with_repetition(lst, n - 1)]\n    without_first = combinations_with_repetition(rest_elements, n)\n    return with_first + without_first",
+      "source": "def combinations_with_repetition(lst, n):\n    if n == 0:\n        return [()]\n    if not lst:\n        return []\n    first_element = lst[0]\n    rest_elements = lst[1:]\n    with_first = [(first_element,) + comb for comb in combinations_with_repetition(lst, n - 1)]\n    without_first = combinations_with_repetition(rest_elements, n)\n    return with_first + without_first\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:256:0:rejected",
+      "problem_id": "mbpp:test:256",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_primes(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    count = 0\n    for num in range(2, n):\n        if is_prime(num):\n            count += 1\n    return count",
+      "source": "def count_primes(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    count = 0\n    for num in range(2, n):\n        if is_prime(num):\n            count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:257:0:rejected",
+      "problem_id": "mbpp:test:257",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def swap_numbers(a, b):\n    return (b, a)",
+      "source": "def swap_numbers(a, b):\n    return (b, a)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:259:0:rejected",
+      "problem_id": "mbpp:test:259",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def maximize_tuples(tup1, tup2):\n    result = tuple(max(x, y) for x, y in zip(tup1, tup2))\n    return result",
+      "source": "def maximize_tuples(tup1, tup2):\n    result = tuple(max(x, y) for x, y in zip(tup1, tup2))\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:261:0:rejected",
+      "problem_id": "mbpp:test:261",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def divide_tuples(tup1, tup2):\n    result = tuple(a / b for a, b in zip(tup1, tup2))\n    return result",
+      "source": "def divide_tuples(tup1, tup2):\n    result = tuple(a / b for a, b in zip(tup1, tup2))\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:262:0:2",
+      "problem_id": "mbpp:test:262",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that takes in a list and an integer L and splits the given list into two parts where the length of the first part of the list is L, and returns the resulting lists in a tuple.",
+      "gold": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          4,
+          5,
+          1
+        ]
+      ],
+      "trace": "def split_list(lst, L):\n    first_part = lst[:L]\n    second_part = lst[L:]\n    return (first_part, second_part)",
+      "source": "def split_list(lst, L):\n    first_part = lst[:L]\n    second_part = lst[L:]\n    return (first_part, second_part)\n",
+      "status": "built",
+      "den_clean": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          4,
+          5,
+          1
+        ]
+      ],
+      "den_treat": [
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          4,
+          5,
+          1
+        ]
+      ],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            4,
+            5,
+            1
+          ]
+        ],
+        "treat": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            4,
+            5,
+            1
+          ]
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: ([1, 1, 2], [3, 4, 4, 5, 1])",
+        "treat": "FINAL RESULT: ([4, 1, 2], [3, 4, 4, 5, 1])",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"lst\": [1, 1, 2, 3, 4, 4, 5, 1], \"L\": 3}\nTAIL:\ndef __tail__(lst=lst, L=L):\n    first_part = lst[:L]\n    second_part = lst[L:]\n    return (first_part, second_part)\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"lst\": [4, 1, 2, 3, 4, 4, 5, 1], \"L\": 3}\nTAIL:\ndef __tail__(lst=lst, L=L):\n    first_part = lst[:L]\n    second_part = lst[L:]\n    return (first_part, second_part)\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "lst",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:264:0:2",
+      "problem_id": "mbpp:test:264",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to calculate a dog's age in dog's years.",
+      "gold": 61,
+      "trace": "def dog_years(age_in_human_years):\n    puppy_years = age_in_human_years * 10.5\n    adult_years = (age_in_human_years - 2) * 4 + 21\n    return puppy_years if age_in_human_years <= 2 else adult_years",
+      "source": "def dog_years(age_in_human_years):\n    puppy_years = age_in_human_years * 10.5\n    adult_years = (age_in_human_years - 2) * 4 + 21\n    return puppy_years if age_in_human_years <= 2 else adult_years\n",
+      "status": "built",
+      "den_clean": 61,
+      "den_treat": 73,
+      "den_placebo": null,
+      "den_copyable": 55.0,
+      "answers": {
+        "control": 49.0,
+        "treat": 21,
+        "placebo": null,
+        "copyable": 42.0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 49.0",
+        "treat": "FINAL RESULT: 21",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 42.0"
+      },
+      "rendered": {
+        "control": "STATE: {\"age_in_human_years\": 12}\nTAIL:\ndef __tail__(age_in_human_years=age_in_human_years):\n    puppy_years = age_in_human_years * 10.5\n    adult_years = (age_in_human_years - 2) * 4 + 21\n    return puppy_years if age_in_human_years <= 2 else adult_years\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"age_in_human_years\": 15}\nTAIL:\ndef __tail__(age_in_human_years=age_in_human_years):\n    puppy_years = age_in_human_years * 10.5\n    adult_years = (age_in_human_years - 2) * 4 + 21\n    return puppy_years if age_in_human_years <= 2 else adult_years\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"age_in_human_years\": 10.5}\nTAIL:\ndef __tail__(age_in_human_years=age_in_human_years):\n    puppy_years = age_in_human_years * 10.5\n    adult_years = (age_in_human_years - 2) * 4 + 21\n    return puppy_years if age_in_human_years <= 2 else adult_years\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 53
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "age_in_human_years",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:265:0:rejected",
+      "problem_id": "mbpp:test:265",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def split_list(lst, n):\n    result = []\n    for i in range(0, len(lst), n):\n        result.append(lst[i:i + n])\n    return result",
+      "source": "def split_list(lst, n):\n    result = []\n    for i in range(0, len(lst), n):\n        result.append(lst[i:i + n])\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:266:0:2",
+      "problem_id": "mbpp:test:266",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the lateral surface area of a cube given its side length.",
+      "gold": 100,
+      "trace": "def lateral_surface_area(side_length):\n    area = 4 * side_length ** 2\n    return area",
+      "source": "def lateral_surface_area(side_length):\n    area = 4 * side_length ** 2\n    return area\n",
+      "status": "built",
+      "den_clean": 100,
+      "den_treat": 256,
+      "den_placebo": null,
+      "den_copyable": 64,
+      "answers": {
+        "control": 100,
+        "treat": 256,
+        "placebo": null,
+        "copyable": 64
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 100",
+        "treat": "FINAL RESULT: 256",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 64"
+      },
+      "rendered": {
+        "control": "STATE: {\"side_length\": 5}\nTAIL:\ndef __tail__(side_length=side_length):\n    area = 4 * side_length ** 2\n    return area\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"side_length\": 8}\nTAIL:\ndef __tail__(side_length=side_length):\n    area = 4 * side_length ** 2\n    return area\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"side_length\": 4}\nTAIL:\ndef __tail__(side_length=side_length):\n    area = 4 * side_length ** 2\n    return area\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 256
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "side_length",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:267:0:2",
+      "problem_id": "mbpp:test:267",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.",
+      "gold": 10,
+      "trace": "def sum_of_squares_of_odds(n):\n    total = 0\n    for i in range(n):\n        odd_number = 2 * i + 1\n        total += odd_number ** 2\n    return total",
+      "source": "def sum_of_squares_of_odds(n):\n    total = 0\n    for i in range(n):\n        odd_number = 2 * i + 1\n        total += odd_number ** 2\n    return total\n",
+      "status": "built",
+      "den_clean": 10,
+      "den_treat": 165,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 10,
+        "treat": 165,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 10",
+        "treat": "FINAL RESULT: 165",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n):\n        odd_number = 2 * i + 1\n        total += odd_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n):\n        odd_number = 2 * i + 1\n        total += odd_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(n):\n        odd_number = 2 * i + 1\n        total += odd_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 55
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:268:0:rejected",
+      "problem_id": "mbpp:test:268",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def nth_star_number(n):\n    return n * (2 * n - 1)",
+      "source": "def nth_star_number(n):\n    return n * (2 * n - 1)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:269:0:rejected",
+      "problem_id": "mbpp:test:269",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def ascii_value(char):\n    return ord(char)",
+      "source": "def ascii_value(char):\n    return ord(char)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:270:0:2",
+      "problem_id": "mbpp:test:270",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find the sum of even numbers at even positions of a list.",
+      "gold": 30,
+      "trace": "def sum_even_at_even_positions(lst):\n    even_sum = 0\n    for i, num in enumerate(lst):\n        if i % 2 == 0 and num % 2 == 0:\n            even_sum += num\n    return even_sum",
+      "source": "def sum_even_at_even_positions(lst):\n    even_sum = 0\n    for i, num in enumerate(lst):\n        if i % 2 == 0 and num % 2 == 0:\n            even_sum += num\n    return even_sum\n",
+      "status": "built",
+      "den_clean": 30,
+      "den_treat": 38,
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": 26,
+        "treat": 26,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 26",
+        "treat": "FINAL RESULT: 26",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"lst\": [5, 6, 12, 1, 18, 8]}\nTAIL:\ndef __tail__(lst=lst):\n    even_sum = 0\n    for i, num in enumerate(lst):\n        if i % 2 == 0 and num % 2 == 0:\n            even_sum += num\n    return even_sum\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"lst\": [8, 6, 12, 1, 18, 8]}\nTAIL:\ndef __tail__(lst=lst):\n    even_sum = 0\n    for i, num in enumerate(lst):\n        if i % 2 == 0 and num % 2 == 0:\n            even_sum += num\n    return even_sum\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 26
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "lst",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:271:0:2",
+      "problem_id": "mbpp:test:271",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.",
+      "gold": 1056,
+      "trace": "def sum_of_even_powers(n):\n    total = 0\n    current = 2\n    for _ in range(n):\n        total += current ** 5\n        current += 2\n    return total",
+      "source": "def sum_of_even_powers(n):\n    total = 0\n    current = 2\n    for _ in range(n):\n        total += current ** 5\n        current += 2\n    return total\n",
+      "status": "built",
+      "den_clean": 1056,
+      "den_treat": 141600,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 1056,
+        "treat": 24500,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 1056",
+        "treat": "FINAL RESULT: 24500",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    current = 2\n    for _ in range(n):\n        total += current ** 5\n        current += 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    current = 2\n    for _ in range(n):\n        total += current ** 5\n        current += 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    current = 2\n    for _ in range(n):\n        total += current ** 5\n        current += 2\n    return total\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 650
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:272:0:rejected",
+      "problem_id": "mbpp:test:272",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def get_rear_elements(tuples_list):\n    return [tup[-1] for tup in tuples_list]",
+      "source": "def get_rear_elements(tuples_list):\n    return [tup[-1] for tup in tuples_list]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:273:0:rejected",
+      "problem_id": "mbpp:test:273",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def subtract_tuples(tup1, tup2):\n    result = tuple(a - b for a, b in zip(tup1, tup2))\n    return result",
+      "source": "def subtract_tuples(tup1, tup2):\n    result = tuple(a - b for a, b in zip(tup1, tup2))\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:274:0:rejected",
+      "problem_id": "mbpp:test:274",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_even_index_binomial(n):\n    from math import comb\n    sum_even = 0\n    for i in range(0, n + 1, 2):\n        sum_even += comb(n, i)\n    return sum_even",
+      "source": "def sum_even_index_binomial(n):\n    from math import comb\n    sum_even = 0\n    for i in range(0, n + 1, 2):\n        sum_even += comb(n, i)\n    return sum_even\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:277:0:rejected",
+      "problem_id": "mbpp:test:277",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def filter_dict_by_value(d, n):\n    filtered = {k: v for k, v in d.items() if v >= n}\n    return filtered",
+      "source": "def filter_dict_by_value(d, n):\n    filtered = {k: v for k, v in d.items() if v >= n}\n    return filtered\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:278:0:rejected",
+      "problem_id": "mbpp:test:278",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_before_tuple(tup, target):\n    count = 0\n    for i, elem in enumerate(tup):\n        if isinstance(elem, tuple):\n            break\n        count += 1\n    return count",
+      "source": "def count_before_tuple(tup, target):\n    count = 0\n    for i, elem in enumerate(tup):\n        if isinstance(elem, tuple):\n            break\n        count += 1\n    return count\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:279:0:2",
+      "problem_id": "mbpp:test:279",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the nth decagonal number.",
+      "gold": 27,
+      "trace": "def nth_decagonal_number(n):\n    decagonal_number = 4 * n - 3\n    return decagonal_number * n",
+      "source": "def nth_decagonal_number(n):\n    decagonal_number = 4 * n - 3\n    return decagonal_number * n\n",
+      "status": "built",
+      "den_clean": 27,
+      "den_treat": 126,
+      "den_placebo": null,
+      "den_copyable": 27,
+      "answers": {
+        "control": 21,
+        "treat": 111,
+        "placebo": null,
+        "copyable": 21
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 21",
+        "treat": "FINAL RESULT: 111",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 21"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 3}\nTAIL:\ndef __tail__(n=n):\n    decagonal_number = 4 * n - 3\n    return decagonal_number * n\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 6}\nTAIL:\ndef __tail__(n=n):\n    decagonal_number = 4 * n - 3\n    return decagonal_number * n\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 3}\nTAIL:\ndef __tail__(n=n):\n    decagonal_number = 4 * n - 3\n    return decagonal_number * n\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:280:0:2",
+      "problem_id": "mbpp:test:280",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function that takes in an array and element and returns a tuple containing a boolean that indicates if the element is in the array and the index position of the element (or -1 if the element is not found).",
+      "gold": [
+        true,
+        3
+      ],
+      "trace": "def find_element(arr, elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index",
+      "source": "def find_element(arr, elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index\n",
+      "status": "built",
+      "den_clean": [
+        true,
+        3
+      ],
+      "den_treat": [
+        false,
+        -1
+      ],
+      "den_placebo": [
+        true,
+        3
+      ],
+      "den_copyable": [
+        false,
+        -1
+      ],
+      "answers": {
+        "control": null,
+        "treat": [
+          false,
+          -1
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: true",
+        "treat": "FINAL RESULT: (False, -1)",
+        "placebo": "FINAL RESULT: true",
+        "copyable": "FINAL RESULT: true"
+      },
+      "rendered": {
+        "control": "STATE: {\"arr\": [11, 23, 58, 31, 56, 77, 43, 12, 65, 19], \"elem\": 31}\nTAIL:\ndef __tail__(arr=arr, elem=elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"arr\": [11, 23, 58, 31, 56, 77, 43, 12, 65, 19], \"elem\": 34}\nTAIL:\ndef __tail__(arr=arr, elem=elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index\n    return None\n__result__ = __tail__()\n",
+        "placebo": "STATE: {\"arr\": [14, 23, 58, 31, 56, 77, 43, 12, 65, 19], \"elem\": 31}\nTAIL:\ndef __tail__(arr=arr, elem=elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index\n    return None\n__result__ = __tail__()\n",
+        "copyable": "STATE: {\"arr\": [11, 23, 58, 31, 56, 77, 43, 12, 65, 19], \"elem\": 1}\nTAIL:\ndef __tail__(arr=arr, elem=elem):\n    found = elem in arr\n    index = arr.index(elem) if found else -1\n    return found, index\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "elem",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:281:0:rejected",
+      "problem_id": "mbpp:test:281",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def are_elements_unique(lst):\n    return len(lst) == len(set(lst))",
+      "source": "def are_elements_unique(lst):\n    return len(lst) == len(set(lst))\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:282:0:2",
+      "problem_id": "mbpp:test:282",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to subtract two lists element-wise.",
+      "gold": [
+        -3,
+        -3,
+        -3
+      ],
+      "trace": "def elementwise_subtraction(list1, list2):\n    result = []\n    for i in range(len(list1)):\n        result.append(list1[i] - list2[i])\n    return result",
+      "source": "def elementwise_subtraction(list1, list2):\n    result = []\n    for i in range(len(list1)):\n        result.append(list1[i] - list2[i])\n    return result\n",
+      "status": "built",
+      "den_clean": [
+        -3,
+        -3,
+        -3
+      ],
+      "den_treat": [
+        0,
+        -3,
+        -3
+      ],
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": [
+          -3,
+          -3,
+          -3
+        ],
+        "treat": [
+          0,
+          -3,
+          -3
+        ],
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: [-3, -3, -3]",
+        "treat": "FINAL RESULT: [0, -3, -3]",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"list1\": [1, 2, 3], \"list2\": [4, 5, 6]}\nTAIL:\ndef __tail__(list1=list1, list2=list2):\n    result = []\n    for i in range(len(list1)):\n        result.append(list1[i] - list2[i])\n    return result\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"list1\": [4, 2, 3], \"list2\": [4, 5, 6]}\nTAIL:\ndef __tail__(list1=list1, list2=list2):\n    result = []\n    for i in range(len(list1)):\n        result.append(list1[i] - list2[i])\n    return result\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": null,
+      "treatment_step_idx": 2,
+      "edited_var": "list1",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:283:0:rejected",
+      "problem_id": "mbpp:test:283",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def validate_digits(n):\n    s = str(n)\n    for digit in set(s):\n        if s.count(digit) > int(digit):\n            return False\n    return True",
+      "source": "def validate_digits(n):\n    s = str(n)\n    for digit in set(s):\n        if s.count(digit) > int(digit):\n            return False\n    return True\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:284:0:rejected",
+      "problem_id": "mbpp:test:284",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def all_equal(lst, element):\n    return all(item == element for item in lst)",
+      "source": "def all_equal(lst, element):\n    return all(item == element for item in lst)\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:285:0:rejected",
+      "problem_id": "mbpp:test:285",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def check_string(s):\n    import re\n    pattern = r'ab{2,3}'\n    return bool(re.search(pattern, s))",
+      "source": "def check_string(s):\n    import re\n    pattern = r'ab{2,3}'\n    return bool(re.search(pattern, s))\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:286:0:rejected",
+      "problem_id": "mbpp:test:286",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_max_subarray_sum(arr, k):\n    n = len(arr)\n    max_kadane, min_kadane = arr[0], arr[0]\n    max_sum, min_sum = arr[0], arr[0]\n    \n    for i in range(1, 2 * n):\n        if i < n:\n            max_sum += arr[i]\n            min_sum += arr[i]\n            max_kadane = max(max_kadane, max_sum - min_sum)\n        else:\n            max_sum += arr[i % n]\n            min_sum += arr[i % n]\n            max_kadane = max(max_kadane, max_sum - min_sum)\n        \n        max_kadane = max(max_kadane, arr[i % n])\n        min_kadane = min(min_kadane, arr[i % n])\n    \n    total_sum = sum(arr)\n    if total_sum > 0:\n        max_kadane = max(max_kadane, total_sum * (k - 2) + max_kadane)\n    \n    return max_kadane",
+      "source": "def find_max_subarray_sum(arr, k):\n    n = len(arr)\n    max_kadane, min_kadane = arr[0], arr[0]\n    max_sum, min_sum = arr[0], arr[0]\n    \n    for i in range(1, 2 * n):\n        if i < n:\n            max_sum += arr[i]\n            min_sum += arr[i]\n            max_kadane = max(max_kadane, max_sum - min_sum)\n        else:\n            max_sum += arr[i % n]\n            min_sum += arr[i % n]\n            max_kadane = max(max_kadane, max_sum - min_sum)\n        \n        max_kadane = max(max_kadane, arr[i % n])\n        min_kadane = min(min_kadane, arr[i % n])\n    \n    total_sum = sum(arr)\n    if total_sum > 0:\n        max_kadane = max(max_kadane, total_sum * (k - 2) + max_kadane)\n    \n    return max_kadane\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:287:0:2",
+      "problem_id": "mbpp:test:287",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function takes in an integer n and returns the sum of squares of first n even natural numbers.",
+      "gold": 20,
+      "trace": "def sum_of_squares_of_evens(n):\n    total = 0\n    for i in range(1, n + 1):\n        even_number = 2 * i\n        total += even_number ** 2\n    return total",
+      "source": "def sum_of_squares_of_evens(n):\n    total = 0\n    for i in range(1, n + 1):\n        even_number = 2 * i\n        total += even_number ** 2\n    return total\n",
+      "status": "built",
+      "den_clean": 20,
+      "den_treat": 220,
+      "den_placebo": null,
+      "den_copyable": 0,
+      "answers": {
+        "control": 20,
+        "treat": 220,
+        "placebo": null,
+        "copyable": 0
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 20",
+        "treat": "FINAL RESULT: 220",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 0"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(1, n + 1):\n        even_number = 2 * i\n        total += even_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(1, n + 1):\n        even_number = 2 * i\n        total += even_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 0}\nTAIL:\ndef __tail__(n=n):\n    total = 0\n    for i in range(1, n + 1):\n        even_number = 2 * i\n        total += even_number ** 2\n    return total\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 130
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "n",
+      "trace_length": 3
+    },
+    {
+      "record_id": "mbpp:test:290:0:rejected",
+      "problem_id": "mbpp:test:290",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_max_length_list(lists):\n    max_length = -1\n    max_list = []\n    for lst in lists:\n        if len(lst) > max_length:\n            max_length = len(lst)\n            max_list = lst\n    return max_list",
+      "source": "def find_max_length_list(lists):\n    max_length = -1\n    max_list = []\n    for lst in lists:\n        if len(lst) > max_length:\n            max_length = len(lst)\n            max_list = lst\n    return max_list\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:291:0:6",
+      "problem_id": "mbpp:test:291",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color for the given fence with n posts and k colors.",
+      "gold": 16,
+      "trace": "def count_ways(n, k):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return k\n    same, diff = k, k * (k - 1)\n    for _ in range(3, n + 1):\n        same, diff = diff, (same + diff) * (k - 1)\n    return same + diff",
+      "source": "def count_ways(n, k):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return k\n    same, diff = k, k * (k - 1)\n    for _ in range(3, n + 1):\n        same, diff = diff, (same + diff) * (k - 1)\n    return same + diff\n",
+      "status": "built",
+      "den_clean": 16,
+      "den_treat": 864,
+      "den_placebo": null,
+      "den_copyable": 9,
+      "answers": {
+        "control": 30,
+        "treat": 132,
+        "placebo": null,
+        "copyable": 18
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 30",
+        "treat": "FINAL RESULT: 132",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 18"
+      },
+      "rendered": {
+        "control": "STATE: {\"n\": 2, \"k\": 4}\nTAIL:\ndef __tail__(n=n, k=k):\n    same, diff = k, k * (k - 1)\n    for _ in range(3, n + 1):\n        same, diff = diff, (same + diff) * (k - 1)\n    return same + diff\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"n\": 5, \"k\": 4}\nTAIL:\ndef __tail__(n=n, k=k):\n    same, diff = k, k * (k - 1)\n    for _ in range(3, n + 1):\n        same, diff = diff, (same + diff) * (k - 1)\n    return same + diff\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"n\": 2, \"k\": 3}\nTAIL:\ndef __tail__(n=n, k=k):\n    same, diff = k, k * (k - 1)\n    for _ in range(3, n + 1):\n        same, diff = diff, (same + diff) * (k - 1)\n    return same + diff\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "FINAL_RESULT": 1680
+      },
+      "treatment_step_idx": 6,
+      "edited_var": "n",
+      "trace_length": 4
+    },
+    {
+      "record_id": "mbpp:test:292:0:2",
+      "problem_id": "mbpp:test:292",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a python function to find quotient of two numbers (rounded down to the nearest integer).",
+      "gold": 3,
+      "trace": "def find_quotient(dividend, divisor):\n    quotient = dividend // divisor\n    return quotient",
+      "source": "def find_quotient(dividend, divisor):\n    quotient = dividend // divisor\n    return quotient\n",
+      "status": "built",
+      "den_clean": 3,
+      "den_treat": 4,
+      "den_placebo": null,
+      "den_copyable": null,
+      "answers": {
+        "control": 3,
+        "treat": 4,
+        "placebo": null,
+        "copyable": null
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 3",
+        "treat": "FINAL RESULT: 4",
+        "placebo": null,
+        "copyable": null
+      },
+      "rendered": {
+        "control": "STATE: {\"dividend\": 10, \"divisor\": 3}\nTAIL:\ndef __tail__(dividend=dividend, divisor=divisor):\n    quotient = dividend // divisor\n    return quotient\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"dividend\": 13, \"divisor\": 3}\nTAIL:\ndef __tail__(dividend=dividend, divisor=divisor):\n    quotient = dividend // divisor\n    return quotient\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": null
+      },
+      "competent": false,
+      "competent_answer": {
+        "result": 4
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "dividend",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:293:0:2",
+      "problem_id": "mbpp:test:293",
+      "dataset": "mbpp",
+      "seed": 0,
+      "question": "Write a function to find the third side of a right angled triangle.",
+      "gold": 10.63014581273465,
+      "trace": "def find_hypotenuse(leg1, leg2):\n    hypotenuse = (leg1**2 + leg2**2) ** 0.5\n    return hypotenuse",
+      "source": "def find_hypotenuse(leg1, leg2):\n    hypotenuse = (leg1**2 + leg2**2) ** 0.5\n    return hypotenuse\n",
+      "status": "built",
+      "den_clean": 10.63014581273465,
+      "den_treat": 12.806248474865697,
+      "den_placebo": null,
+      "den_copyable": 7.0178344238090995,
+      "answers": {
+        "control": 10.63014581273465,
+        "treat": 12.806248474865697,
+        "placebo": null,
+        "copyable": 7.059139126779792
+      },
+      "outputs": {
+        "control": "FINAL RESULT: 10.63014581273465",
+        "treat": "FINAL RESULT: 12.806248474865697",
+        "placebo": null,
+        "copyable": "FINAL RESULT: 7.059139126779792"
+      },
+      "rendered": {
+        "control": "STATE: {\"leg1\": 7, \"leg2\": 8}\nTAIL:\ndef __tail__(leg1=leg1, leg2=leg2):\n    hypotenuse = (leg1**2 + leg2**2) ** 0.5\n    return hypotenuse\n    return None\n__result__ = __tail__()\n",
+        "treat": "STATE: {\"leg1\": 10, \"leg2\": 8}\nTAIL:\ndef __tail__(leg1=leg1, leg2=leg2):\n    hypotenuse = (leg1**2 + leg2**2) ** 0.5\n    return hypotenuse\n    return None\n__result__ = __tail__()\n",
+        "placebo": null,
+        "copyable": "STATE: {\"leg1\": 7, \"leg2\": 0.5}\nTAIL:\ndef __tail__(leg1=leg1, leg2=leg2):\n    hypotenuse = (leg1**2 + leg2**2) ** 0.5\n    return hypotenuse\n    return None\n__result__ = __tail__()\n"
+      },
+      "competent": false,
+      "competent_answer": {
+        "final_result": 12.806248474865697
+      },
+      "treatment_step_idx": 2,
+      "edited_var": "leg1",
+      "trace_length": 2
+    },
+    {
+      "record_id": "mbpp:test:294:0:rejected",
+      "problem_id": "mbpp:test:294",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_max_value(lst):\n    max_value = None\n    for item in lst:\n        if max_value is None or item > max_value:\n            max_value = item\n    return max_value",
+      "source": "def find_max_value(lst):\n    max_value = None\n    for item in lst:\n        if max_value is None or item > max_value:\n            max_value = item\n    return max_value\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:295:0:rejected",
+      "problem_id": "mbpp:test:295",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def sum_of_divisors(n):\n    divisors_sum = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            divisors_sum += i\n    return divisors_sum",
+      "source": "def sum_of_divisors(n):\n    divisors_sum = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            divisors_sum += i\n    return divisors_sum\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:296:0:rejected",
+      "problem_id": "mbpp:test:296",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def count_inversions(arr):\n    def merge_sort(arr):\n        if len(arr) <= 1:\n            return arr, 0\n        mid = len(arr) // 2\n        left, left_inversions = merge_sort(arr[:mid])\n        right, right_inversions = merge_sort(arr[mid:])\n        merged, split_inversions = merge(left, right)\n        return merged, left_inversions + right_inversions + split_inversions\n    \n    def merge(left, right):\n        merged = []\n        i = j = inversions = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n                inversions += len(left) - i\n        merged += left[i:]\n        merged += right[j:]\n        return merged, inversions\n    \n    _, total_inversions = merge_sort(arr)\n    return total_inversions",
+      "source": "def count_inversions(arr):\n    def merge_sort(arr):\n        if len(arr) <= 1:\n            return arr, 0\n        mid = len(arr) // 2\n        left, left_inversions = merge_sort(arr[:mid])\n        right, right_inversions = merge_sort(arr[mid:])\n        merged, split_inversions = merge(left, right)\n        return merged, left_inversions + right_inversions + split_inversions\n    \n    def merge(left, right):\n        merged = []\n        i = j = inversions = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n                inversions += len(left) - i\n        merged += left[i:]\n        merged += right[j:]\n        return merged, inversions\n    \n    _, total_inversions = merge_sort(arr)\n    return total_inversions\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:297:0:rejected",
+      "problem_id": "mbpp:test:297",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def flatten(lst):\n    result = []\n    for i in lst:\n        if isinstance(i, list):\n            result.extend(flatten(i))\n        else:\n            result.append(i)\n    return result",
+      "source": "def flatten(lst):\n    result = []\n    for i in lst:\n        if isinstance(i, list):\n            result.extend(flatten(i))\n        else:\n            result.append(i)\n    return result\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:299:0:rejected",
+      "problem_id": "mbpp:test:299",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def max_aggregate(lst):\n    max_val = float('-inf')\n    for tup in lst:\n        aggregate = sum(tup)\n        if aggregate > max_val:\n            max_val = aggregate\n    return max_val",
+      "source": "def max_aggregate(lst):\n    max_val = float('-inf')\n    for tup in lst:\n        aggregate = sum(tup)\n        if aggregate > max_val:\n            max_val = aggregate\n    return max_val\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:301:0:rejected",
+      "problem_id": "mbpp:test:301",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_depth(dictionary):\n    max_depth = 0\n    for key, value in dictionary.items():\n        current_depth = 1\n        if isinstance(value, dict):\n            current_depth += find_depth(value)\n        max_depth = max(max_depth, current_depth)\n    return max_depth",
+      "source": "def find_depth(dictionary):\n    max_depth = 0\n    for key, value in dictionary.items():\n        current_depth = 1\n        if isinstance(value, dict):\n            current_depth += find_depth(value)\n        max_depth = max(max_depth, current_depth)\n    return max_depth\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:304:0:rejected",
+      "problem_id": "mbpp:test:304",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_element_after_rotation(arr, index, k):\n    n = len(arr)\n    k = k % n\n    rotated_index = (index + k) % n\n    return arr[rotated_index]",
+      "source": "def find_element_after_rotation(arr, index, k):\n    n = len(arr)\n    k = k % n\n    rotated_index = (index + k) % n\n    return arr[rotated_index]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    },
+    {
+      "record_id": "mbpp:test:305:0:rejected",
+      "problem_id": "mbpp:test:305",
+      "dataset": "mbpp",
+      "seed": 0,
+      "trace": "def find_p_words(words):\n    p_words = [word for word in words if word.startswith('p')]\n    return p_words[:2]",
+      "source": "def find_p_words(words):\n    p_words = [word for word in words if word.startswith('p')]\n    return p_words[:2]\n",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true
+    }
+  ],
+  "completed_at": "2026-08-03T02:21:02.764643+00:00"
+}

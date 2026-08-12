@@ -1,0 +1,52 @@
+{
+  "n_filled": 100,
+  "n_sheet": 100,
+  "n_agree": 99,
+  "agreement_rate": 0.99,
+  "ci95": [
+    0.9455406146079194,
+    0.9997468539670226
+  ],
+  "by_model": {
+    "anthropic/claude-sonnet-5": {
+      "n": 19,
+      "agree": 19,
+      "rate": 1.0
+    },
+    "meta-llama/llama-3.1-8b-instruct": {
+      "n": 12,
+      "agree": 12,
+      "rate": 1.0
+    },
+    "qwen/qwen-2.5-7b-instruct": {
+      "n": 10,
+      "agree": 10,
+      "rate": 1.0
+    },
+    "meta-llama/llama-3.2-1b-instruct": {
+      "n": 3,
+      "agree": 3,
+      "rate": 1.0
+    },
+    "openai/gpt-5.6-luna": {
+      "n": 30,
+      "agree": 30,
+      "rate": 1.0
+    },
+    "qwen/qwen-2.5-72b-instruct": {
+      "n": 13,
+      "agree": 13,
+      "rate": 1.0
+    },
+    "meta-llama/llama-3.1-70b-instruct": {
+      "n": 8,
+      "agree": 7,
+      "rate": 0.875
+    },
+    "deepseek/deepseek-r1": {
+      "n": 5,
+      "agree": 5,
+      "rate": 1.0
+    }
+  }
+}

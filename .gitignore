@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.blg
+*.out
+.denote_cache/
+.ua/

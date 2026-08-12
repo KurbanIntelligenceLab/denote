@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-08-07T16:05:08.724597+00:00",
+  "purpose": "Side-by-side OpenRouter logprobs probe for AttriCoT/NLDD feasibility without local GPU. Not a faithfulness measurement.",
+  "models_usable_for_api_margin_pilot": [
+    "meta-llama/llama-3.1-8b-instruct"
+  ],
+  "models_not_usable": [
+    "qwen/qwen-2.5-7b-instruct",
+    "meta-llama/llama-3.1-70b-instruct",
+    "qwen/qwen-2.5-72b-instruct",
+    "deepseek/deepseek-r1"
+  ],
+  "cc_shap_note": "CC-SHAP needs input attributions, not output logprobs; this probe does not help CC-SHAP.",
+  "rows": [
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "ok": false,
+      "error": null,
+      "has_logprobs_field": false,
+      "n_tokens_with_logprob": 0,
+      "n_tokens_with_top": 0,
+      "crude_margins": [],
+      "mean_crude_margin": null,
+      "sample_text": "The final answer is 7",
+      "note": "API accepted logprobs=true but returned empty/null content — not usable for margins via this hop"
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "ok": true,
+      "error": null,
+      "has_logprobs_field": true,
+      "n_tokens_with_logprob": 5,
+      "n_tokens_with_top": 5,
+      "crude_margins": [
+        16.374999642372188,
+        16.124999523162728,
+        9.50000011476368,
+        12.375000119198376,
+        9.375000353807991
+      ],
+      "mean_crude_margin": 12.749999950660992,
+      "sample_text": "The final answer is 7.",
+      "note": "Got top_logprobs; crude best-vs-second margins are available. This is NOT yet AttriCoT/NLDD (those need intact-vs-corrupted answer margins on the same items), but it unblocks an API pilot."
+    },
+    {
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "ok": false,
+      "error": null,
+      "has_logprobs_field": false,
+      "n_tokens_with_logprob": 0,
+      "n_tokens_with_top": 0,
+      "crude_margins": [],
+      "mean_crude_margin": null,
+      "sample_text": "The final answer is 7.",
+      "note": "API accepted logprobs=true but returned empty/null content — not usable for margins via this hop"
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "ok": false,
+      "error": null,
+      "has_logprobs_field": false,
+      "n_tokens_with_logprob": 0,
+      "n_tokens_with_top": 0,
+      "crude_margins": [],
+      "mean_crude_margin": null,
+      "sample_text": "The final answer is 7",
+      "note": "API accepted logprobs=true but returned empty/null content — not usable for margins via this hop"
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "ok": false,
+      "error": null,
+      "has_logprobs_field": false,
+      "n_tokens_with_logprob": 0,
+      "n_tokens_with_top": 0,
+      "crude_margins": [],
+      "mean_crude_margin": null,
+      "sample_text": "",
+      "note": "API accepted logprobs=true but returned empty/null content — not usable for margins via this hop"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "n_rejected_seeds_0_2": 404,
+  "n_empty_trace_not_addressed": 99,
+  "n_nonempty_rejected": 305,
+  "before": {
+    "parsed": 148,
+    "self_consistent": 20,
+    "buildable_c1_c3": 0
+  },
+  "after_normalization": {
+    "parsed": 232,
+    "self_consistent": 34,
+    "buildable_c1_c3": 5
+  },
+  "note": "Offline retroactive re-gate on already-collected DeepSeek-R1 text using denote_grammar_ext.normalize_trace_text + the unmodified ArithTrace parser. No new model call was made. 'buildable_c1_c3' counts items for which a scoreable treatment edit exists; it is NOT phi/delta/sigma, which still requires live continuation calls on these normalized traces (blocked in this environment: no OPENROUTER_API_KEY)."
+}
