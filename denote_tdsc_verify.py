@@ -50,16 +50,19 @@ SHORT = {
 }
 
 # What the manuscript prints in Table I. Kept here so a mismatch is loud.
+# m is the design-effect-corrected exact Clopper-Pearson construction, the
+# primary specification since the 2026-08-14 promotion (denote_tdsc.tex,
+# Table I footnote and the "ranking is never unique" paragraph).
 MANUSCRIPT_TABLE1 = {
     #            N     sigma   phi     delta   m
-    "Llama-70B": (134, 0.388, 0.276, 0.112, 0.169),
-    "Llama-8B": (109, 0.202, 0.138, 0.064, 0.117),
-    "Qwen-72B": (165, 0.188, 0.164, 0.024, 0.051),
-    "Qwen-7B": (105, 0.086, 0.057, 0.029, 0.064),
-    "Claude-5": (293, 0.003, 0.003, 0.000, 0.000),
+    "Llama-70B": (134, 0.388, 0.276, 0.112, 0.190),
+    "Llama-8B": (109, 0.202, 0.138, 0.064, 0.145),
+    "Qwen-72B": (165, 0.188, 0.164, 0.024, 0.084),
+    "Qwen-7B": (105, 0.086, 0.057, 0.029, 0.086),
+    "Claude-5": (293, 0.003, 0.003, 0.000, 0.003),
     "GPT-5.6": (341, 0.000, 0.000, 0.000, 0.000),
 }
-MANUSCRIPT_DOWNSTREAM = {"determined": 13, "adjacent": 4, "rankings": 3}
+MANUSCRIPT_DOWNSTREAM = {"determined": 9, "adjacent": 1, "rankings": 20}
 
 TOL = 1e-3
 

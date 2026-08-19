@@ -1,0 +1,42 @@
+{
+  "qwen2.5-3b-instruct": {
+    "n": 38,
+    "sigma": 0.0,
+    "phi": 0.0,
+    "delta": 0.0,
+    "psi": 1.0,
+    "follow": 0,
+    "restore": 38,
+    "derail": 0,
+    "no_response": 0,
+    "nprob": 18,
+    "note": "no derailed item to train against; DPO not run"
+  },
+  "qwen2.5-7b-instruct_before": {
+    "n": 26,
+    "sigma": 0.3076923076923077,
+    "phi": 0.23076923076923078,
+    "delta": 0.07692307692307693,
+    "psi": 0.6923076923076923,
+    "follow": 6,
+    "restore": 18,
+    "derail": 2,
+    "no_response": 0,
+    "nprob": 13,
+    "delta_cp95_upper": 0.22289365499449815
+  },
+  "qwen2.5-7b-instruct_after": {
+    "n": 30,
+    "sigma": 0.26666666666666666,
+    "phi": 0.2,
+    "delta": 0.06666666666666667,
+    "psi": 0.7333333333333333,
+    "follow": 6,
+    "restore": 22,
+    "derail": 2,
+    "no_response": 0,
+    "nprob": 14,
+    "delta_cp95_upper": 0.19532604365492595,
+    "note": "trained on 2 DPO pairs, rank-8 LoRA, 3 epochs, final_loss=0.5695"
+  }
+}

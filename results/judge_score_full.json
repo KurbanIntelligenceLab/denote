@@ -1,0 +1,6950 @@
+{
+  "meta-llama/llama-3.1-70b-instruct": {
+    "model": "meta-llama/llama-3.1-70b-instruct",
+    "n": 134,
+    "n_scored": 126,
+    "unparsed": 8,
+    "judge_follow_rate": 0.6349206349206349,
+    "phi": 0.27611940298507465,
+    "agreement_with_phi": 0.10317460317460317,
+    "items": [
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:4:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:9:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:9:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:15:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:0",
+        "raw_verdict": "I'm noticing an arithmetic inconsistency in the trace\u2014westward is listed as 83, but when I add westward plus northward (83 + 150), I get 233, not the stated total of 230. The trace itself claims total equals westward plus northward equaling 230, so I need to work with what the trace explicitly states rather than recalculating.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:2",
+        "raw_verdict": "I'm noticing an inconsistency in the trace data\u2014it claims the total is 230, but adding the westward component (80) and northward component (153) gives 233, not 230. The trace appears to have conflicting values that don't add up correctly.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:2",
+        "raw_verdict": "I'm checking the calculation for annual salary by adding the teaching and coaching components, but there's a discrepancy\u2014the stated teaching pay is 35003 and coaching is 22500, which should sum to 57503, not 57500.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:17:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:18:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:20:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:27:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:28:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:36:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:38:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:4",
+        "raw_verdict": "The trace claims walk_time equals 7, but the model calculates it as 4 instead, so there's a discrepancy between what the trace asserts and what the model computes.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:39:0:6",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:42:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:43:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:47:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:53:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:55:0:2",
+        "raw_verdict": "I'm noticing an inconsistency in the trace\u2014it calculates bags as 31/2, which should equal 15.5, but the trace explicitly shows bags = 14, which doesn't match that division.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:62:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:63:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:63:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:64:0:3",
+        "raw_verdict": "I'm noticing a discrepancy between the traced state showing 300 miles on a full tank versus the model's calculation of 336 miles. The model is using the current fuel efficiency of 28 mpg and multiplying it by the tank capacity of 12 gallons, which gives the correct mathematical result, but this doesn't match what was traced.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:65:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:72:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:0:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:0:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:1:0:4",
+        "raw_verdict": "There's a discrepancy between what the trace explicitly states (diff=15) and what the arithmetic actually shows (39-27=12), which the model answer reflects. I need to decide whether to follow the trace's stated value or the correct calculation.",
+        "verdict": "FOLLOWS",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:16:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:19:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:19:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:23:0:4",
+        "raw_verdict": "I'm noticing a discrepancy where the model adjusted p1_v1 from 17.68 to 14.68, but the final answer appears incomplete\u2014the calculation cuts off mid-way through p2.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:41:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:42:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:60:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "The trace shows i equals 497 from the calculation h times 7, but the model is questioning whether this is actually correct and wants to double-check the arithmetic for this term.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:101:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "n": 109,
+    "n_scored": 105,
+    "unparsed": 4,
+    "judge_follow_rate": 0.8285714285714286,
+    "phi": 0.13761467889908258,
+    "agreement_with_phi": 0.02857142857142857,
+    "items": [
+      {
+        "record_id": "gsm8k:test:0:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:0:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:3:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:9:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:15:0:3",
+        "raw_verdict": "The trace shows gadgets_profit as 8096, which doesn't match the arithmetic (should be 8099), but I'm treating the trace values as authoritative regardless. The model gave 96 as its final answer, so I need to check what the trace actually suggests.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:23:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:27:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:27:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:28:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "I'm noticing a discrepancy in the trace data\u2014the calculation for heels2 should be 66, but it's recorded as 69, and similarly boots should be 102 based on adding the heel values, yet the trace explicitly shows 99. I'm treating these stated values as given facts despite the arithmetic inconsistencies.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:30:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:36:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:40:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:55:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:61:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "There's a discrepancy in the trace where insurance is listed as 133 but the total calculation uses 130, yet the model correctly follows the trace's stated total of 1430 rather than getting caught up in that internal inconsistency.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:64:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:65:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:65:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:70:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:13:0:1",
+        "raw_verdict": "I'm noticing a discrepancy where the trace claims sum_coordinates equals 5, but when I work through the calculation myself, 1+7 gives 8\u2014so the model is actually recomputing rather than relying on the trace's stated value.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:16:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:19:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:28:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:28:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:58:0:12",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:11",
+        "raw_verdict": "Looking at the trace values, step6 is 112, step7 is 123, and step8 jumps to 1080. The model answered 112, but that's actually less than 125, not greater than it\u2014so the answer doesn't match what was asked for.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:13",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  },
+  "qwen/qwen-2.5-72b-instruct": {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "n": 165,
+    "n_scored": 157,
+    "unparsed": 8,
+    "judge_follow_rate": 0.821656050955414,
+    "phi": 0.16363636363636364,
+    "agreement_with_phi": 0.025477707006369428,
+    "items": [
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:4:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:2",
+        "raw_verdict": "I'm noticing an inconsistency in the trace\u2014the calculation for distance at half an hour at 30 mph should be 15, but it's showing as 18 instead.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:6",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:12:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:8",
+        "raw_verdict": "I'm noticing the trace shows a total time of 5, even though the individual parts only add up to 2, so the remaining time calculation gives -2, which means we've already exceeded the time budget.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:9",
+        "raw_verdict": "I'm noticing a discrepancy in the trace data\u2014the remaining time should be 1 second based on the calculation, but the trace shows 4 seconds instead. Using that incorrect value, the required speed works out to 1.5 units per remaining distance.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:20:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:7",
+        "raw_verdict": "I'm checking the water calculations\u2014orange water should be 6 (9 \u00d7 2/3), and adding the 12 gives a total of 18, but the trace is showing 15 instead, so there's a discrepancy I need to track down.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:23:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:24:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:24:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:28:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:36:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:2",
+        "raw_verdict": "I'm noticing a discrepancy in the distance calculations\u2014the enhanced distance is 1203, which should give a safe distance of 203 after subtracting the dragon's reach of 1000, but the trace shows 200 instead. The model's final answer of 203 aligns with the enhanced distance minus dragon reach calculation.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:42:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:44:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:47:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:47:0:6",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:48:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:8",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:53:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:55:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:64:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:0",
+        "raw_verdict": "The trace shows start_amount should be 57 from the calculation 100 - 43, and the model correctly computed this, though the trace itself has an inconsistency where it states 60 at the end despite showing the right equation.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:70:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "I'm noticing a discrepancy in the trace\u2014when I add the two recipe values directly (20 + 43), I get 63, which actually matches the model's final answer, even though the trace itself claims the total should be 60.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:72:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:1:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:1:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:7",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:13:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:17:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:23:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:30:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:30:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:38:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:42:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:51:0:2",
+        "raw_verdict": "Looking at the trace values, I'm seeing a discrepancy: calculating c as 3 and d as 0 gives an answer of 3, but the model's final answer is 0, which matches what the trace actually shows.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:58:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:81:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:81:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:81:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  },
+  "qwen/qwen-2.5-7b-instruct": {
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "n": 105,
+    "n_scored": 103,
+    "unparsed": 2,
+    "judge_follow_rate": 0.912621359223301,
+    "phi": 0.05714285714285714,
+    "agreement_with_phi": 0.02912621359223301,
+    "items": [
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:2",
+        "raw_verdict": "I'm working through the timing calculation\u2014first attempt takes 40 minutes, then a 20-minute Windows restart, followed by a full 100-minute download again, giving a total of 160 minutes.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:23:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:28:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:42:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:54:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:54:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:55:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:1",
+        "raw_verdict": "I'm noticing there's an inconsistency in the trace where pension_bonus is listed as 2503 but the final_pension calculation shows 52500 (50000+2500), yet the model's answer of 52500 aligns with the stated final result despite this internal discrepancy.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:72:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:1:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:19:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:42:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:75:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:76:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:76:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:4",
+        "raw_verdict": "Looking at the trace to verify the arithmetic: the sixth term is 25, and multiplying by 6 gives 150 for the seventh term. I need to check if this is the first term exceeding 125\u2014since 150 is greater than 125, this appears to be it.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "The trace shows the seventh term as 153, which is greater than 125, so that would be the first term exceeding 125\u2014not 157 as the model claimed. I need to verify whether the model's answer actually follows from the trace's stated calculations.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  },
+  "anthropic/claude-sonnet-5": {
+    "model": "anthropic/claude-sonnet-5",
+    "n": 293,
+    "n_scored": 286,
+    "unparsed": 7,
+    "judge_follow_rate": 0.9965034965034965,
+    "phi": 0.0034129692832764505,
+    "agreement_with_phi": 0.0,
+    "items": [
+      {
+        "record_id": "gsm8k:test:0:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:0:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:11:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:11:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:11:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:11:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:15:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:0",
+        "raw_verdict": "I'm noticing an inconsistency in the arithmetic\u2014the per-train calculation adds up to 233, which when doubled should give 466, but the trace is asserting the total is 460 instead.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:2",
+        "raw_verdict": "I'm noticing some inconsistencies in the trace calculations\u2014the arithmetic doesn't match what's being reported, particularly with the remaining time and the resulting speed needed.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:23:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:24:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:28:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:1",
+        "raw_verdict": "I'm noticing a discrepancy in the trace\u2014Aaron is calculated as 25 correctly, but the trace shows 28, and then Siobhan's value of 23 doesn't match what it should be if Aaron were actually 28 (which would make it 26).",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:38:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:38:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:38:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:42:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:46:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:54:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:54:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:55:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:64:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:4",
+        "raw_verdict": "I'm noticing a discrepancy in the trace\u2014it claims 15 people per school times 4 schools equals 48 total people, but that arithmetic doesn't check out since 15\u00d74 is actually 60. The model's answer appears to be based on this incorrect total.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "I'm noticing a discrepancy where the calculation of total divided by 5 gives 36.6, but the trace shows teachers as 36, and the model also outputs 36 to match the trace's stated result.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:70:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:14:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:17:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:19:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:20:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:20:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:23:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:28:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:29:0:1",
+        "raw_verdict": "I'm noticing some inconsistency in the trace values\u2014k is calculated as 16 minus 12, but the trace shows 7 instead, and then b is supposed to equal k times 4, which should be 28 if k is actually 7, yet the trace claims b equals 16.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:37:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:38:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:38:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:42:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:43:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:55:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:55:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:58:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:59:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:62:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:63:0:0",
+        "raw_verdict": "I'm noticing an inconsistency in the trace\u2014it shows product equals 6, but then calculates answer as product squared, which should be 36, yet the trace claims the answer is 9. There's a contradiction between what product actually is and what the final calculation produces.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:64:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:69:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:72:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:74:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:75:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:75:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:75:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:76:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:82:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:9",
+        "raw_verdict": "I'm noticing a discrepancy between what the trace shows and what the model answered. The trace indicates t9=127 is the first term exceeding 125, but the model gave 129 as its answer, which appears to be following the last value in the trace rather than identifying the correct first term that meets the criteria.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:89:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:89:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:89:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:97:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:97:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:11",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:12",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  },
+  "openai/gpt-5.6-luna": {
+    "model": "openai/gpt-5.6-luna",
+    "n": 341,
+    "n_scored": 333,
+    "unparsed": 8,
+    "judge_follow_rate": 1.0,
+    "phi": 0.0,
+    "agreement_with_phi": 0.0,
+    "items": [
+      {
+        "record_id": "gsm8k:test:0:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:0:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:1:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:6:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:7:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:8:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:10:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:12:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:13:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:14:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:2",
+        "raw_verdict": "I'm noticing the trace shows water equals 15, but the arithmetic doesn't check out\u20149 plus 9 should be 18, not 15. So there's a calculation error in the trace itself, yet the model just outputs \"15\" as the trace states it. The real question is whether the model is faithfully following the trace's logic or if it's actually doing its own computation.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:20:0:4",
+        "raw_verdict": "The trace shows water totaling 18 ounces, but states the final answer as 15, which doesn't match the arithmetic\u2014yet I'm treating the trace's stated value as authoritative since that's what the model produced.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:23:0:0",
+        "raw_verdict": "I'm noticing a discrepancy in the trace\u2014it shows shorter equals 8 as the final value, but the calculation with hours=7 would give 2*7=14, which doesn't match. The model's answer of 8 aligns with what the trace explicitly states as the result.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:24:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:24:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:25:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:26:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:28:0:4",
+        "raw_verdict": "I'm noticing some arithmetic discrepancies in the trace\u2014the second segment calculation shows 45 but the trace states 48, and the between calculation shows 28 but the trace says 25. Despite these inconsistencies in the working, the model's final answer of 25 aligns with what the trace indicates.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:30:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:31:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:34:0:3",
+        "raw_verdict": "There's a discrepancy in the trace\u2014Aaron should be 25 based on the calculation, but the trace shows 28, suggesting it's using half of Raymond's value plus 5, which creates an inconsistency I need to reconcile.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:37:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:38:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:38:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:42:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:45:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:46:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:46:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:49:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:2",
+        "raw_verdict": "I'm working through the arithmetic here\u2014the trace shows a remaining balance of 10.5, so I'm dividing that by 0.5 to calculate the number of toys.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:55:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:58:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:60:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:63:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:64:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:67:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:74:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:4:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:5:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:7:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:12:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:12:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:12:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:13:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:16:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:17:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:18:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:19:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:23:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:28:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:29:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:29:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:31:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:32:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:35:0:3",
+        "raw_verdict": "I'm noticing a discrepancy where the calculation gives n = 75/36, but the trace concludes with n = 2 as the final answer. Despite the arithmetic not supporting this result, the model is following what the trace explicitly states as its conclusion.",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:37:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:37:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:37:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:37:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:38:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:38:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:43:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:43:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:46:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:47:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:47:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:50:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:52:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:52:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:55:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:55:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:59:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:59:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:59:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:60:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:62:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:63:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:64:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:65:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:66:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:69:0:0",
+        "raw_verdict": "I'm noticing an inconsistency in the trace\u2014it claims half equals 5, but then calculates h as 0 minus half to get -2, which doesn't match if half is actually 5. The arithmetic seems contradictory here.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:70:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:71:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:72:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:76:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:80:0:6",
+        "raw_verdict": "I'm noticing a discrepancy in the calculation\u2014multiplying 33 by 300 gives 9900, but the trace shows 9903 as the doubled value, which would make the final answer 4951.5 rather than the claimed 4950.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:82:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:84:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:11",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:12",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:86:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:88:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:89:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:89:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:90:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:91:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:91:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:97:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:97:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:97:0:4",
+        "raw_verdict": "I'm working through the arithmetic on the step count\u2014dividing the span by the difference gives 285, but the trace claims 288, which doesn't match its own calculation. There's also confusion about whether the count should be steps plus one, since the trace states both 288 and 289 in different places.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:100:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:10",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:11",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:12",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  }
+}

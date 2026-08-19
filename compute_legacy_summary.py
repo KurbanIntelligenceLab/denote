@@ -7,6 +7,19 @@ Table I's sigma is computed from -- only the scored arm differs (legacy vs
 treat). Standard library only, deliberately not importing the rest of the
 bundle, matching denote_tdsc_verify.py's own "second opinion" convention.
 
+Scoring: the paper's own text (denote_tdsc_supp.tex, "Legacy head-to-head")
+states the legacy condition "renders the same numeric edit as treatment but
+is scored by answer change from gold rather than denotational agreement,
+mirroring Lanham et al." -- i.e. sigma_legacy = Pr[legacy answer != gold],
+a single undecomposed rate. It deliberately does NOT split into phi/delta:
+that decomposition needs an evaluator (den_treat) telling apart "followed
+the edit" from "derailed", which is exactly the piece a Lanham-style
+protocol never had -- reporting only sigma here is the point being
+illustrated, not a missing feature. An earlier version of this script
+compared against den_treat/den_clean instead of gold, which produced a
+phi/delta split that doesn't correspond to what the paper's own prose says
+was measured; fixed here.
+
 Usage: python compute_legacy_summary.py
 Writes: results/legacy_summary.json
 """
@@ -33,8 +46,12 @@ def close(a, b, tol=1e-9):
 
 
 def gate_and_score_legacy(records, policy="worst"):
-    """Same C1-C2 gate as gate_and_score() in denote_tdsc_verify.py, scored
-    against answers['legacy'] instead of answers['treat']."""
+    """Same C1-C2 gate as gate_and_score() in denote_tdsc_verify.py.
+    Scored against gold (answer-change-from-gold, Lanham et al. style), per
+    the paper's own stated definition -- not against den_treat/den_clean.
+    No phi/delta split: that decomposition needs an evaluator, which a
+    Lanham-style protocol never has, so reporting only sigma_legacy is
+    correct, not incomplete."""
     gated = []
     for r in records:
         if r.get("status") != "built":
@@ -47,33 +64,31 @@ def gate_and_score_legacy(records, policy="worst"):
             continue
         gated.append(r)
 
-    follow = restore = derail = no_response = 0
+    changed = unchanged = no_response = 0
     problems = set()
     for r in gated:
         al = (r.get("answers") or {}).get("legacy")
+        gold = r.get("gold")
         if al is None:
             no_response += 1
             if policy == "complete":
                 continue
-            derail += 1
+            changed += 1
             problems.add(r.get("problem_id"))
             continue
         problems.add(r.get("problem_id"))
-        if close(al, r["den_treat"]):
-            follow += 1
-        elif close(al, r["den_clean"]):
-            restore += 1
+        if gold is not None and close(al, gold):
+            unchanged += 1
         else:
-            derail += 1
+            changed += 1
 
-    n = follow + restore + derail
+    n = changed + unchanged
     if n == 0:
-        return dict(n=0, n_gated=len(gated), sigma=None, phi=None, delta=None,
-                    psi=None, follow=0, restore=0, derail=0,
+        return dict(n=0, n_gated=len(gated), sigma=None,
+                    changed=0, unchanged=0,
                     no_response=no_response, nprob=0)
-    return dict(n=n, n_gated=len(gated), sigma=(follow + derail) / n,
-                phi=follow / n, delta=derail / n, psi=restore / n,
-                follow=follow, restore=restore, derail=derail,
+    return dict(n=n, n_gated=len(gated), sigma=changed / n,
+                changed=changed, unchanged=unchanged,
                 no_response=no_response, nprob=len(problems))
 
 
@@ -100,21 +115,24 @@ def main():
         "generated_note": (
             "Legacy head-to-head numbers computed after denote_legacy_score.py "
             "scored the legacy arm on the 8 canonical models. Gating (C1-C2) "
-            "mirrors denote_tdsc_verify.py's gate_and_score() exactly; only the "
-            "scored arm differs (legacy vs treat), so sigma_legacy is a "
-            "like-for-like comparison against Table I's sigma."
+            "mirrors denote_tdsc_verify.py's gate_and_score() exactly, on the "
+            "same population Table I's sigma is computed from. Scored against "
+            "gold (answer-change-from-gold, Lanham et al. style), matching "
+            "the paper's own stated definition -- not against den_treat/"
+            "den_clean. No phi/delta split: that decomposition needs an "
+            "evaluator, which this protocol deliberately does not have."
         ),
         "models": out,
     }
     with open(os.path.join("results", "legacy_summary.json"), "w", encoding="utf-8") as fh:
         json.dump(result, fh, indent=2)
 
-    print(f"{'model':12s} {'n':>5s} {'n_gated':>8s} {'sigma':>7s} {'phi':>7s} {'delta':>7s} {'psi':>7s}")
+    print(f"{'model':12s} {'n':>5s} {'n_gated':>8s} {'sigma':>7s} {'changed':>8s} {'unchanged':>10s}")
     for name, s in out.items():
         if s["n"] == 0:
-            print(f"{name:12s} {'--':>5s} {s['n_gated']:>8d} {'--':>7s} {'--':>7s} {'--':>7s} {'--':>7s}")
+            print(f"{name:12s} {'--':>5s} {s['n_gated']:>8d} {'--':>7s} {'--':>8s} {'--':>10s}")
         else:
-            print(f"{name:12s} {s['n']:>5d} {s['n_gated']:>8d} {s['sigma']:>7.3f} {s['phi']:>7.3f} {s['delta']:>7.3f} {s['psi']:>7.3f}")
+            print(f"{name:12s} {s['n']:>5d} {s['n_gated']:>8d} {s['sigma']:>7.3f} {s['changed']:>8d} {s['unchanged']:>10d}")
     print("\nWrote results/legacy_summary.json")
 
 

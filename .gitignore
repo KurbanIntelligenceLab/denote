@@ -7,3 +7,4 @@ __pycache__/
 *.out
 .denote_cache/
 .ua/
+.rehearsal/

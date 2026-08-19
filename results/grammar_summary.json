@@ -7,9 +7,9 @@
   "gate_rate": 0.5027624309392266,
   "n": 182,
   "phi": 0.016483516483516484,
-  "psi": 0.5439560439560439,
-  "delta": 0.43956043956043955,
-  "sigma": 0.45604395604395603,
+  "psi": 0.5494505494505495,
+  "delta": 0.4340659340659341,
+  "sigma": 0.45054945054945056,
   "identity_residual": 0.0,
   "rates_with_c4": {
     "n": 0,
@@ -24,38 +24,38 @@
     0.035175879396984924
   ],
   "delta_ci": [
-    0.43956043956043955,
-    0.3626373626373626,
-    0.5147080577793247
+    0.4340659340659341,
+    0.3597560975609756,
+    0.5057487971130714
   ],
   "sigma_ci": [
-    0.45604395604395603,
-    0.37967511758263,
-    0.5290697674418605
+    0.45054945054945056,
+    0.3763440860215054,
+    0.5211288945795988
   ],
   "dpe": 0.016853932584269662,
   "dpe_ci": [
     0.0,
     0.0357188644688644
   ],
-  "delta_bar": 0.5147080577793247,
+  "delta_bar": 0.5057487971130714,
   "audit": {
     "n": 182,
-    "sigma": 0.45604395604395603,
-    "delta_hat": 0.43956043956043955,
+    "sigma": 0.45054945054945056,
+    "delta_hat": 0.4340659340659341,
     "phi_direct": 0.016483516483516484,
     "phi_audit": 0.01648351648351648,
     "var_direct": 8.907588004315452e-05,
-    "var_audit": 0.0013535552721641358,
+    "var_audit": 0.0013497401041175949,
     "audit_preferred": false
   },
   "e6_competence_gate": {
     "without_c4": {
       "n": 182,
       "phi": 0.016483516483516484,
-      "psi": 0.5439560439560439,
-      "delta": 0.43956043956043955,
-      "sigma": 0.45604395604395603
+      "psi": 0.5494505494505495,
+      "delta": 0.4340659340659341,
+      "sigma": 0.45054945054945056
     },
     "with_c4": {
       "n": 0,
@@ -398,9 +398,9 @@
     "3/10": {
       "n": 1,
       "phi": 0.0,
-      "psi": 0.0,
-      "delta": 1.0,
-      "sigma": 1.0
+      "psi": 1.0,
+      "delta": 0.0,
+      "sigma": 0.0
     },
     "4/10": {
       "n": 1,
@@ -540,9 +540,9 @@
     "10": {
       "n": 8,
       "phi": 0.0,
-      "psi": 0.25,
-      "delta": 0.75,
-      "sigma": 0.75
+      "psi": 0.375,
+      "delta": 0.625,
+      "sigma": 0.625
     },
     "13": {
       "n": 7,
@@ -584,14 +584,14 @@
     "n": 362,
     "mean_token_edit_distance_treatment": 1.270718232044199,
     "mean_token_edit_distance_placebo": 1.0,
-    "treatment_derailment_rate": 0.505524861878453,
+    "treatment_derailment_rate": 0.5027624309392266,
     "placebo_derailment_rate": 0.4889502762430939,
     "span_perplexity": null,
     "span_perplexity_status": "UNAVAILABLE: no held-out reference language model is installed."
   },
   "e5_copy_control": {
-    "n": 360,
-    "mean_copyable_minus_noncopyable": 0.5527777777777778,
+    "n": 362,
+    "mean_copyable_minus_noncopyable": 0.5552486187845304,
     "permutation_p": 9.999000099990002e-05
   },
   "e4_observational_dpe": null,
@@ -604,6 +604,6 @@
   "grammar_normalized": true,
   "max_trace_tokens": 4096,
   "output_tag": "grammar",
-  "source_raw": "C:/Users/rafim/Documents/HBKU/Summer/CoT Reasoning/version2/results/raw/full_deepseek_deepseek-r1_grammar.json",
+  "source_raw": "C:/Users/rafim/Documents/HBKU/Summer/version3 (IEEE TDSC)/results/raw/full_deepseek_deepseek-r1_grammar.json",
   "completed_at": "2026-08-04T07:53:38.868083+00:00"
 }

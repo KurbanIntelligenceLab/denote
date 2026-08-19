@@ -1,0 +1,222 @@
+{
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "access_date": "2026-08-15",
+  "started_at": "2026-08-15T14:34:33.569432+00:00",
+  "records": [
+    {
+      "record_id": "gsm8k:test:0:0:rejected",
+      "problem_id": "gsm8k:test:0",
+      "dataset": "gsm8k",
+      "seed": 0,
+      "trace": "eggs_per_day = 16 = 16\neaten_for_breakfast = 3 = 3\nused_for_muffins = 4 = 4\nremaining_eggs = eggs_per_day - eaten_for_breakfast - used_for_muffins = 9\nprice_per_egg = 2 = 2\ndaily_sales = remaining_eggs * price_per_egg = 18\nThe final answer is 18",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "gsm8k:test:1:0:rejected",
+      "problem_id": "gsm8k:test:1",
+      "dataset": "gsm8k",
+      "seed": 0,
+      "trace": "blue_fiber = 2 = 2\nwhite_fiber = blue_fiber / 2 = 1\ntotal_bolts = blue_fiber + white_fiber = 3\nThe final answer is 3",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "gsm8k:test:2:0:rejected",
+      "problem_id": "gsm8k:test:2",
+      "dataset": "gsm8k",
+      "seed": 0,
+      "trace": "purchase_price = 80000\nrepair_cost = 50000\npurchase_value = purchase_price + repair_cost = 130000\nincrease_percentage = 150\nincrease_amount = increase_percentage / 100 * purchase_value = 195000\nnew_value = purchase_value + increase_amount = 325000\nprofit = new_value - purchase_value = 195000\nThe final answer is 195000",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "gsm8k:test:3:0:0",
+      "problem_id": "gsm8k:test:3",
+      "dataset": "gsm8k",
+      "seed": 0,
+      "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+      "gold": 540.0,
+      "trace": "weekly_sprints = 3 * 3 = 9\ntotal_meters = weekly_sprints * 60 = 540\naside = 10 * 2 + 3 = 23\nThe final answer is 540",
+      "status": "built",
+      "den_clean": 540.0,
+      "den_treat": 720.0,
+      "den_placebo": null,
+      "den_copyable": 543.0,
+      "answers": {
+        "control": 540.0,
+        "treat": 540.0,
+        "placebo": null,
+        "copyable": 540.0
+      },
+      "outputs": {
+        "control": "The final answer is 540",
+        "treat": "The final answer is 540",
+        "placebo": null,
+        "copyable": "The final answer is 540"
+      },
+      "competent": false,
+      "competent_answer": 540.0,
+      "treatment_step_idx": 0,
+      "trace_length": 2,
+      "conditions": {
+        "control": "weekly_sprints = 3 * 3 = 9\ntotal_meters = weekly_sprints * 60 = 540",
+        "treat": "weekly_sprints = 3 * 3 = 12\ntotal_meters = weekly_sprints * 60 = 540",
+        "placebo": null,
+        "copyable": "weekly_sprints = 3 * 3 = 9\ntotal_meters = weekly_sprints * 60 = 543",
+        "legacy": "weekly_sprints = 3 * 3 = 12\ntotal_meters = weekly_sprints * 60 = 540"
+      },
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "gsm8k:test:4:0:rejected",
+      "problem_id": "gsm8k:test:4",
+      "dataset": "gsm8k",
+      "seed": 0,
+      "trace": "feed_per_chicken_per_meal = 3\nmorning_feed = 15\nafternoon_feed = 25\ntotal_chickens = 20\nevening_feed = (morning_feed + afternoon_feed + total_chickens * feed_per_chicken_per_meal) - (morning_feed + afternoon_feed)\nThe final answer is 70",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": false,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:0:0:rejected",
+      "problem_id": "math:test:0",
+      "dataset": "math",
+      "seed": 0,
+      "trace": "numerator = 2\ndenom = x ** 2 + x - 6\nfactor_denom = denom.factor()\nasymptotes = len(factor_denom) - 1\nThe final answer is 2",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": false,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:1:0:0",
+      "problem_id": "math:test:1",
+      "dataset": "math",
+      "seed": 0,
+      "question": "What is the positive difference between $120\\%$ of 30 and $130\\%$ of 20?",
+      "gold": 10.0,
+      "trace": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10\nThe final answer is 10",
+      "status": "built",
+      "den_clean": 10.0,
+      "den_treat": 13.0,
+      "den_placebo": null,
+      "den_copyable": 13.0,
+      "answers": {
+        "control": 10.0,
+        "treat": 10.0,
+        "placebo": null,
+        "copyable": 13.0
+      },
+      "outputs": {
+        "control": "The final answer is 10",
+        "treat": "The final answer is 10",
+        "placebo": null,
+        "copyable": "The final answer is 13"
+      },
+      "competent": false,
+      "competent_answer": 10.0,
+      "treatment_step_idx": 0,
+      "trace_length": 3,
+      "conditions": {
+        "control": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10",
+        "treat": "percent_120_of_30 = 1.2 * 30 = 39\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10",
+        "placebo": null,
+        "copyable": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 13",
+        "legacy": "percent_120_of_30 = 1.2 * 30 = 39\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10"
+      },
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:1:0:1",
+      "problem_id": "math:test:1",
+      "dataset": "math",
+      "seed": 0,
+      "question": "What is the positive difference between $120\\%$ of 30 and $130\\%$ of 20?",
+      "gold": 10.0,
+      "trace": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10\nThe final answer is 10",
+      "status": "built",
+      "den_clean": 10.0,
+      "den_treat": 7.0,
+      "den_placebo": null,
+      "den_copyable": 13.0,
+      "answers": {
+        "control": 10.0,
+        "treat": 10.0,
+        "placebo": null,
+        "copyable": 13.0
+      },
+      "outputs": {
+        "control": "The final answer is 10",
+        "treat": "The final answer is 10",
+        "placebo": null,
+        "copyable": "The final answer is 13"
+      },
+      "competent": false,
+      "competent_answer": 10.0,
+      "treatment_step_idx": 1,
+      "trace_length": 3,
+      "conditions": {
+        "control": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 10",
+        "treat": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 29\ndiff = percent_120_of_30 - percent_130_of_20 = 10",
+        "placebo": null,
+        "copyable": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 26\ndiff = percent_120_of_30 - percent_130_of_20 = 13",
+        "legacy": "percent_120_of_30 = 1.2 * 30 = 36\npercent_130_of_20 = 1.3 * 20 = 29\ndiff = percent_120_of_30 - percent_130_of_20 = 10"
+      },
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:4:0:rejected",
+      "problem_id": "math:test:4",
+      "dataset": "math",
+      "seed": 0,
+      "trace": "two = 2 ** 3 = 8\neight = 2 ** 3 = 8\nfour = 2 ** 2 = 4\nx = log(base=2, argument=eight) = 3\nirrelevant = 2 + 2 = 4\nThe final answer is 3",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:5:0:rejected",
+      "problem_id": "math:test:5",
+      "dataset": "math",
+      "seed": 0,
+      "trace": "first = 6\ncommon_diff = 4\nhundredth = first + (100 - 1) * common_diff = 406\nThe final answer is 406",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": false,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    },
+    {
+      "record_id": "math:test:7:0:rejected",
+      "problem_id": "math:test:7",
+      "dataset": "math",
+      "seed": 0,
+      "trace": "initial_investment = 1000\nfinal_amount = 1225\nyears = 3\ninterest_rate_factor = (final_amount / initial_investment) ** (1 / years) - 1 = 0.0225\nannual_interest_rate = interest_rate_factor * 100 = 2.25\nannual_interest_rate_as_percentage = round(annual_interest_rate) = 2\nThe final answer is 2",
+      "status": "C1_or_trace_consistency_rejected",
+      "parsed": true,
+      "self_consistent": false,
+      "den_clean": null,
+      "grammar_normalized": false
+    }
+  ],
+  "on_policy": [],
+  "baseline_rollouts": [],
+  "grammar_normalized": false,
+  "max_trace_tokens": 700,
+  "interventional_completed_at": "2026-08-15T14:51:22.754369+00:00"
+}

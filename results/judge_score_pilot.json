@@ -1,0 +1,817 @@
+{
+  "meta-llama/llama-3.1-70b-instruct": {
+    "model": "meta-llama/llama-3.1-70b-instruct",
+    "n": 134,
+    "n_scored": 126,
+    "unparsed": 8,
+    "judge_follow_rate": 0.6349206349206349,
+    "phi": 0.27611940298507465,
+    "agreement_with_phi": 0.10317460317460317,
+    "items": [
+      {
+        "record_id": "gsm8k:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:2:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:3:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:4:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:4:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:5:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:5:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:9:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:9:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:9:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:15:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:0",
+        "raw_verdict": "I'm noticing an arithmetic inconsistency in the trace\u2014westward is listed as 83, but when I add westward plus northward (83 + 150), I get 233, not the stated total of 230. The trace itself claims total equals westward plus northward equaling 230, so I need to work with what the trace explicitly states rather than recalculating.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:16:0:2",
+        "raw_verdict": "I'm noticing an inconsistency in the trace data\u2014it claims the total is 230, but adding the westward component (80) and northward component (153) gives 233, not 230. The trace appears to have conflicting values that don't add up correctly.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:17:0:2",
+        "raw_verdict": "I'm checking the calculation for annual salary by adding the teaching and coaching components, but there's a discrepancy\u2014the stated teaching pay is 35003 and coaching is 22500, which should sum to 57503, not 57500.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:17:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:18:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:18:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:19:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:20:0:9",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:21:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:22:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:22:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:27:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:27:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:28:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:29:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:29:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:32:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:33:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:35:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:36:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:36:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:38:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:4",
+        "raw_verdict": "The trace claims walk_time equals 7, but the model calculates it as 4 instead, so there's a discrepancy between what the trace asserts and what the model computes.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:39:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:39:0:6",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:40:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:41:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:42:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:43:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:43:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:44:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:47:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:47:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:48:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:50:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:51:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:52:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:53:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:53:0:5",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:55:0:2",
+        "raw_verdict": "I'm noticing an inconsistency in the trace\u2014it calculates bags as 31/2, which should equal 15.5, but the trace explicitly shows bags = 14, which doesn't match that division.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:56:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:57:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:59:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:61:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:61:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:62:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:62:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:63:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:63:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:64:0:3",
+        "raw_verdict": "I'm noticing a discrepancy between the traced state showing 300 miles on a full tank versus the model's calculation of 336 miles. The model is using the current fuel efficiency of 28 mpg and multiplying it by the tank capacity of 12 gallons, which gives the correct mathematical result, but this doesn't match what was traced.",
+        "verdict": null,
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:65:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:65:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:66:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:68:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:69:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:71:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "gsm8k:test:72:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:72:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "gsm8k:test:73:0:4",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:0:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:0:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:1:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:1:0:4",
+        "raw_verdict": "There's a discrepancy between what the trace explicitly states (diff=15) and what the arithmetic actually shows (39-27=12), which the model answer reflects. I need to decide whether to follow the trace's stated value or the correct calculation.",
+        "verdict": "FOLLOWS",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:16:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:19:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:19:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:23:0:4",
+        "raw_verdict": "I'm noticing a discrepancy where the model adjusted p1_v1 from 17.68 to 14.68, but the final answer appears incomplete\u2014the calculation cuts off mid-way through p2.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:24:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:41:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:41:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:42:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:42:0:2",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:60:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:79:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:83:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:1",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:2",
+        "raw_verdict": "The trace shows i equals 497 from the calculation h times 7, but the model is questioning whether this is actually correct and wants to double-check the arithmetic for this term.",
+        "verdict": null,
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:85:0:7",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:87:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:3",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:4",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:5",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:6",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:93:0:8",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:2",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:96:0:3",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:101:0:0",
+        "raw_verdict": "IGNORES",
+        "verdict": "IGNORES",
+        "phi_follow": true
+      },
+      {
+        "record_id": "math:test:101:0:1",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      },
+      {
+        "record_id": "math:test:102:0:0",
+        "raw_verdict": "FOLLOWS",
+        "verdict": "FOLLOWS",
+        "phi_follow": false
+      }
+    ]
+  }
+}

@@ -35,8 +35,10 @@ Live experiment scripts call the OpenRouter API and need a key at
 | `denote_tdsc_certify.py` | CERTIFY procedure (audit-based certification) |
 | `denote_tdsc_verify_theory.py` | Line-by-line verification of the paper's numbered propositions |
 | `denote_legacy_score.py`, `denote_seed_replicate.py`, `denote_rerun_treat.py`, `denote_grammar_ext.py`, `denote_grammar_watch_finish.py`, `denote_h4_e0_auc.py`, `denote_logit_margin_probe.py`, `denote_logprob_probe.py`, `denote_baselines.py` | Evaluator variants: the legacy arm, seed replication, treat-arm reruns, grammar-normalized collection, the labelled-E0 harness, and the baseline-metric panel |
-| `denote_v1_parser_audit.py`, `denote_v2_audit.py`, `denote_grammar_analyze.py`, `denote_h4_common_pop.py`, `denote_code_experiments.py`, `compute_legacy_summary.py` | Analysis: parser audits, derailment-vs-extraction adjudication, grammar-panel summaries, common-population wiring, the Denote-Code (MBPP) panel |
-| `results/raw/` | Raw per-model API records (one file per model; `_grammar` suffix marks the grammar-normalized re-collection) |
+| `denote_v1_parser_audit.py`, `denote_v2_audit.py`, `denote_grammar_analyze.py`, `denote_h4_common_pop.py`, `denote_code_experiments.py`, `compute_legacy_summary.py`, `audit_geometry.py`, `denote_pairedaudit.py` | Analysis: parser audits, derailment-vs-extraction adjudication, grammar-panel summaries, common-population wiring, the Denote-Code (MBPP) panel, ranking-geometry audit, paired human/model audit |
+| `denote_judge_score.py` | LLM-as-judge comparator: scores gated items against an independent judge model |
+| `denote_local_model.py`, `denote_local_collect.py`, `denote_train_sensitivity.py` | Local (Hugging Face, on-GPU) backend: same `ModelInterface` contract as the OpenRouter client, used for the train-against-sensitivity demonstration (DPO preference pairs built from genuinely derailed records, LoRA fine-tuning, before/after comparison) |
+| `results/raw/` | Raw per-model API records (one file per model; `_grammar` suffix marks the grammar-normalized re-collection; `local_*`/`smoketest*` files are from the local-model train-against-sensitivity runs) |
 | `results/*.json`, `results/*.csv`, `results/tables.tex` | Derived summaries, audit sheets, and generated table source the paper's numbers trace back to |
 
 ## Reproducing the analysis

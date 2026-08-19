@@ -60,7 +60,7 @@ def load_states():
     """Every full run, excluding the pilot (see denote_fix_bugs.py)."""
     states = []
     for p in sorted(RAW.glob("full_*.json")):
-        s = json.loads(p.read_text())
+        s = json.loads(p.read_text(encoding="utf-8"))
         if (s.get("model"), s.get("access_date")) == PILOT:
             continue
         states.append((p, s))
@@ -159,7 +159,7 @@ def do_analyze():
 
     states = {s["model"]: s for _, s in load_states()}
     summary_path = OUT / "summary.json"
-    summ = json.loads(summary_path.read_text()) if summary_path.exists() else {"models": []}
+    summ = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {"models": []}
     prior = {m["model"]: m for m in summ.get("models", [])
              if (m.get("model"), m.get("access_date")) != PILOT}
 
