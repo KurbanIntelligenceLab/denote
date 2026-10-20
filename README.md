@@ -1,9 +1,9 @@
 # DENOTE
 
-Code and data for the corruption-test faithfulness analysis in *DENOTE:
-Corruption Scores Bound Chain-of-Thought Faithfulness From Above* (IEEE
-TDSC, special issue on Safety, Alignment, and Responsibility of Large
-Language Models).
+Code and data for the corruption-test faithfulness analysis in *What
+Chain-of-Thought Corruption Scores Identify: Bounds, Ranking Uncertainty,
+and Audits* (IEEE TDSC, special issue on Trust, Privacy, and Security in
+Intelligent and Agentic Systems).
 
 This repository contains the construction, evaluator, metric, and analysis
 code, together with the sampled traces and raw per-model records the
@@ -14,8 +14,9 @@ neither is redistributed here.
 
 ## Setup
 
-```
+```bash
 pip install -r requirements.txt   # openai, tenacity, python-dotenv, sympy
+pip install -e .                  # registers the denote package (src/denote/)
 cp .env.example .env              # then fill in OPENROUTER_API_KEY
 ```
 
@@ -25,35 +26,40 @@ Live experiment scripts call the OpenRouter API and need a key at
 
 ## Layout
 
-| Path | What it is |
-|---|---|
-| `denote_build.py`, `denote_code_build.py` | Construction: build treat/control/placebo items from source problems |
-| `denote_model.py`, `denote_run.py` | Evaluator: OpenRouter client and run orchestration |
-| `denote_metrics.py` | Metric: σ/φ/δ classification per item |
-| `denote_experiments.py` | Primary analysis pipeline (gating, aggregation, bootstrap) |
-| `denote_tdsc_verify.py` | Independent recomputation of every quantity the paper reports; `--all` runs every mode |
-| `denote_tdsc_certify.py` | CERTIFY procedure (audit-based certification) |
-| `denote_tdsc_verify_theory.py` | Line-by-line verification of the paper's numbered propositions |
-| `denote_legacy_score.py`, `denote_seed_replicate.py`, `denote_rerun_treat.py`, `denote_grammar_ext.py`, `denote_grammar_watch_finish.py`, `denote_h4_e0_auc.py`, `denote_logit_margin_probe.py`, `denote_logprob_probe.py`, `denote_baselines.py` | Evaluator variants: the legacy arm, seed replication, treat-arm reruns, grammar-normalized collection, the labelled-E0 harness, and the baseline-metric panel |
-| `denote_v1_parser_audit.py`, `denote_v2_audit.py`, `denote_grammar_analyze.py`, `denote_h4_common_pop.py`, `denote_code_experiments.py`, `compute_legacy_summary.py`, `audit_geometry.py`, `denote_pairedaudit.py` | Analysis: parser audits, derailment-vs-extraction adjudication, grammar-panel summaries, common-population wiring, the Denote-Code (MBPP) panel, ranking-geometry audit, paired human/model audit |
-| `denote_judge_score.py` | LLM-as-judge comparator: scores gated items against an independent judge model |
-| `denote_local_model.py`, `denote_local_collect.py`, `denote_train_sensitivity.py` | Local (Hugging Face, on-GPU) backend: same `ModelInterface` contract as the OpenRouter client, used for the train-against-sensitivity demonstration (DPO preference pairs built from genuinely derailed records, LoRA fine-tuning, before/after comparison) |
-| `results/raw/` | Raw per-model API records (one file per model; `_grammar` suffix marks the grammar-normalized re-collection; `local_*`/`smoketest*` files are from the local-model train-against-sensitivity runs) |
-| `results/*.json`, `results/*.csv`, `results/tables.tex` | Derived summaries, audit sheets, and generated table source the paper's numbers trace back to |
+```
+src/denote/
+├── construction/   # build treat/control/placebo items from source problems
+├── evaluation/     # OpenRouter + local (HF) model clients, run orchestration,
+│                   # baseline/legacy scoring, judge comparator, seed replication
+├── metrics/        # σ/φ/δ classification per item
+└── analysis/       # gating/aggregation/bootstrap, CERTIFY, proposition checks,
+                    # parser and extraction audits, ranking geometry
+
+results/
+├── raw/            # raw per-model API records
+├── summaries/      # derived σ/φ/δ panels, pilot and audit summaries
+├── audits/         # human-in-the-loop audit sheets and scored results
+└── tables/         # generated LaTeX source for the paper's Table I
+```
+
+Each module is documented at the top of its file; start from
+`denote.analysis.tdsc_verify` and `denote.analysis.experiments` to see how the
+pieces fit together.
 
 ## Reproducing the analysis
 
-No API calls required — everything below reads `results/` as shipped:
+No API calls required — everything below reads `results/` as shipped, run
+from the repo root after `pip install -e .`:
 
-```
-python denote_tdsc_verify.py --all
-python denote_experiments.py analyze --bootstrap 10000
-python denote_tdsc_certify.py
-python denote_tdsc_verify_theory.py
+```bash
+python -m denote.analysis.tdsc_verify --all
+python -m denote.analysis.experiments analyze --bootstrap 10000
+python -m denote.analysis.tdsc_certify
+python -m denote.analysis.tdsc_verify_theory
 ```
 
-`denote_tdsc_verify.py --all` recomputes every reported σ/φ/δ from the raw
-records, checks the paper's printed table against that recomputation, and
+`denote.analysis.tdsc_verify --all` recomputes every reported σ/φ/δ from the
+raw records, checks the paper's printed table against that recomputation, and
 runs the ranking/grid/audit/certify checks described in the paper.
 
 ## License
