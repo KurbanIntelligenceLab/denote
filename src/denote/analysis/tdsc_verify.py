@@ -9,12 +9,16 @@ second call to the same code. Standard library only (math, json, itertools);
 numpy is used only if present and is never required.
 
 MODES
-  --provenance   Reproduce the principal blocking finding: the manuscript's
-                 headline table does not follow from the released records.
+  --provenance   Recompute sigma/phi/delta for the six-model headline panel
+                 from the raw records and check it against Table I.
   --legacy       Check whether the fifth (legacy) arm was ever scored.
   --rank         Recompute determined pairs, adjacent transfers and admissible
                  rankings, under the sharp interval-order rule of the paper.
+  --grid         Admissible rankings across gating-policy/bound choices.
   --audit        Exact Clopper-Pearson audit sizes for a list of margins.
+  --certify      Run the CERTIFY/family-wise/evasion experiments (E1-E3).
+  --code         Recompute the DENOTE-Code panel (supp. Appendix F) from
+                 results/raw/code_full_*.json via code_experiments.py.
   --selftest     Run the synthetic smoke test. Uses NO data and asserts no
                  empirical outcome; it checks that the estimators recover
                  quantities that were planted in synthetic records.
@@ -22,9 +26,7 @@ MODES
   --all          Everything above.
 
 EXIT CODE
-  0 if every check that was run passed, 1 otherwise. A non-zero exit from
-  --provenance or --legacy is the EXPECTED result on today's bundle; it means
-  the blocking findings are still open, not that the script is broken.
+  0 if every check that was run passed, 1 otherwise.
 """
 
 import argparse
@@ -45,23 +47,21 @@ SHORT = {
     "qwen/qwen-2.5-72b-instruct": "Qwen-72B",
     "qwen/qwen-2.5-7b-instruct": "Qwen-7B",
     "deepseek/deepseek-r1": "DeepSeek-R1",
-    "anthropic/claude-sonnet-5": "Claude-5",
+    "anthropic/claude-sonnet-5": "Sonnet-5",
     "openai/gpt-5.6-luna": "GPT-5.6",
 }
 
-# What the manuscript prints in Table I. Kept here so a mismatch is loud.
-# m is the design-effect-corrected exact Clopper-Pearson construction, the
-# primary specification since the 2026-08-14 promotion (denote_tdsc.tex,
-# Table I footnote and the "ranking is never unique" paragraph).
 MANUSCRIPT_TABLE1 = {
     #            N     sigma   phi     delta   m
     "Llama-70B": (134, 0.388, 0.276, 0.112, 0.190),
     "Llama-8B": (109, 0.202, 0.138, 0.064, 0.145),
     "Qwen-72B": (165, 0.188, 0.164, 0.024, 0.084),
     "Qwen-7B": (105, 0.086, 0.057, 0.029, 0.086),
-    "Claude-5": (293, 0.003, 0.003, 0.000, 0.003),
+    "Sonnet-5": (293, 0.003, 0.003, 0.000, 0.003),
     "GPT-5.6": (341, 0.000, 0.000, 0.000, 0.000),
 }
+# Table I footnote, design-effect row: 9 determined pairs, 1 adjacent
+# transfer, 20 admissible rankings (see mode_rank's part (a)).
 MANUSCRIPT_DOWNSTREAM = {"determined": 9, "adjacent": 1, "rankings": 20}
 
 TOL = 1e-3
@@ -275,19 +275,26 @@ def mode_provenance(raw_dir):
 
     print(f"\n  treat-arm no-response calls in the gated population: {total_nr}")
     if not ok:
-        print("\n  BLOCKING (item B1). The manuscript's headline table does not\n"
-              "  follow from the released records. Its numbers are computed\n"
-              "  after re-running the failed calls, and those post-re-run\n"
-              "  records are not in this bundle. Ship them, or revert the\n"
-              "  paper's numbers to what is reproducible here.")
+        print("\n  The manuscript's headline table (Table I) does not match what\n"
+              "  the released raw records recompute to under the C1-C2 gate.\n"
+              "  Either the raw bundle is stale relative to the printed table,\n"
+              "  or the printed table needs correcting -- find out which before\n"
+              "  submission.")
     return ok
 
 
 def mode_legacy(raw_dir):
+    """Checks only the canonical headline-panel files: the same filter
+    load_panel() uses (full_*.json, excluding _grammar variants), so this
+    doesn't also report on pilot/smoketest/local scratch files that were
+    never meant to carry a legacy arm."""
     print("Legacy arm: prompts constructed vs outputs actually scored\n")
     ok = True
     for fn in sorted(os.listdir(raw_dir)):
         if not (fn.startswith("full_") and fn.endswith(".json")):
+            continue
+        if "_grammar" in fn or any(tag in fn for tag in
+                                    ("smoketest", "_local_", "pilot")):
             continue
         with open(os.path.join(raw_dir, fn), encoding="utf-8") as fh:
             blob = json.load(fh)
@@ -295,16 +302,16 @@ def mode_legacy(raw_dir):
         prompts = sum(1 for r in built if "legacy" in (r.get("conditions") or {}))
         outputs = sum(1 for r in built if "legacy" in (r.get("outputs") or {}))
         answers = sum(1 for r in built if "legacy" in (r.get("answers") or {}))
-        flag = "" if outputs else "   <-- never scored"
+        flag = "" if outputs or not prompts else "   <-- never scored"
         print(f"  {SHORT.get(blob['model'], blob['model']):<14}"
               f"built={len(built):>5}  prompts={prompts:>5}  "
               f"outputs={outputs:>5}  answers={answers:>5}{flag}")
         if outputs == 0 and prompts > 0:
             ok = False
     if not ok:
-        print("\n  BLOCKING (item B3). Legacy prompts exist and legacy outputs do\n"
-              "  not, on every model. Any legacy head-to-head number has no\n"
-              "  artifact behind it. Score the arm or delete the claim.")
+        print("\n  Legacy prompts exist with no legacy outputs on at least one\n"
+              "  headline-panel model. Any legacy head-to-head number for that\n"
+              "  model has no artifact behind it.")
     return ok
 
 
@@ -356,7 +363,7 @@ def mode_rank(raw_dir, summary_path):
 
 def mode_grid(raw_dir):
     """Reproduce Table III: admissible rankings across the two analysis choices."""
-    head = ["Llama-70B", "Llama-8B", "Qwen-72B", "Qwen-7B", "Claude-5", "GPT-5.6"]
+    head = ["Llama-70B", "Llama-8B", "Qwen-72B", "Qwen-7B", "Sonnet-5", "GPT-5.6"]
     scored = {}
     for fn in sorted(os.listdir(raw_dir)):
         if not (fn.startswith("full_") and fn.endswith(".json")):
@@ -491,9 +498,25 @@ def mode_selftest():
 
 def mode_certify():
     """Run the certification, family-wise and evasion experiments (E1-E3).
-    Delegates to denote_tdsc_certify.py so there is exactly one implementation."""
+    Delegates to tdsc_certify.py (sibling module) so there is exactly one
+    implementation."""
     import subprocess
-    r = subprocess.run([sys.executable, "denote_tdsc_certify.py"],
+    from pathlib import Path
+    certify_script = Path(__file__).resolve().parent / "tdsc_certify.py"
+    r = subprocess.run([sys.executable, str(certify_script)],
+                       capture_output=True, text=True)
+    print(r.stdout or r.stderr)
+    return r.returncode == 0
+
+
+def mode_code():
+    """Recompute the DENOTE-Code panel (supp. Appendix F) from
+    results/raw/code_full_*.json. Delegates to code_experiments.py's own
+    `analyze` subcommand so there is exactly one implementation."""
+    import subprocess
+    from pathlib import Path
+    code_script = Path(__file__).resolve().parent / "code_experiments.py"
+    r = subprocess.run([sys.executable, str(code_script), "analyze"],
                        capture_output=True, text=True)
     print(r.stdout or r.stderr)
     return r.returncode == 0
@@ -546,14 +569,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--raw", default=RAW_DIR_DEFAULT)
-    ap.add_argument("--summary", default=os.path.join("results", "summary.json"))
+    ap.add_argument("--summary", default=os.path.join("results", "summaries", "summary.json"))
     for flag in ("provenance", "legacy", "rank", "grid", "audit", "certify",
-                 "selftest", "preflight", "all"):
+                 "code", "selftest", "preflight", "all"):
         ap.add_argument(f"--{flag}", action="store_true")
     args = ap.parse_args()
 
     if not any([args.provenance, args.legacy, args.rank, args.grid, args.audit,
-                args.certify, args.selftest, args.preflight, args.all]):
+                args.certify, args.code, args.selftest, args.preflight, args.all]):
         args.all = True
 
     results = {}
@@ -578,9 +601,12 @@ def main():
     if args.certify or args.all:
         results["certify"] = mode_certify()
         print()
+    if args.code or args.all:
+        results["code"] = mode_code()
+        print()
     if args.preflight or args.all:
         results["preflight"] = mode_preflight(
-            ["denote_tdsc.tex", "denote_tdsc_supp.tex"])
+            ["paper_revised/denote_tdsc.tex", "paper_revised/denote_tdsc_supp.tex"])
         print()
 
     print("=" * 64)
