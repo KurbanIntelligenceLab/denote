@@ -110,3 +110,47 @@ for d in (0.024,0.10,0.15,0.20,0.224,0.30):
     print(f"  {d:>7.3f}{s:>8.3f}{t['phi']:>7.3f}{sr:>12}{pr:>10}{n:>19}")
 print("\n  A corruption test reports the sigma rank. No corruption protocol")
 print("  separates the two columns. An audit of the sizes above does.")
+
+print()
+print("="*72)
+print("E4  DETECTION PROBABILITY of the attacked system (supp. sec:defence)")
+print("="*72)
+# Qwen-72B re-weighted to delta=0.220 (the attack margin needed to tie
+# Llama-70B's sigma): detect = the audit observes at least one derailment,
+# i.e. the certificate the attacker wants (accept on c=0) is NOT issued.
+# Deployed rule: one item drawn per source problem, item outcome resampled
+# with replacement from that problem's own outcome multiset -- same
+# resampling scheme as E1's pids/pool construction above.
+attack_delta = 0.220
+pool = {}
+for pid, o in P[tgt]:
+    pool.setdefault(pid, []).append(o)
+pids = list(pool)
+rng2 = random.Random(20260809)
+B4 = 20000
+print(f"  {'n_a':>5}{'uniform 1-(1-d)^n':>20}{'deployed (per-problem)':>26}")
+for na in (10, 20, 30, 50):
+    uniform_formula = 1 - (1 - attack_delta) ** na
+    if len(pids) < na:
+        print(f"  {na:>5}{uniform_formula:>20.4f}{'(fewer source problems than n_a)':>26}")
+        continue
+    hits = 0
+    for _ in range(B4):
+        samp_pids = rng2.sample(pids, na)
+        detected = False
+        for p in samp_pids:
+            o = rng2.choice(pool[p])
+            # re-weighting construction: a 'R' (restore) outcome is the
+            # pool eligible to convert to 'D' under the attack; convert it
+            # with probability attack_delta/psi, matching E3's conv formula
+            # applied per audited draw rather than to the whole corpus.
+            if o == 'R' and rng2.random() < (attack_delta / psi):
+                o = 'D'
+            if o == 'D':
+                detected = True
+        if detected:
+            hits += 1
+    print(f"  {na:>5}{uniform_formula:>20.4f}{hits / B4:>26.4f}")
+print("\n  Manuscript claims 0.913 at n_a=10 and 1.000 at n_a=50 for the "
+      "uniform-draw formula;\n  supp. sec:defence reports the deployed "
+      "per-problem rule runs about 0.038 higher.")

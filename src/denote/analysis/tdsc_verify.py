@@ -12,6 +12,9 @@ MODES
   --provenance   Recompute sigma/phi/delta for the six-model headline panel
                  from the raw records and check it against Table I.
   --legacy       Check whether the fifth (legacy) arm was ever scored.
+  --gold         Recompute the gold-referenced scoring-sensitivity claims
+                 (admissible rankings, tightest-margin audit size) in the
+                 "Scoring reference" paragraph from the raw records.
   --rank         Recompute determined pairs, adjacent transfers and admissible
                  rankings, under the sharp interval-order rule of the paper.
   --grid         Admissible rankings across gating-policy/bound choices.
@@ -19,6 +22,9 @@ MODES
   --certify      Run the CERTIFY/family-wise/evasion experiments (E1-E3).
   --code         Recompute the DENOTE-Code panel (supp. Appendix F) from
                  results/raw/code_full_*.json via code_experiments.py.
+  --manual       Check the committed human-annotated parser-agreement
+                 result (v1_parser_audit.py's output) against the
+                 manuscript's "100 traces, 99 agree" claim.
   --selftest     Run the synthetic smoke test. Uses NO data and asserts no
                  empirical outcome; it checks that the estimators recover
                  quantities that were planted in synthetic records.
@@ -63,6 +69,13 @@ MANUSCRIPT_TABLE1 = {
 # Table I footnote, design-effect row: 9 determined pairs, 1 adjacent
 # transfer, 20 admissible rankings (see mode_rank's part (a)).
 MANUSCRIPT_DOWNSTREAM = {"determined": 9, "adjacent": 1, "rankings": 20}
+
+# "Scoring reference" paragraph: gold-referenced scores leave all 720
+# rankings admissible (no derailment bound, so m=sigma for every model),
+# and the tightest nonzero adjacent margin among the six gold-referenced
+# sigma values requires this many audited items under the exact
+# zero-count Clopper-Pearson bound at alpha=0.05.
+MANUSCRIPT_GOLD = {"rankings": 720, "audit_n": 2078}
 
 TOL = 1e-3
 
@@ -315,6 +328,112 @@ def mode_legacy(raw_dir):
     return ok
 
 
+def _gold_gate_and_score(records):
+    """sigma_gold = Pr[legacy answer != gold], on the same C1-C2 gate as
+    gate_and_score() above (status == 'built', control answer agrees with
+    the trace's own denotation). Mirrors
+    compute_legacy_summary.py's gate_and_score_legacy(), kept inline rather
+    than imported so this script's standard-library-only "second opinion"
+    convention holds. No phi/delta split: a Lanham-style protocol has no
+    evaluator to tell "followed the edit" apart from "derailed", so
+    reporting only sigma_gold is correct, not incomplete (see
+    compute_legacy_summary.py's module docstring)."""
+    gated = []
+    for r in records:
+        if r.get("status") != "built":
+            continue
+        ans = r.get("answers") or {}
+        den_clean = r.get("den_clean")
+        if ans.get("control") is None or den_clean is None:
+            continue
+        if not close(ans["control"], den_clean):
+            continue
+        gated.append(r)
+
+    changed = unchanged = no_response = 0
+    for r in gated:
+        al = (r.get("answers") or {}).get("legacy")
+        gold = r.get("gold")
+        if al is None:
+            no_response += 1
+            changed += 1
+            continue
+        if gold is not None and close(al, gold):
+            unchanged += 1
+        else:
+            changed += 1
+    n = changed + unchanged
+    if n == 0:
+        return None
+    return dict(n=n, sigma=changed / n, no_response=no_response)
+
+
+def mode_gold(raw_dir):
+    """Checks the "Scoring reference" paragraph's gold-referenced claims:
+    the admissible-ranking count (should be 720, since no derailment bound
+    exists for a Lanham-style score, so m=sigma for every model and no pair
+    is determined) and the tightest-nonzero-adjacent-margin audit size.
+    This is the check that was missing when the paper shipped "tightest
+    nonzero margin 0.043, about 69 audited items" -- a claim that does not
+    match any margin recomputable from the six headline models' own
+    gold-referenced sigma values."""
+    panel = load_panel(raw_dir)
+    print("Gold-referenced scoring (sigma_gold = Pr[legacy answer != gold]), "
+          "recomputed from raw records:\n")
+    print(f"  {'model':<12}{'n':>6}{'sigma_gold':>12}")
+    rows = []
+    for name in sorted(MANUSCRIPT_TABLE1):
+        s = None
+        # locate the raw file for this model the same way load_panel() does
+        for filename in sorted(os.listdir(raw_dir)):
+            if not (filename.startswith("full_") and filename.endswith(".json")):
+                continue
+            if "_grammar" in filename or any(
+                    tag in filename for tag in ("smoketest", "_local_", "pilot")):
+                continue
+            with open(os.path.join(raw_dir, filename), encoding="utf-8") as fh:
+                blob = json.load(fh)
+            if SHORT.get(blob.get("model"), blob.get("model")) != name:
+                continue
+            s = _gold_gate_and_score(blob["records"])
+            break
+        if s is None:
+            print(f"  {name:<12} NOT FOUND in raw records")
+            continue
+        print(f"  {name:<12}{s['n']:>6}{s['sigma']:>12.3f}")
+        rows.append((name, s["sigma"], s["sigma"]))  # m = sigma: no derailment bound
+
+    res = rank_analysis(rows)
+    print(f"\n  admissible rankings: {res['admissible']}/{res['total']}  "
+          f"(manuscript claims {MANUSCRIPT_GOLD['rankings']})")
+    rankings_ok = res["admissible"] == MANUSCRIPT_GOLD["rankings"]
+
+    sig = sorted((r[1] for r in rows))
+    margins = [round(b - a, 6) for a, b in zip(sig, sig[1:])]
+    nonzero = [m for m in margins if m > 1e-9]
+    if not nonzero:
+        print("\n  no nonzero adjacent margin found among the gold-referenced "
+              "scores")
+        return False
+    tightest = min(nonzero)
+    n_audit = audit_size(tightest)
+    print(f"  tightest nonzero adjacent margin: {tightest:.6f}  "
+          f"(manuscript prose should state this, not a different value)")
+    print(f"  exact audit n at that margin: {n_audit}  "
+          f"(manuscript claims {MANUSCRIPT_GOLD['audit_n']})")
+    audit_ok = n_audit == MANUSCRIPT_GOLD["audit_n"]
+
+    ok = rankings_ok and audit_ok
+    if not ok:
+        print("\n  The manuscript's gold-reference scoring-sensitivity claim "
+              "does not match\n  what the six headline models' own "
+              "gold-referenced sigma values produce\n  under the same "
+              "sharp interval-order rule used for Table I. Fix the prose\n"
+              "  to state the recomputed margin/audit-size, not a value "
+              "with no\n  derivation behind it.")
+    return ok
+
+
 def mode_rank(raw_dir, summary_path):
     print("Ranking analysis under the sharp interval-order rule.\n")
 
@@ -376,7 +495,25 @@ def mode_grid(raw_dir):
         scored[name] = {pol: gate_and_score(blob["records"], pol)
                         for pol in ("worst", "complete")}
 
-    print("Admissible rankings across analysis choices "
+    # "estimated design effect (range ... on our panel)" / "at n_a=30 the
+    # unadjusted zero-count bound of 0.095 becomes approximately ... after
+    # adjustment" (sec:retrofit): deff = n/nprob per model, worst-case
+    # policy (same population Table I's N column uses).
+    deffs = {name: scored[name]["worst"]["n"] / scored[name]["worst"]["nprob"]
+             for name in head if scored[name]["worst"]["nprob"]}
+    deff_lo, deff_hi = min(deffs.values()), max(deffs.values())
+    bound_unadj = clopper_pearson_upper(0, 30)
+    bounds_30 = {name: clopper_pearson_upper(0, max(1, round(30 / d)))
+                 for name, d in deffs.items()}
+    print("Design effect per headline model (n/nprob, worst-case policy):\n")
+    for name in head:
+        print(f"  {name:<12} deff={deffs[name]:.3f}  "
+              f"bound at n_a=30: {bounds_30[name]:.3f}")
+    print(f"\n  design-effect range: {deff_lo:.2f}--{deff_hi:.2f}")
+    print(f"  n_a=30 unadjusted bound: {bound_unadj:.3f}; "
+          f"adjusted range: {min(bounds_30.values()):.3f}--{max(bounds_30.values()):.3f}")
+
+    print("\nAdmissible rankings across analysis choices "
           "(reproducible rows only).\n")
     print(f"  {'empty responses':<16}{'delta-bar from':<28}"
           f"{'det.':>6}{'adj.':>6}{'rankings':>10}")
@@ -405,18 +542,47 @@ def mode_grid(raw_dir):
     return 1 not in counts
 
 
-def mode_audit():
+def mode_audit(raw_dir=None):
     print("Exact Clopper-Pearson audit sizes at alpha = 0.05, zero derailments "
           "observed.\n")
     print(f"  {'margin g':>10}{'exact n':>10}{'ceil(3/g)':>12}")
-    for g in (0.186, 0.102, 0.082, 0.043, 0.014, 0.010, 0.002):
+    for g in (0.186, 0.102, 0.083, 0.043, 0.014, 0.010, 0.002):
         n = audit_size(g)
         print(f"  {g:>10.3f}{n:>10}{math.ceil(3 / g):>12}")
     # The paper's claim: the 3/g rule is an upper envelope for alpha = 0.05.
     ok = all(audit_size(g) <= math.ceil(3 / g)
-             for g in (0.186, 0.102, 0.082, 0.043, 0.014, 0.010, 0.002))
+             for g in (0.186, 0.102, 0.083, 0.043, 0.014, 0.010, 0.002))
     print(f"\n  3/g dominates the exact size at every margin tested: "
           f"{'YES' if ok else 'NO'}")
+
+    if raw_dir is not None:
+        # sec:retrofit: "at n_a=30, the estimated standard error is 1.39-2.41
+        # times smaller for the four models with nonzero derailment" --
+        # SEratio = sqrt(var_direct/var_audit), var_x = p(1-p)/n_a, matching
+        # audit_estimate()'s variance formulas in metrics.py.
+        panel = load_panel(raw_dir)
+        n_a = 30
+        ratios = []
+        print("\nStandard-error ratio (direct phi-estimator vs. audit "
+              f"estimator) at n_a={n_a}, four models with nonzero derailment:\n")
+        for name in ("Llama-70B", "Llama-8B", "Qwen-72B", "Qwen-7B",
+                     "Sonnet-5", "GPT-5.6"):
+            s = panel.get(name)
+            if s is None or s["delta"] == 0:
+                continue
+            var_direct = s["phi"] * (1 - s["phi"]) / n_a
+            var_audit = s["delta"] * (1 - s["delta"]) / n_a
+            ratio = math.sqrt(var_direct / var_audit) if var_audit > 0 else float("inf")
+            ratios.append(ratio)
+            print(f"  {name:<12} phi={s['phi']:.3f}  delta={s['delta']:.3f}  "
+                  f"SE ratio={ratio:.3f}")
+        if ratios:
+            print(f"\n  SE-ratio range: {min(ratios):.2f}--{max(ratios):.2f}  "
+                  "(manuscript claims 1.39--2.41)")
+            se_ok = (abs(min(ratios) - 1.39) < 0.01
+                     and abs(max(ratios) - 2.41) < 0.01)
+            ok = ok and se_ok
+
     return ok
 
 
@@ -511,15 +677,40 @@ def mode_certify():
 
 def mode_code():
     """Recompute the DENOTE-Code panel (supp. Appendix F) from
-    results/raw/code_full_*.json. Delegates to code_experiments.py's own
-    `analyze` subcommand so there is exactly one implementation."""
+    results/raw/code_full_*.json and diff it against the committed
+    results/summaries/code_summary.json. Delegates to code_experiments.py's
+    `analyze --check`, which is read-only (unlike plain `analyze`, which
+    regenerates and overwrites the committed summary) -- so running the
+    verification suite never has the side effect of rewriting a committed
+    file."""
     import subprocess
     from pathlib import Path
     code_script = Path(__file__).resolve().parent / "code_experiments.py"
-    r = subprocess.run([sys.executable, str(code_script), "analyze"],
+    r = subprocess.run([sys.executable, str(code_script), "analyze", "--check"],
                        capture_output=True, text=True)
     print(r.stdout or r.stderr)
     return r.returncode == 0
+
+
+def mode_manual_validation(audits_dir=None):
+    """sec:bench: 'manual validation of 100 gated traces, the evaluator
+    agreed with human interpretation on 99'. Reads the committed human-
+    annotated result directly (v1_parser_audit.py's own output) rather than
+    re-running the audit, since phase 2 of that script needs a human to
+    fill in agreement labels -- this just checks the artifact behind the
+    manuscript's claim actually says what the manuscript says it says."""
+    audits_dir = audits_dir or os.path.join("results", "audits")
+    path = os.path.join(audits_dir, "v1_parser_audit_result.json")
+    if not os.path.exists(path):
+        print(f"  {path} not found -- the manual-validation claim has no "
+              "artifact behind it in this checkout.")
+        return False
+    with open(path, encoding="utf-8") as fh:
+        result = json.load(fh)
+    n, agree = result.get("n_filled"), result.get("n_agree")
+    print(f"  {path}: n_filled={n}  n_agree={agree}  "
+          f"(manuscript claims 100 traces, 99 agree)")
+    return n == 100 and agree == 99
 
 
 SCAFFOLD_PATTERNS = [
@@ -570,13 +761,14 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--raw", default=RAW_DIR_DEFAULT)
     ap.add_argument("--summary", default=os.path.join("results", "summaries", "summary.json"))
-    for flag in ("provenance", "legacy", "rank", "grid", "audit", "certify",
-                 "code", "selftest", "preflight", "all"):
+    for flag in ("provenance", "legacy", "gold", "rank", "grid", "audit",
+                 "certify", "code", "manual", "selftest", "preflight", "all"):
         ap.add_argument(f"--{flag}", action="store_true")
     args = ap.parse_args()
 
-    if not any([args.provenance, args.legacy, args.rank, args.grid, args.audit,
-                args.certify, args.code, args.selftest, args.preflight, args.all]):
+    if not any([args.provenance, args.legacy, args.gold, args.rank, args.grid,
+                args.audit, args.certify, args.code, args.manual,
+                args.selftest, args.preflight, args.all]):
         args.all = True
 
     results = {}
@@ -589,6 +781,9 @@ def main():
     if args.legacy or args.all:
         results["legacy"] = mode_legacy(args.raw)
         print()
+    if args.gold or args.all:
+        results["gold"] = mode_gold(args.raw)
+        print()
     if args.rank or args.all:
         results["rank"] = mode_rank(args.raw, args.summary)
         print()
@@ -596,13 +791,16 @@ def main():
         results["grid"] = mode_grid(args.raw)
         print()
     if args.audit or args.all:
-        results["audit"] = mode_audit()
+        results["audit"] = mode_audit(args.raw)
         print()
     if args.certify or args.all:
         results["certify"] = mode_certify()
         print()
     if args.code or args.all:
         results["code"] = mode_code()
+        print()
+    if args.manual or args.all:
+        results["manual"] = mode_manual_validation()
         print()
     if args.preflight or args.all:
         results["preflight"] = mode_preflight(
