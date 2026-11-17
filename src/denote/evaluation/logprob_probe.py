@@ -31,8 +31,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "results" / "logprob_probe.json"
+# src/denote/evaluation/logprob_probe.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "results" / "summaries" / "logprob_probe.json"
 
 DEFAULT_MODELS = (
     "qwen/qwen-2.5-7b-instruct",

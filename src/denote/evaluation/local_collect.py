@@ -20,10 +20,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from denote_experiments import collect_interventional, load_arithmetic_problems
-from denote_local_model import LocalHFModel
+from denote.analysis.experiments import collect_interventional, load_arithmetic_problems
+from denote.evaluation.local_model import LocalHFModel
 
-RAW_DIR = Path("results/raw")
+# src/denote/evaluation/local_collect.py -> repo root is three parents up
+RAW_DIR = Path(__file__).resolve().parents[3] / "results" / "raw"
 
 
 def main() -> None:

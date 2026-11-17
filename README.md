@@ -56,11 +56,21 @@ python -m denote.analysis.tdsc_verify --all
 python -m denote.analysis.experiments analyze --bootstrap 10000
 python -m denote.analysis.tdsc_certify
 python -m denote.analysis.tdsc_verify_theory
+python -m denote.analysis.code_experiments analyze   # DENOTE-Code panel (supp. Appendix F)
 ```
 
-`denote.analysis.tdsc_verify --all` recomputes every reported σ/φ/δ from the
-raw records, checks the paper's printed table against that recomputation, and
-runs the ranking/grid/audit/certify checks described in the paper.
+`denote.analysis.tdsc_verify --all` recomputes σ/φ/δ for the six-model
+headline panel (Table I) from the raw records, checks the paper's printed
+table against that recomputation, and runs the ranking/grid/audit/certify
+checks described in the paper. It does not cover the seed-replication
+table, the baseline/metric-comparison panel, or the eight-model ranking
+extension — those are checked by hand against `results/raw/` and
+`results/summaries/` rather than by an automated script.
+`denote.analysis.code_experiments analyze` independently recomputes the
+DENOTE-Code panel (supplement Appendix F) from `results/raw/code_full_*.json`.
+`denote.analysis.tdsc_verify_theory` is a pure math/combinatorics check of
+the paper's propositions; it reads no experimental data and asserts no
+empirical claim.
 
 ## License
 

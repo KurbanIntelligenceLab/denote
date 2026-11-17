@@ -32,8 +32,8 @@ from peft import LoraConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from trl import DPOConfig, DPOTrainer
 
-from denote_model import CONTINUE_SYSTEM
-from denote_tdsc_verify import close
+from denote.evaluation.model import CONTINUE_SYSTEM
+from denote.analysis.tdsc_verify import close
 
 
 def build_pairs(before_path: str) -> list[dict]:

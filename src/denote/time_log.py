@@ -15,7 +15,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/time_log.py -> repo root is two parents up (denote/ -> src/ -> root)
+ROOT = Path(__file__).resolve().parents[2]
 LOG = ROOT / "results" / "v2_time_log.jsonl"
 
 

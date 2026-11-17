@@ -59,7 +59,7 @@ import sys
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
-from denote_build import ModelInterface, code_denote, is_copyable
+from denote.construction.build import ModelInterface, code_denote, is_copyable
 
 BASE_SEED = 0
 _STATE_TIMEOUT_S = 2.0  # wall-clock budget per tail execution (see _run_tail)

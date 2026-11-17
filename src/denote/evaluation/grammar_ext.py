@@ -57,7 +57,10 @@ import re
 import sys
 from pathlib import Path
 
-from denote_build import ArithTrace, _ANSWER, _STEP, build_items_all_positions
+from denote.construction.build import ArithTrace, _ANSWER, _STEP, build_items_all_positions
+
+# src/denote/evaluation/grammar_ext.py -> repo root is three parents up
+_ROOT = Path(__file__).resolve().parents[3]
 
 _BARE_CONST = re.compile(
     r"^\s*(?P<name>[A-Za-z_][A-Za-z_0-9 ]*?)\s*=\s*(?P<val>-?\d+(?:\.\d+)?)\s*$"
@@ -148,7 +151,7 @@ def self_test() -> int:
                 normalize_line(prose) == prose)
 
     print("\nG5  retroactive re-gate of the real DeepSeek-R1 raw JSON (offline)")
-    raw_path = Path("results/raw/full_deepseek_deepseek-r1.json")
+    raw_path = _ROOT / "results" / "raw" / "full_deepseek_deepseek-r1.json"
     if not raw_path.exists():
         print("  [SKIP] no raw DeepSeek JSON found in this checkout")
     else:
@@ -203,8 +206,8 @@ def self_test() -> int:
              f"(upper bound, ignores C4/self-consistency-under-edit): "
              f"{old_gate:.3f} -> {new_gate:.3f}")
 
-        Path("results").mkdir(exist_ok=True)
-        Path("results/grammar_ext_deepseek_regate.json").write_text(
+        (_ROOT / "results" / "summaries").mkdir(parents=True, exist_ok=True)
+        (_ROOT / "results" / "summaries" / "grammar_ext_deepseek_regate.json").write_text(
             json.dumps({
                 "n_rejected_seeds_0_2": n_rej,
                 "n_empty_trace_not_addressed": n_empty,

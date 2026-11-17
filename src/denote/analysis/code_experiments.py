@@ -8,7 +8,8 @@ Typical workflow
   python denote_code_experiments.py construction-survival
   python denote_code_experiments.py pilot --model qwen/qwen-2.5-7b-instruct --limit 30
   python denote_code_experiments.py full --limit 150 --seeds 0
-  python denote_code_experiments.py analyze
+  python denote_code_experiments.py analyze          # regenerate the committed summary
+  python denote_code_experiments.py analyze --check  # read-only: diff against it, write nothing
 """
 
 from __future__ import annotations
@@ -21,14 +22,14 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from denote_code_build import (
+from denote.construction.code_build import (
     CodeCall,
     CodeItem,
     build_code_item,
     extract_code_answer,
     load_mbpp_problems,
 )
-from denote_experiments import (
+from denote.analysis.experiments import (
     DEFAULT_MODELS,
     DEFAULT_PILOT_MODEL,
     write_json,
@@ -37,11 +38,13 @@ from denote_experiments import (
     utc_now,
     ACCESS_DATE,
 )
-from denote_metrics import Item, apply_gate, identity_residual, outcome_rates
-from denote_model import MissingOpenRouterKey, OpenRouterModel
+from denote.metrics.metrics import Item, apply_gate, identity_residual, outcome_rates
+from denote.evaluation.model import MissingOpenRouterKey, OpenRouterModel
 
-RESULTS = Path("results")
+# src/denote/analysis/code_experiments.py -> repo root is three parents up
+RESULTS = Path(__file__).resolve().parents[3] / "results"
 RAW = RESULTS / "raw"
+SUMMARIES = RESULTS / "summaries"
 BASE_SEED = 0
 
 CODE_TRACE_SYSTEM = """You solve Python programming problems by writing ONE complete function.
@@ -133,7 +136,7 @@ def preflight_code() -> dict:
         "openrouter_key_present": bool(os.getenv("OPENROUTER_API_KEY", "").strip()),
         "note": "Presence check only; pilot/full make live calls.",
     }
-    write_json(RESULTS / "code_preflight.json", status)
+    write_json(SUMMARIES / "code_preflight.json", status)
     return status
 
 
@@ -182,7 +185,7 @@ def run_construction_survival(limit: int | None = None) -> dict:
         ),
         "rows": rows,
     }
-    write_json(RESULTS / "code_construction_survival.json", _clean_floats(result))
+    write_json(SUMMARIES / "code_construction_survival.json", _clean_floats(result))
     print(f"[construction-survival] n={n} test_call_parsed={n_call_parsed} "
           f"({n_call_parsed / n:.1%}) built={n_built} ({n_built / n:.1%})")
     return result
@@ -451,16 +454,16 @@ def run_pilot(model_name: str, limit: int) -> dict:
             "MBPP reference construction itself is ~0.25."
         ),
     })
-    write_json(RESULTS / "code_pilot_summary.json", result)
+    write_json(SUMMARIES / "code_pilot_summary.json", result)
     return result
 
 
 def run_full(models: list[str], limit: int, seeds: list[int]) -> dict:
-    pilot_path = RESULTS / "code_pilot_summary.json"
+    pilot_path = SUMMARIES / "code_pilot_summary.json"
     if not pilot_path.exists() or not json.loads(pilot_path.read_text(encoding="utf-8")).get("go"):
         raise RuntimeError("Code pilot GO has not passed; refusing full panel.")
     problems = _load_code_panel(limit)
-    write_json(RESULTS / "code_problem_panel.json", {
+    write_json(SUMMARIES / "code_problem_panel.json", {
         "n": len(problems),
         "ids": [p["problem_id"] for p in problems],
     })
@@ -485,11 +488,24 @@ def run_full(models: list[str], limit: int, seeds: list[int]) -> dict:
         "models": summaries,
         "failures": failures,
     }
-    write_json(RESULTS / "code_summary.json", _clean_floats(summary))
+    write_json(SUMMARIES / "code_summary.json", _clean_floats(summary))
     return summary
 
 
-def analyze_all() -> dict:
+def analyze_all(write: bool = True) -> dict:
+    """Recompute the Code panel from results/raw/code_full_*.json.
+
+    write=True (the `analyze` CLI command) regenerates
+    results/summaries/code_summary.json -- this is the build step, run
+    deliberately when raw data or scoring logic changes, with its output
+    reviewed before being committed.
+
+    write=False (the `analyze --check` CLI command, and tdsc_verify.py's
+    --code mode) is the read-only verification path: it recomputes the same
+    numbers and returns them for diffing against the committed summary, but
+    never writes anything, so running a *check* never has the side effect
+    of silently updating a *committed* file.
+    """
     summaries = []
     for path in sorted(RAW.glob("code_full_*.json")):
         state = json.loads(path.read_text(encoding="utf-8"))
@@ -500,8 +516,36 @@ def analyze_all() -> dict:
         "domain": "code",
         "models": summaries,
     }
-    write_json(RESULTS / "code_summary.json", _clean_floats(summary))
+    if write:
+        write_json(SUMMARIES / "code_summary.json", _clean_floats(summary))
     return summary
+
+
+def check_all() -> dict:
+    """Read-only verification: recompute the Code panel and diff it against
+    the committed results/summaries/code_summary.json. Writes nothing."""
+    recomputed = _clean_floats(analyze_all(write=False))
+    committed_path = SUMMARIES / "code_summary.json"
+    if not committed_path.exists():
+        return {"ok": False, "reason": f"{committed_path} not found"}
+    committed = json.loads(committed_path.read_text(encoding="utf-8"))
+
+    by_model_recomputed = {m["model"]: m for m in recomputed["models"]}
+    by_model_committed = {m["model"]: m for m in committed.get("models", [])}
+
+    mismatches = []
+    for model, have in by_model_recomputed.items():
+        want = by_model_committed.get(model)
+        if want is None:
+            mismatches.append(f"{model}: not in committed summary")
+            continue
+        for field in ("n", "phi", "sigma", "delta"):
+            hv, wv = have.get(field), want.get(field)
+            if hv != wv:
+                mismatches.append(f"{model}.{field}: recomputed {hv} vs committed {wv}")
+
+    ok = not mismatches
+    return {"ok": ok, "mismatches": mismatches, "models_checked": len(by_model_recomputed)}
 
 
 def parse_args() -> argparse.Namespace:
@@ -517,7 +561,10 @@ def parse_args() -> argparse.Namespace:
     full.add_argument("--models", default=",".join(DEFAULT_MODELS))
     full.add_argument("--limit", type=int, default=150)
     full.add_argument("--seeds", default="0")
-    sub.add_parser("analyze", help="Score all results/raw/code_full_*.json")
+    analyze = sub.add_parser("analyze", help="Score all results/raw/code_full_*.json")
+    analyze.add_argument("--check", action="store_true",
+                          help="Read-only: diff the recomputation against the "
+                               "committed summary instead of overwriting it.")
     return parser.parse_args()
 
 
@@ -534,6 +581,10 @@ def main() -> int:
             models = [m.strip() for m in args.models.split(",") if m.strip()]
             seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
             result = run_full(models, args.limit, seeds)
+        elif args.command == "analyze" and args.check:
+            result = check_all()
+            print(json.dumps(result, indent=2, ensure_ascii=False))
+            return 0 if result["ok"] else 1
         else:
             result = analyze_all()
     except MissingOpenRouterKey as exc:

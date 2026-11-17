@@ -21,9 +21,10 @@ from __future__ import annotations
 import argparse, json, sys, time
 from pathlib import Path
 
-from denote_v2_env import bootstrap
+from denote.v2_env import bootstrap
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/evaluation/legacy_score.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "results" / "raw"
 PILOT = ("qwen/qwen-2.5-7b-instruct", "2026-07-26")
 
@@ -78,8 +79,8 @@ def main():
         print("dry run only. Re-run with --all or --model <name> to execute.")
         return
 
-    from denote_model import OpenRouterModel          # same client as the run
-    from denote_build import extract_answer           # same extractor
+    from denote.evaluation.model import OpenRouterModel  # same client as the run
+    from denote.construction.build import extract_answer  # same extractor
 
     for p, s in states(a.model, a.exclude_grammar):
         todo = pending(s)
@@ -106,8 +107,7 @@ def main():
         print(f"  {s['model']}: wrote {done} legacy answers -> {p.name}")
 
     print("\nNow re-run the analysis so the legacy column appears:")
-    print("  python denote_experiments.py --analyze     (or analyze_all())")
-    print("  python denote_reconcile.py")
+    print("  python -m denote.analysis.experiments --analyze     (or analyze_all())")
     print("Then fill the legacy head-to-head worksheet in the paper appendix.")
 
 

@@ -17,11 +17,11 @@ import json
 import sys
 from pathlib import Path
 
-from denote_v2_env import bootstrap
+from denote.v2_env import bootstrap
 
 bootstrap()
 
-from denote_experiments import (  # noqa: E402
+from denote.analysis.experiments import (  # noqa: E402
     DEFAULT_MODELS,
     RAW,
     _acquire_model_lock,
@@ -33,7 +33,7 @@ from denote_experiments import (  # noqa: E402
     utc_now,
     write_json,
 )
-from denote_model import OpenRouterModel  # noqa: E402
+from denote.evaluation.model import OpenRouterModel  # noqa: E402
 
 
 def _seed_coverage(state: dict, seeds: list[int], n_problems: int) -> dict:

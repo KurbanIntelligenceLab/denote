@@ -22,11 +22,12 @@ import os
 import time
 from pathlib import Path
 
-from denote_v2_env import bootstrap
+from denote.v2_env import bootstrap
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/evaluation/judge_score.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "results" / "raw"
-OUT_DIR = ROOT / "results"
+OUT_DIR = ROOT / "results" / "summaries"
 JUDGE_MODEL = "anthropic/claude-sonnet-5"
 
 SHORT = {
@@ -168,7 +169,7 @@ def main():
     ap.add_argument("--limit", type=int, default=None)
     a = ap.parse_args()
 
-    from denote_model import OpenRouterModel
+    from denote.evaluation.model import OpenRouterModel
     judge = OpenRouterModel(JUDGE_MODEL)
 
     targets = list(HEADLINE_FILES) if a.all else ([a.model] if a.model else [])
@@ -188,6 +189,7 @@ def main():
               f"agreement={s['agreement_with_phi']:.3f}")
 
     tag = "pilot" if (a.pilot or limit) else "full"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / f"judge_score_{tag}.json"
     out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"\nwrote {out_path}  ({time.time()-t0:.1f}s)")

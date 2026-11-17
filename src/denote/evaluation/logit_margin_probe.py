@@ -33,8 +33,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "results" / "logit_margin_probe.json"
+# src/denote/evaluation/logit_margin_probe.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "results" / "summaries" / "logit_margin_probe.json"
 
 DEFAULT_MODELS = (
     "meta-llama/llama-3.2-1b-instruct",

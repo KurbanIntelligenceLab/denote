@@ -15,13 +15,14 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from denote_experiments import analyze_state, _clean_floats
+from denote.analysis.experiments import analyze_state, _clean_floats
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/analysis/grammar_analyze.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
 RAW_DIR = ROOT / "results" / "raw"
 DEFAULT = RAW_DIR / "full_deepseek_deepseek-r1_grammar.json"
-OUT_SINGLE = ROOT / "results" / "grammar_summary.json"
-OUT_PANEL = ROOT / "results" / "grammar_panel_summary.json"
+OUT_SINGLE = ROOT / "results" / "summaries" / "grammar_summary.json"
+OUT_PANEL = ROOT / "results" / "summaries" / "grammar_panel_summary.json"
 
 KEYS = ("model", "n_raw", "n_gated", "gate_rate", "phi", "delta", "sigma")
 

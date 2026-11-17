@@ -46,10 +46,11 @@ from pathlib import Path
 
 import numpy as np
 
-from denote_baselines import metric_agreement, spearman
-from denote_experiments import SUMMARY, write_json, utc_now, _clean_floats
+from denote.evaluation.baselines import metric_agreement, spearman
+from denote.analysis.experiments import SUMMARY, write_json, utc_now, _clean_floats
 
-OUT = Path("results/h4_common_pop.json")
+# src/denote/analysis/h4_common_pop.py -> repo root is three parents up
+OUT = Path(__file__).resolve().parents[3] / "results" / "summaries" / "h4_common_pop.json"
 
 BASELINE_FIELDS = ("adding_mistakes", "paraphrasing", "filler_tokens", "hint_verbalization")
 
@@ -85,7 +86,7 @@ def build_h4_common_pop() -> dict:
     """
     if not SUMMARY.exists():
         raise FileNotFoundError(
-            f"{SUMMARY} not found; run `python denote_experiments.py analyze` first."
+            f"{SUMMARY} not found; run `python -m denote.analysis.experiments analyze` first."
         )
     summary = json.loads(SUMMARY.read_text(encoding="utf-8"))
     per_model = _extract_per_model(summary)

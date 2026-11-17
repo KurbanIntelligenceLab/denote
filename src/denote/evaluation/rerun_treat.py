@@ -9,11 +9,12 @@ import sys
 import time
 from pathlib import Path
 
-from denote_build import extract_answer
-from denote_model import CONTINUE_SYSTEM, _CONTINUE_MAX_TOKENS
-from denote_v2_env import bootstrap
+from denote.construction.build import extract_answer
+from denote.evaluation.model import CONTINUE_SYSTEM, _CONTINUE_MAX_TOKENS
+from denote.v2_env import bootstrap
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/evaluation/rerun_treat.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "results" / "raw"
 PILOT = ("qwen/qwen-2.5-7b-instruct", "2026-07-26")
 
@@ -92,7 +93,7 @@ def main() -> None:
         print("dry run only. Re-run with --all or --model <name> to execute.")
         return
 
-    from denote_model import OpenRouterModel
+    from denote.evaluation.model import OpenRouterModel
 
     done_total = 0
     for path, state in targets:

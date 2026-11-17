@@ -15,8 +15,8 @@ import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-from denote_build import ModelInterface
-from denote_model import CONTINUE_SYSTEM, DIRECT_SYSTEM, TRACE_SYSTEM
+from denote.construction.build import ModelInterface
+from denote.evaluation.model import CONTINUE_SYSTEM, DIRECT_SYSTEM, TRACE_SYSTEM
 
 
 class LocalHFModel(ModelInterface):

@@ -63,14 +63,14 @@ import numpy as np
 from datasets import load_dataset
 from dotenv import load_dotenv
 
-from denote_build import (
+from denote.construction.build import (
     ArithTrace,
     build_items_all_positions,
     extract_answer,
     make_e0_decorative,
     make_e0_faithful,
 )
-from denote_baselines import (
+from denote.evaluation.baselines import (
     Rollout,
     adding_mistakes,
     early_answering,
@@ -80,7 +80,7 @@ from denote_baselines import (
     metric_agreement,
     paraphrasing,
 )
-from denote_metrics import (
+from denote.metrics.metrics import (
     Item,
     apply_gate,
     audit_estimate,
@@ -93,8 +93,8 @@ from denote_metrics import (
     outcome_rates,
     paired_permutation_p,
 )
-from denote_model import MissingOpenRouterKey, OpenRouterModel
-from denote_grammar_ext import normalize_trace_text
+from denote.evaluation.model import MissingOpenRouterKey, OpenRouterModel
+from denote.evaluation.grammar_ext import normalize_trace_text
 
 # ---------------------------------------------------------------------------
 # Constants and paths
@@ -114,10 +114,13 @@ DEFAULT_MODELS = (
     "anthropic/claude-sonnet-5",
     "openai/gpt-5.6-luna",
 )
-RESULTS = Path("results")
+# src/denote/analysis/experiments.py -> repo root is three parents up
+RESULTS = Path(__file__).resolve().parents[3] / "results"
 RAW = RESULTS / "raw"          # per-model resumable state: full_<slug>.json
 LOCKS = RESULTS / "locks"      # per-model locks for parallel workers
-SUMMARY = RESULTS / "summary.json"
+SUMMARIES = RESULTS / "summaries"
+TABLES = RESULTS / "tables"
+SUMMARY = SUMMARIES / "summary.json"
 ACCESS_DATE = datetime.now(timezone.utc).date().isoformat()
 # Canonical Table-1 raw files only; tagged refreshes (e.g. *_grammar.json)
 # must not silently enter summarize/analyze.
@@ -327,7 +330,7 @@ def preflight() -> dict:
         "cuda": torch.cuda.is_available(),
         "openrouter_key_present": bool(os.getenv("OPENROUTER_API_KEY")),
     }
-    write_json(RESULTS / "preflight.json", status)
+    write_json(SUMMARIES / "preflight.json", status)
     return status
 
 
@@ -1105,7 +1108,8 @@ def write_latex_tables(summary: dict) -> None:
             f"{fmt('delta')} & {fmt('sigma')} & {fmt('dpe')} \\\\"
         )
     lines.extend(["\\bottomrule", "\\end{tabular}", ""])
-    path = RESULTS / "tables.tex"
+    path = TABLES / "tables.tex"
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -1168,8 +1172,8 @@ def run_pilot(model_name: str, limit: int) -> dict:
         and (residual < 1e-12)
         and len(gated) > 0
     )
-    write_json(RESULTS / "pilot_summary.json", result)
-    write_json(RESULTS / "e0_harness.json", {
+    write_json(SUMMARIES / "pilot_summary.json", result)
+    write_json(SUMMARIES / "e0_harness.json", {
         k: v for k, v in e0.items() if k != "redesign_rows"
     })
     return result
@@ -1295,12 +1299,12 @@ def run_full(models: Iterable[str], limit: int, include_baselines: bool,
     When: ``python denote_experiments.py full ...`` (Phases 5-7).
     """
     normalize_grammar = _normalize_grammar_enabled(normalize_grammar)
-    pilot_path = RESULTS / "pilot_summary.json"
+    pilot_path = SUMMARIES / "pilot_summary.json"
     if not pilot_path.exists() or not json.loads(pilot_path.read_text(encoding="utf-8")).get("go"):
         raise RuntimeError("Pilot GO gate has not passed; refusing to run the full panel.")
 
     problems = load_arithmetic_problems(limit, include_math=True)
-    write_json(RESULTS / "problem_panel.json", {
+    write_json(SUMMARIES / "problem_panel.json", {
         "n": len(problems),
         "by_dataset": {
             name: sum(1 for p in problems if p["dataset"] == name)
@@ -1309,10 +1313,10 @@ def run_full(models: Iterable[str], limit: int, include_baselines: bool,
         "ids": [p["problem_id"] for p in problems],
     })
     failures = []
-    if (RESULTS / "full_failures.json").exists():
+    if (SUMMARIES / "full_failures.json").exists():
         try:
             failures = json.loads(
-                (RESULTS / "full_failures.json").read_text(encoding="utf-8")
+                (SUMMARIES / "full_failures.json").read_text(encoding="utf-8")
             )
         except (json.JSONDecodeError, OSError):
             failures = []
@@ -1355,7 +1359,7 @@ def run_full(models: Iterable[str], limit: int, include_baselines: bool,
         except Exception as exc:
             failures.append({"model": model_name, "error": str(exc)})
             print(f"[full] FAILED {model_name}: {exc}", flush=True)
-            write_json(RESULTS / "full_failures.json", failures)
+            write_json(SUMMARIES / "full_failures.json", failures)
             continue
         finally:
             if lock_path is not None:

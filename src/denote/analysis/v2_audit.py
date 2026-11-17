@@ -38,9 +38,10 @@ try:
 except ImportError:
     _beta = None
 
-ROOT = Path(__file__).resolve().parent
+# src/denote/analysis/v2_audit.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "results" / "raw"
-OUT = ROOT / "results"
+OUT = ROOT / "results" / "audits"
 SHEET = OUT / "v2_audit_sheet.csv"
 RESULT = OUT / "v2_audit_result.json"
 PILOT = ("qwen/qwen-2.5-7b-instruct", "2026-07-26")

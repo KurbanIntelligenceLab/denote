@@ -24,12 +24,12 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from denote_build import (ArithTrace, ModelInterface, build_items, extract_answer,
+from denote.construction.build import (ArithTrace, ModelInterface, build_items, extract_answer,
                           make_e0_decorative, make_e0_faithful)
-from denote_metrics import (Item, apply_gate, audit_estimate, cluster_bootstrap_ci,
+from denote.metrics.metrics import (Item, apply_gate, audit_estimate, cluster_bootstrap_ci,
                             dpe, identified_set, comparison_determined,
                             outcome_rates, identity_residual)
-from denote_baselines import e0_discrimination, roc_auc
+from denote.evaluation.baselines import e0_discrimination, roc_auc
 
 BASE_SEED = 0
 

@@ -30,7 +30,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
-from denote_build import ModelInterface
+from denote.construction.build import ModelInterface
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1"
 

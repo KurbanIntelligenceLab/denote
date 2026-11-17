@@ -24,12 +24,13 @@ from pathlib import Path
 
 import numpy as np
 
-from denote_baselines import e0_discrimination
-from denote_build import ArithTrace, build_items, extract_answer, make_e0_decorative, make_e0_faithful
-from denote_model import OpenRouterModel
+from denote.evaluation.baselines import e0_discrimination
+from denote.construction.build import ArithTrace, build_items, extract_answer, make_e0_decorative, make_e0_faithful
+from denote.evaluation.model import OpenRouterModel
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "results" / "h4_e0_auc.json"
+# src/denote/evaluation/h4_e0_auc.py -> repo root is three parents up
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "results" / "summaries" / "h4_e0_auc.json"
 DEFAULT_MODEL = "qwen/qwen-2.5-7b-instruct"
 
 

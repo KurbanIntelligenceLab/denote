@@ -1,17 +1,14 @@
-"""Load version1 credentials without copying .env into version2."""
+"""Load the OpenRouter API key from the repo root's .env."""
 from __future__ import annotations
 
 from pathlib import Path
 
 from dotenv import load_dotenv
 
-ROOT = Path(__file__).resolve().parent
-V1 = ROOT.parent / "version1"
+# src/denote/v2_env.py -> repo root is three parents up (denote/ -> src/ -> root)
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def bootstrap() -> None:
-    """Load OpenRouter key from version1/.env if present."""
-    env_path = V1 / ".env"
-    if env_path.exists():
-        load_dotenv(env_path, override=False)
+    """Load OPENROUTER_API_KEY from the repo root's .env, if present."""
     load_dotenv(ROOT / ".env", override=False)
